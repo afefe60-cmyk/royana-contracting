@@ -34,7 +34,6 @@ export function Header({
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close mobile menu on route change
   useEffect(() => {
     setMobileMenuOpen(false);
   }, [pathname]);
@@ -65,21 +64,21 @@ export function Header({
     <header
       className={`sticky top-0 z-40 transition-all duration-300 ${
         scrolled
-          ? "bg-white/95 backdrop-blur-md shadow-md border-b border-slate-200"
-          : "bg-white border-b border-slate-100"
+          ? "bg-[#0B192C]/95 backdrop-blur-md shadow-lg border-b border-[#1E3E62]/80"
+          : "bg-[#0B192C]/90 backdrop-blur-sm border-b border-[#1E3E62]/50"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
+          {/* Official Logo with natural 3.12:1 proportions */}
           <Link
             href={`/${locale}`}
-            className="flex items-center gap-3 focus:outline-none focus:ring-2 focus:ring-[#C68B59] rounded-lg p-1"
+            className="flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-[#39B5FF] rounded-lg p-1 group"
             aria-label={isAr ? "رؤيانا الحديثة للمقاولات - الصفحة الرئيسية" : "Royana Modern Contracting - Home"}
           >
-            <div className="relative w-48 sm:w-56 h-14">
+            <div className="relative h-12 sm:h-14 w-40 sm:w-48 aspect-[3.12/1] transition-transform group-hover:scale-102">
               <Image
-                src="/images/logo.webp"
+                src="/images/logo-white.webp"
                 alt="شعار مؤسسة رؤيانا الحديثة للمقاولات"
                 fill
                 priority
@@ -103,10 +102,10 @@ export function Header({
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`px-3 py-2 text-sm font-semibold rounded-md transition-colors ${
+                  className={`px-3 py-2 text-sm font-semibold rounded-lg transition-all ${
                     isActive
-                      ? "text-[#C68B59] bg-[#0B192C]/5 font-bold"
-                      : "text-slate-700 hover:text-[#0B192C] hover:bg-slate-50"
+                      ? "text-[#39B5FF] bg-white/10 font-bold border-b-2 border-[#39B5FF]"
+                      : "text-slate-200 hover:text-white hover:bg-white/5"
                   }`}
                 >
                   {link.label}
@@ -121,9 +120,9 @@ export function Header({
             <a
               href={phoneUrl}
               onClick={() => trackCallClick(phone)}
-              className="flex items-center gap-2 text-xs xl:text-sm font-bold text-slate-700 hover:text-[#C68B59] transition-colors"
+              className="flex items-center gap-2 text-xs xl:text-sm font-bold text-slate-200 hover:text-[#39B5FF] transition-colors"
             >
-              <span className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-[#C68B59]">
+              <span className="w-8 h-8 rounded-full bg-[#1E3E62] flex items-center justify-center text-[#39B5FF]">
                 <Phone className="w-4 h-4" />
               </span>
               <span dir="ltr">{phoneDisplay}</span>
@@ -137,6 +136,7 @@ export function Header({
               href={`/${locale}/contact`}
               variant="primary"
               size="sm"
+              className="shadow-md"
             >
               {isAr ? "اطلب عرض سعر" : "Get a Quote"}
             </Button>
@@ -149,12 +149,12 @@ export function Header({
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label={mobileMenuOpen ? "إغلاق القائمة" : "فتح القائمة الرئيسية"}
               aria-expanded={mobileMenuOpen}
-              className="p-2 rounded-lg text-slate-700 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-[#C68B59]"
+              className="p-2 rounded-lg text-slate-200 hover:bg-[#1E3E62] focus:outline-none focus:ring-2 focus:ring-[#39B5FF]"
             >
               {mobileMenuOpen ? (
-                <X className="w-6 h-6 text-[#0B192C]" />
+                <X className="w-6 h-6 text-[#39B5FF]" />
               ) : (
-                <Menu className="w-6 h-6 text-[#0B192C]" />
+                <Menu className="w-6 h-6 text-white" />
               )}
             </button>
           </div>
@@ -163,7 +163,7 @@ export function Header({
 
       {/* Mobile Drawer Navigation */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-slate-200 bg-white shadow-xl animate-in slide-in-from-top-2 duration-200">
+        <div className="lg:hidden border-t border-[#1E3E62] bg-[#0B192C] shadow-2xl animate-in slide-in-from-top-2 duration-200">
           <nav
             aria-label={isAr ? "قائمة الجوال" : "Mobile Menu"}
             className="px-4 pt-3 pb-6 space-y-1.5"
@@ -172,19 +172,19 @@ export function Header({
               <Link
                 key={link.href}
                 href={link.href}
-                className="block px-3 py-2.5 rounded-lg text-base font-semibold text-slate-800 hover:bg-slate-50 hover:text-[#C68B59]"
+                className="block px-3 py-2.5 rounded-lg text-base font-semibold text-slate-200 hover:bg-[#1E3E62] hover:text-[#39B5FF]"
               >
                 {link.label}
               </Link>
             ))}
 
-            <div className="pt-4 border-t border-slate-100 space-y-3">
+            <div className="pt-4 border-t border-[#1E3E62] space-y-3">
               <a
                 href={phoneUrl}
                 onClick={() => trackCallClick(phone)}
-                className="flex items-center justify-center gap-2 w-full py-2.5 rounded-lg bg-slate-50 text-slate-900 font-bold text-sm"
+                className="flex items-center justify-center gap-2 w-full py-2.5 rounded-lg bg-[#162C46] text-white font-bold text-sm"
               >
-                <Phone className="w-4 h-4 text-[#C68B59]" />
+                <Phone className="w-4 h-4 text-[#39B5FF]" />
                 <span dir="ltr">{phoneDisplay}</span>
               </a>
 
