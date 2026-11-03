@@ -139,13 +139,16 @@ export function Header({
             </Button>
           </div>
 
-          {/* Clean Mobile Controls (Quick Call + Hamburger Menu) */}
+          {/* Clean Mobile Controls (Quick Call + Circular Language Icon + Hamburger Menu) */}
           <div className="flex items-center gap-2 lg:hidden">
+            <LanguageSwitcher currentLocale={locale} variant="circular" />
+
             <a
               href={phoneUrl}
               onClick={() => trackCallClick(phone)}
-              className="w-9 h-9 rounded-full bg-[#162C46] flex items-center justify-center text-[#39B5FF] border border-[#1E3E62]"
-              aria-label="اتصال مباشر"
+              className="w-9 h-9 rounded-full bg-[#162C46] flex items-center justify-center text-[#39B5FF] border border-[#1E3E62] hover:bg-[#1E3E62] hover:border-[#39B5FF] hover:scale-105 active:scale-95 transition-all shadow-sm"
+              aria-label={isAr ? "اتصال هاتفي مباشر" : "Direct Phone Call"}
+              title={phoneDisplay}
             >
               <Phone className="w-4 h-4" />
             </a>
