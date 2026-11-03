@@ -69,8 +69,8 @@ export function HeroSection({
         </video>
       </div>
 
-      {/* 2. Architectural Contrast Protection Layer */}
-      <div className="absolute inset-0 bg-gradient-to-t from-[#0B192C] via-[#0B192C]/80 to-[#0B192C]/85 z-10 pointer-events-none" />
+      {/* 2. Architectural Contrast Protection Layer (Balanced on mobile to make video vivid while keeping text crisp) */}
+      <div className="absolute inset-0 bg-gradient-to-t from-[#0B192C] via-[#0B192C]/50 to-[#0B192C]/65 sm:via-[#0B192C]/80 sm:to-[#0B192C]/85 z-10 pointer-events-none" />
 
       {/* Subtle Blueprint Mesh */}
       <div
@@ -123,8 +123,8 @@ export function HeroSection({
             : "Turnkey construction, comprehensive villa restoration, MEP utilities, and on-site engineering management across Jeddah in full alignment with the Saudi Building Code."}
         </p>
 
-        {/* Action CTAs */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 w-full sm:w-auto mb-8 sm:mb-10">
+        {/* Action CTAs: hidden on mobile to avoid duplication with persistent bottom action bar and showcase background video */}
+        <div className="hidden sm:flex flex-col sm:flex-row items-center justify-center gap-3 w-full sm:w-auto mb-8 sm:mb-10">
           {/* Primary Quote Button: bronze background with navy text */}
           <Button
             href={`/${locale}/contact`}
