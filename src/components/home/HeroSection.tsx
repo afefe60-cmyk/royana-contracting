@@ -43,10 +43,20 @@ export function HeroSection({
 
   useEffect(() => {
     if (videoRef.current) {
-      videoRef.current.play().catch(() => {
-        // Autoplay may be restricted by browser until interaction
-        setIsPlaying(false);
-      });
+      videoRef.current.defaultMuted = true;
+      videoRef.current.muted = true;
+      const playPromise = videoRef.current.play();
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => {
+            setIsPlaying(true);
+            setVideoLoaded(true);
+          })
+          .catch((err) => {
+            console.log("Autoplay deferred:", err);
+            setIsPlaying(false);
+          });
+      }
     }
   }, []);
 
@@ -86,6 +96,7 @@ export function HeroSection({
           loop
           muted
           playsInline
+          src={videoSrc}
           poster={posterSrc}
           onLoadedData={() => setVideoLoaded(true)}
           className="w-full h-full object-cover scale-105"
