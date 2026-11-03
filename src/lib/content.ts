@@ -7,6 +7,10 @@ import localSeoData from "@/../content/jeddah-contractor.json";
 import durratAlArousProject from "@/../content/projects/durrat-al-arus.json";
 import factoryInstallationProject from "@/../content/projects/factory-equipment-installation.json";
 import draftSampleProject from "@/../content/projects/draft-sample-project.json";
+import woodenPalletsArticle from "@/../content/blog/wooden-pallets-saudi-market-guide.json";
+import sfdaPlasticPalletsArticle from "@/../content/blog/sfda-plastic-pallets-standards-saudi.json";
+import heavyDutyMetalPalletsArticle from "@/../content/blog/heavy-duty-metal-pallets-industrial-saudi.json";
+import palletsComparisonArticle from "@/../content/blog/pallets-comparison-guide-saudi-warehouses.json";
 import sampleDraftArticle from "@/../content/blog/sample-draft-article.json";
 
 import type {
@@ -78,7 +82,13 @@ export function getLocalSeoPageBySlug(slug: string): LocalSeoPage | undefined {
 }
 
 export function getBlogPosts(includeDrafts: boolean = isDev): BlogPost[] {
-  const allArticles: BlogPost[] = [sampleDraftArticle as unknown as BlogPost];
+  const allArticles: BlogPost[] = [
+    woodenPalletsArticle as unknown as BlogPost,
+    sfdaPlasticPalletsArticle as unknown as BlogPost,
+    heavyDutyMetalPalletsArticle as unknown as BlogPost,
+    palletsComparisonArticle as unknown as BlogPost,
+    sampleDraftArticle as unknown as BlogPost,
+  ];
   if (!includeDrafts) {
     return allArticles.filter((a) => !a.draft);
   }
