@@ -1,0 +1,17 @@
+[
+  {
+    "id": "testimonial-1",
+    "name_ar": "اسم العميل",
+    "name_en": "Client Name",
+    "role_ar": "مالك فيلا سكنية - جدة",
+    "role_en": "Villa Owner - Jeddah",
+    "company_ar": "شركة أو جهة العمل (اختياري)",
+    "company_en": "Company Name (Optional)",
+    "text_ar": "نص التقييم ورأي العميل في دقة التنفيذ والمواعيد والتعامل الهندسي.",
+    "text_en": "Client testimonial regarding project execution, timeline adherence, and engineering professionalism.",
+    "rating": 5,
+    "project_title_ar": "أعمال الترميم والتشطيب",
+    "project_title_en": "Restoration and Finishing Works",
+    "visible": true
+  }
+]

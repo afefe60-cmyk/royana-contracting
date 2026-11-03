@@ -1,0 +1,109 @@
+{
+  "stats": [
+    {
+      "id": "projects",
+      "value": null,
+      "suffix": "+",
+      "label_ar": "مشروع منجز",
+      "label_en": "Projects Completed",
+      "visible": false
+    },
+    {
+      "id": "years",
+      "value": null,
+      "suffix": "+",
+      "label_ar": "سنوات خبرة",
+      "label_en": "Years of Experience",
+      "visible": false
+    },
+    {
+      "id": "clients",
+      "value": null,
+      "suffix": "+",
+      "label_ar": "عميل راضٍ",
+      "label_en": "Satisfied Clients",
+      "visible": false
+    }
+  ],
+  "credentials": {
+    "commercial_registration": null,
+    "vat_number": null,
+    "classification": {
+      "grade": null,
+      "field": null
+    },
+    "documents": []
+  },
+  "contact": {
+    "phone": "+966508805861",
+    "phone_display": "050 880 5861",
+    "phone_alt": "+966568024374",
+    "phone_alt_display": "056 802 4374",
+    "whatsapp": "966508805861",
+    "email": "info@royana.com.sa"
+  },
+  "address": {
+    "city_ar": "جدة",
+    "city_en": "Jeddah",
+    "street_ar": "حي البغدادية، شارع أبو عبدالله الزهري",
+    "street_en": "Al-Baghdadiyah Dist., Abu Abdullah Al-Zuhri St.",
+    "country_ar": "المملكة العربية السعودية",
+    "country_en": "Kingdom of Saudi Arabia",
+    "google_maps_url": "https://maps.google.com/?q=21.4984,39.1856"
+  },
+  "working_hours": {
+    "days_ar": "الأحد إلى الخميس",
+    "days_en": "Sunday to Thursday",
+    "time_ar": "8:00 صباحاً – 6:00 مساءً",
+    "time_en": "8:00 AM – 6:00 PM"
+  },
+  "social": {
+    "instagram": null,
+    "x": null,
+    "linkedin": null,
+    "snapchat": null,
+    "tiktok": null
+  },
+  "why_us": [
+    {
+      "id": "saudi_code",
+      "title_ar": "التوافق مع كود البناء السعودي",
+      "title_en": "Saudi Building Code Compliance",
+      "desc_ar": "تنفيذ كافة أعمال الإنشاء والترميم وفق المعايير والاشتراطات الهندسية المعتمدة رسمياً في المملكة.",
+      "desc_en": "Executing all structural and restoration works strictly in line with officially approved Saudi building codes.",
+      "visible": true
+    },
+    {
+      "id": "site_supervision",
+      "title_ar": "إشراف هندسي ميداني مباشر",
+      "title_en": "Direct On-site Engineering Supervision",
+      "desc_ar": "متابعة مستمرة لكل مرحلة تنفيذية لضمان دقة المخططات وجودة المواد المستخدمة وسلامة المنشأة.",
+      "desc_en": "Continuous inspection across every execution milestone to ensure architectural adherence and structural safety.",
+      "visible": true
+    },
+    {
+      "id": "work_warranty",
+      "title_ar": "ضمان معتمد على الأعمال المنفذة",
+      "title_en": "Certified Warranty on Delivered Works",
+      "desc_ar": "تقديم وثيقة ضمان واضحة تغطي أعمال العزل والإنشاءات والتشطيب وفق العقود الرسمية المبرمة.",
+      "desc_en": "Providing formal written guarantees covering insulation, structural works, and finishing per contractual agreement.",
+      "visible": true
+    },
+    {
+      "id": "schedule_commitment",
+      "title_ar": "التزام بجدول التسليم والمواصفات",
+      "title_en": "Punctual Delivery & Spec Commitment",
+      "desc_ar": "خطة عمل زمنية واضحة وجداول تسليم مرحلية محددة لتفادي التأخير والحفاظ على وقت العميل.",
+      "desc_en": "Structured timeline milestones and dedicated schedules to prevent delays and respect client project timelines.",
+      "visible": true
+    }
+  ],
+  "badges": [
+    {
+      "id": "badge_licensed",
+      "text_ar": "مؤسسة مقاولات عامة مسجلة بجدة",
+      "text_en": "Registered General Contractor in Jeddah",
+      "visible": true
+    }
+  ]
+}

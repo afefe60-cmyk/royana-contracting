@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <!-- 
+    ========================================================================
+    عنصر نائب لصورة مشروع (Project Image Placeholder)
+    نسبة الأبعاد: 16:10 (800x500px أو 1600x1000px)
+    لصاحب الموقع: استبدل هذا الملف بصورة حقيقية للمشروع وضعها في public/images/projects/
+    ========================================================================
+  -->
+  <rect width="800" height="500" fill="#1E293B"/>
+  <rect x="20" y="20" width="760" height="460" rx="12" fill="#0B192C" stroke="#334155" stroke-width="2" stroke-dasharray="6 4"/>
+  <circle cx="400" cy="210" r="48" fill="#1E3E62"/>
+  <path d="M375 225L392 205L405 218L418 200L432 225H375Z" fill="#C68B59"/>
+  <circle cx="420" cy="188" r="6" fill="#C68B59"/>
+  <text x="400" y="300" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">صورة مشروع قيد التحديث</text>
+  <text x="400" y="335" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">استبدل الملف في: public/images/projects/</text>
+</svg>

@@ -1,0 +1,182 @@
+[
+  {
+    "slug": "wooden-pallets",
+    "title_ar": "تصنيع وتوريد الطبالي الخشبية",
+    "title_en": "Wooden Pallets Manufacturing & Supply",
+    "short_desc_ar": "تصنيع وتوريد طبالي خشبية بمواصفات قياسية وتخصيصات تلائم متطلبات المستودعات والشحن اللوجستي.",
+    "short_desc_en": "Standard and customized wooden pallets engineered for heavy-duty warehousing and freight logistics.",
+    "icon": "Boxes",
+    "specs_ar": [
+      "خشب طبيعي معالج حرارياً وفق معيار ISPM 15 للتصدير والتخزين الدولي.",
+      "مقاسات قياسية متعددة (120×100 سم، 120×80 سم يوروباليت) مع إمكانية التفصيل حسب الطلب.",
+      "قدرات تحمل أوزان متنوعة تبدأ من 500 كجم وتصل إلى 2500 كجم بحسب التصميم.",
+      "تثبيت بمسامير حلزونية مقواة ومقاومة للاهتزاز أثناء النقل بالرافعات الشوكية."
+    ],
+    "specs_en": [
+      "Heat-treated timber compliant with international ISPM 15 phytosanitary standards.",
+      "Standard dimensional configurations (120x100cm, 120x80cm Euro pallets) plus tailored dimensions.",
+      "Weight-bearing capacities ranging from 500kg up to 2500kg depending on payload design.",
+      "Reinforced ring-shank nails preventing joint loosening during forklift operations."
+    ],
+    "applications_ar": [
+      "مستودعات المواد الغذائية والسلع الاستهلاكية.",
+      "المصانع وخطوط التعبئة والتغليف.",
+      "شركات الخدمات اللوجستية والشحن البري والبحري."
+    ],
+    "applications_en": [
+      "Food and FMCG storage facilities.",
+      "Manufacturing facilities and packaging lines.",
+      "Logistics providers, freight forwarders, and distribution hubs."
+    ]
+  },
+  {
+    "slug": "metal-pallets",
+    "title_ar": "تصنيع وتوريد الطبالي المعدنية",
+    "title_en": "Metal & Steel Pallets Manufacturing & Supply",
+    "short_desc_ar": "طبالي حديدية متينة مصممة لتحمل الأحمال الشاقة والبيئات الصناعية القاسية مع مقاومة فائقة للصدأ والتآكل.",
+    "short_desc_en": "Heavy-duty steel pallets built for extreme industrial conditions, high static loads, and corrosion resistance.",
+    "icon": "ShieldCheck",
+    "specs_ar": [
+      "هياكل فولاذية ملحومة بالكامل ومطلية بدهان إيبوكسي أو جلفنة على الساخن لمقاومة الصدأ والرطوبة.",
+      "طاقة تحمل فائقة للأحمال الثقيلة تصل إلى 5000 كجم في الوضع الثابت.",
+      "أبعاد موحدة دقيقة تتوافق مع أنظمة التخزين الآلية (ASRS) والرفوف المرتفعة.",
+      "عمر افتراضي طويل يقلل من تكاليف الاستبدال الدورية ويوفر أقصى معايير الأمان ضد الحرائق."
+    ],
+    "specs_en": [
+      "Fully welded structural steel with epoxy coating or hot-dip galvanization for humidity resilience.",
+      "Extreme static payload endurance of up to 5,000 kg.",
+      "High dimensional precision tailored for Automated Storage and Retrieval Systems (ASRS).",
+      "Superior lifespan minimizing replacement overheads with full fire-safety compliance."
+    ],
+    "applications_ar": [
+      "المصانع الثقيلة وورش تصنيع وتخزين المعادن ومواد البناء.",
+      "مستودعات المواد الكيميائية والمناطق المقاومة للاشتعال.",
+      "سلاسل الإمداد ذات الاستخدام المكثف طويل الأمد."
+    ],
+    "applications_en": [
+      "Heavy industrial plants, metallurgy, and construction material yards.",
+      "Chemical storage warehouses and fire-risk restricted environments.",
+      "High-turnover closed-loop distribution operations."
+    ]
+  },
+  {
+    "slug": "plastic-pallets",
+    "title_ar": "توريد الطبالي البلاستيكية الصحية",
+    "title_en": "Plastic Pallets Supply & Hygiene Solutions",
+    "short_desc_ar": "طبالي بلاستيكية عالية الجودة مصنوعة من خامات HDPE النقية تلبي أعلى الاشتراطات الصحية لقطاعات الأغذية والأدوية.",
+    "short_desc_en": "Premium HDPE plastic pallets fulfilling strict hygiene standards for food, beverage, and pharmaceutical industries.",
+    "icon": "Layers",
+    "specs_ar": [
+      "مصنعة من بوليمر عالي الكثافة (HDPE) مقاوم للمواد الكيميائية والأحماض والرطوبة بنسبة 100%.",
+      "سطح أملس سهل التنظيف والغسيل والتعقيم دون ترك أي مسام لتجمع البكتيريا.",
+      "أوزان خفيفة ومتجانسة تقلل من تكلفة الشحن وتسهل المناولة اليدوية والميكانيكية.",
+      "تأتي بتصاميم شبكية أو مسطحة ومزودة بحواف مانعة للانزلاق لتثبيت البضائع."
+    ],
+    "specs_en": [
+      "Manufactured from high-density virgin HDPE resistant to moisture, chemicals, and acids.",
+      "Smooth non-porous finish allowing thorough washing and sterilization with zero bacterial retention.",
+      "Uniform tare weight reducing logistics costs and ensuring safe manual and forklift handling.",
+      "Available in vented and flat top surfaces featuring anti-slip rubber grommets."
+    ],
+    "applications_ar": [
+      "مصانع ومستودعات الأدوية والمستلزمات الطبية.",
+      "غرف التبريد والتجميد والمصانع الغذائية ومحامص القهوة والمشروبات.",
+      "المختبرات والبيئات فائقة النظافة (Cleanrooms)."
+    ],
+    "applications_en": [
+      "Pharmaceutical plants and medical supply distributors.",
+      "Cold storage facilities, food processors, and dairy operations.",
+      "Cleanroom environments and testing laboratories."
+    ]
+  },
+  {
+    "slug": "agriculture",
+    "title_ar": "الإنتاج الزراعي وتوريد المعدات الزراعية",
+    "title_en": "Agricultural Production & Equipment Supply",
+    "short_desc_ar": "توريد معدات الري الحديث والبيوت المحمية وحلول الإنتاج الزراعي المستدام للمزارع والمشاريع الإنتاجية.",
+    "short_desc_en": "Supplying advanced irrigation systems, greenhouses, and sustainable agricultural equipment for farms and agribusinesses.",
+    "icon": "Sprout",
+    "specs_ar": [
+      "أنظمة الري بالتنقيط والرش المحوري الموفرة للمياه المعتمدة لأجواء المملكة الجافة.",
+      "توريد وتركيب الهياكل المعدنية للبيوت المحمية العادية والمكيفة.",
+      "مضخات المياه الزراعية الغاطسة والسطحية وأنظمة الفلاتر والتسميد الآلي.",
+      "أدوات ومستلزمات الحصاد والتخزين الزراعي وحماية المحاصيل."
+    ],
+    "specs_en": [
+      "Water-efficient drip and center-pivot irrigation setups engineered for arid climates.",
+      "Procurement and assembly of structural steel for conventional and climate-controlled greenhouses.",
+      "Submersible agricultural pumps, filtration units, and automated fertigation systems.",
+      "Harvesting, crop protection, and post-harvest handling equipment."
+    ],
+    "applications_ar": [
+      "المزارع الإنتاجية والمشاريع الزراعية المتخصصة بمنطقة مكة المكرمة والغربية.",
+      "مشاريع الاستثمار الزراعي والبيوت المحمية الحديثة.",
+      "المؤسسات المهتمة بالأمن الغذائي والإنتاج المستدام."
+    ],
+    "applications_en": [
+      "Commercial farms and specialized agricultural holdings across Western Saudi Arabia.",
+      "Controlled-environment agriculture (CEA) and high-yield greenhouse investments.",
+      "Sustainable agri-food production ventures."
+    ]
+  },
+  {
+    "slug": "factory-lines",
+    "title_ar": "توريد وتركيب خطوط الإنتاج للمصانع",
+    "title_en": "Industrial Production Lines Supply & Installation",
+    "short_desc_ar": "توريد وتركيب وصيانة خطوط الإنتاج الميكانيكية وسيور النقل للمصانع والورش الإنتاجية.",
+    "short_desc_en": "Supply, installation, and commissioning of mechanical assembly lines, conveyors, and factory automation setups.",
+    "icon": "Factory",
+    "specs_ar": [
+      "سيور ناقلة آلية (Conveyor Belts) بمحركات متطورة وتحكم بالسرعات المتغيرة.",
+      "ماكينات التعبئة والتغليف واللصق وخطوط الفرز والتجميع الميكانيكي.",
+      "أعمال التركيبات الميكانيكية والهوائية (Pneumatic) والكهربائية المتكاملة.",
+      "خدمات الصيانة الدورية وتوفير قطع الغيار وتدريب فرق التشغيل الميدانية."
+    ],
+    "specs_en": [
+      "Automated modular conveyor belt systems with variable frequency speed drives.",
+      "Filling, sealing, labeling, sorting, and mechanical packaging assembly units.",
+      "Comprehensive mechanical, pneumatic, and electrical plant integration.",
+      "Routine preventative servicing, spare parts stocking, and local operator orientation."
+    ],
+    "applications_ar": [
+      "مصانع الأغذية والمشروبات والعبوات البلاستيكية والكرتونية.",
+      "المنشآت الصناعية في المدن الصناعية بجدة ورابغ.",
+      "مراكز الفرز والخدمات اللوجستية والتوزيع السريع."
+    ],
+    "applications_en": [
+      "F&B processing plants, packaging, bottling, and corrugated cardboard factories.",
+      "Industrial manufacturing entities in Jeddah 1st, 2nd, and 3rd Industrial Cities.",
+      "Parcel fulfillment and automated regional sorting warehouses."
+    ]
+  },
+  {
+    "slug": "solar-energy",
+    "title_ar": "أنظمة وحلول الطاقة الشمسية",
+    "title_en": "Solar Energy Systems & Renewable Solutions",
+    "short_desc_ar": "تصميم وتوريد وتركيب أنظمة الطاقة الكهروضوئية للمزارع والمستودعات والمباني لتقليل فاتورة الكهرباء.",
+    "short_desc_en": "Design, procurement, and turnkey deployment of photovoltaic (PV) solar systems for commercial rooftops and remote farm setups.",
+    "icon": "Sun",
+    "specs_ar": [
+      "ألواح شمسية عالية الكفاءة (Monocrystalline) معتمدة ومقاومة لدرجات الحرارة المرتفعة والغبار.",
+      "محولات تيار ذكية (Inverters) متصلة بالشبكة (On-Grid) أو مستقلة مع بطاريات تخزين (Off-Grid).",
+      "هياكل تثبيت ألمنيوم وفولاذ مجلفن مقاومة للرياح الساحلية في منطقة البحر الأحمر.",
+      "أنظمة مراقبة ذكية للإنتاج اللحظي عبر تطبيقات الهاتف وسجلات التوليد."
+    ],
+    "specs_en": [
+      "High-efficiency monocrystalline solar panels engineered for intense heat and sand resistance.",
+      "Smart on-grid, off-grid, and hybrid string/central inverters with battery storage integration.",
+      "Corrosion-resistant aluminum and galvanized steel racking built for coastal wind loads.",
+      "Real-time digital generation analytics via smart mobile and desktop dashboards."
+    ],
+    "applications_ar": [
+      "المزارع والآبار والمواقع النائية غير المربوطة بشبكة الكهرباء العامة.",
+      "مستودعات ومصانع ترغب في تقليل تكاليف استهلاك الطاقة التشغيلية.",
+      "المباني والمجمعات السكنية والتجارية الداعمة للاستدامة البيئية."
+    ],
+    "applications_en": [
+      "Remote agricultural projects, water pumping wells, and off-grid facilities.",
+      "Logistics warehouses and industrial plants optimizing operational utility expenses.",
+      "Sustainable residential estates and commercial buildings targeting green certifications."
+    ]
+  }
+]

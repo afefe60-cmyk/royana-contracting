@@ -1,0 +1,40 @@
+{
+  "id": "durrat-al-arus-restoration",
+  "title_ar": "أعمال الترميم والتشطيبات في مخطط درة العروس",
+  "title_en": "Restoration and Finishing Works at Durrat Al-Arus Scheme",
+  "category": "restoration",
+  "city_ar": "جدة",
+  "city_en": "Jeddah",
+  "location_ar": "مخطط درة العروس",
+  "location_en": "Durrat Al-Arus Scheme",
+  "year": "2024",
+  "client_type_ar": "خاص",
+  "client_type_en": "Private Residential",
+  "featured": true,
+  "draft": false,
+  "thumbnail": "/images/projects/durrat-al-arus-thumb.svg",
+  "before_image": "/images/projects/durrat-al-arus-before.svg",
+  "after_image": "/images/projects/durrat-al-arus-after.svg",
+  "gallery": [
+    "/images/projects/durrat-al-arus-before.svg",
+    "/images/projects/durrat-al-arus-after.svg"
+  ],
+  "challenge_ar": "معالجة تأثيرات الرطوبة الساحلية العالية والأملاح البحرية على الواجهات الخرسانية والتشطيبات الخارجية، وضرورة استعادة الكفاءة الإنشائية والجمالية للمبنى وفق معايير الحماية البحرية.",
+  "challenge_en": "Addressing the severe impact of coastal humidity and saline airborne salts on concrete facades and exterior finishes, restoring structural integrity and aesthetics per marine-grade standards.",
+  "solution_ar": "استخدام مواد تدعيم وعزل كيميائي معتمدة ومقاومة للأملاح، مع إعادة معالجة الشروخ والخرسانة السطحية وتطبيق دهانات مقاومة للعوامل الجوية وتجديد التمديدات الخارجية.",
+  "solution_en": "Application of certified marine-grade anti-saline insulation coatings, surface concrete restoration, weather-resistant architectural paints, and complete renewal of external MEP routing.",
+  "scope_ar": [
+    "فحص واجهات المبنى ورصد مواضع تآكل الخرسانة وتأثر حديد التسليح.",
+    "تنظيف ومعالجة الأسطح وتطبيق طبقات التدعيم والحماية المانعة لتسرب الرطوبة.",
+    "تجديد أعمال اللياسة والدهانات المقاومة للبيئة الساحلية.",
+    "مراجعة وتحديث مسارات شبكات السباكة وتصريف مياه الأمطار والأسطح."
+  ],
+  "scope_en": [
+    "Facade condition assessment mapping concrete spalling and reinforcement corrosion.",
+    "Surface preparation, structural patch repairs, and application of specialized protective sealers.",
+    "Application of heavy-duty exterior coastal plaster and anti-efflorescence finishes.",
+    "Inspection and upgrading of drainage networks and rainwater catchment systems."
+  ],
+  "outcome_ar": "استعادة الواجهات لمظهرها المعماري الراقي مع ضمان حماية طويلة الأمد ضد الرطوبة والأملاح الساحلية المباشرة.",
+  "outcome_en": "Restoration of pristine architectural aesthetics backed by durable long-term marine-grade weatherproofing."
+}

@@ -1,0 +1,154 @@
+[
+  {
+    "slug": "construction-and-building",
+    "title_ar": "الإنشاءات والبناء والترميم",
+    "title_en": "Construction, Building & Restoration",
+    "short_desc_ar": "تصميم وتنفيذ المباني، التجديد والترميم الشامل، فحص وتقييم المنشآت، وعزل وهياكل الأسطح وفق كود البناء السعودي.",
+    "short_desc_en": "Building design and construction, comprehensive restoration, building inspection and assessment, and roof structures per Saudi Building Code.",
+    "icon": "Building2",
+    "scope_ar": [
+      "تصميم وتنفيذ المباني السكنية والتجارية (عظم وتشطيب متكامل).",
+      "أعمال الترميم الشامل ومعالجة الشروخ والتشققات الهيكلية وتدعيم الخرسانة.",
+      "فحص وتقييم سلامة المباني وإعداد التقارير الفنية الميدانية.",
+      "تركيب وصيانة الهياكل المعدنية وأعمال العزل المائي والحراري للأسطح.",
+      "أعمال اللياسة والدهانات والتشطيبات الداخلية والخارجية الفاخرة."
+    ],
+    "scope_en": [
+      "Design and turnkey construction of residential and commercial buildings.",
+      "Comprehensive structural restoration, crack repairs, and concrete strengthening.",
+      "Structural safety inspections and comprehensive engineering assessment reports.",
+      "Installation and maintenance of steel structures, thermal and waterproof roof insulation.",
+      "High-standard plastering, painting, and interior/exterior architectural finishing."
+    ],
+    "steps_ar": [
+      { "title": "المعاينة ورفع المساحات", "desc": "زيارة الموقع بجدة وفحص الحالة الإنشائية وتوثيق الاحتياجات الهندسية بدقة." },
+      { "title": "دراسة المخططات وتقدير التكلفة", "desc": "إعداد مقايسة تفصيلية (BOQ) مع جداول الكميات والمواصفات المعتمدة." },
+      { "title": "اعتماد العقد والجدول الزمني", "desc": "توقيع اتفاقية رسمية محددة التواريخ والدفعات ومراحل التسليم." },
+      { "title": "التنفيذ والإشراف الهندسي", "desc": "مباشرة الأعمال وتطبيق معايير السلامة المهنية ومطابقة الكود السعودي." },
+      { "title": "التسليم الابتدائي والنهائي والضمان", "desc": "فحص نهائي بمحضر رسمي مع تسليم شهادة الضمان المعتمدة." }
+    ],
+    "steps_en": [
+      { "title": "Site Inspection & Survey", "desc": "On-site visit in Jeddah to inspect structural conditions and document technical requirements." },
+      { "title": "Plan Review & Cost Estimation", "desc": "Preparing detailed Bill of Quantities (BOQ) with certified specifications and schedules." },
+      { "title": "Contract & Timeline Sign-off", "desc": "Signing formal contract specifying timeline milestones, deliverables, and payment terms." },
+      { "title": "Execution & Engineering Oversight", "desc": "Commencing works under direct supervision compliant with the Saudi Building Code." },
+      { "title": "Handover & Formal Warranty", "desc": "Final acceptance walkthrough with official sign-off protocol and warranty certificate." }
+    ],
+    "faqs_ar": [
+      {
+        "q": "هل تقدمون خدمات الفحص الهندسي قبل شراء العقار أو الترميم في جدة؟",
+        "a": "نعم، يقدم فريقنا الهندسي كشفاً ميدانياً شاملاً للهيكل الخرساني والأسطح وشبكات السباكة والكهرباء مع تقرير فني يوضح التحديات والتكلفة المتوقعة."
+      },
+      {
+        "q": "ما هي معايير الضمان التي تقدمونها على أعمال العزل والترميم؟",
+        "a": "نوفر ضماناً خطياً موثقاً في العقد يغطي أعمال العزل المائي والحراري والتدعيم الإنشائي وفق المعايير المعمول بها."
+      }
+    ],
+    "faqs_en": [
+      {
+        "q": "Do you provide engineering inspection before buying a property or starting restoration in Jeddah?",
+        "a": "Yes, our engineering team conducts comprehensive on-site inspections for concrete structures, roofing, plumbing, and electrical systems with detailed assessment reports."
+      },
+      {
+        "q": "What warranty standards do you offer for insulation and restoration works?",
+        "a": "We provide formal written warranties documented in the contract covering waterproofing, thermal insulation, and structural repairs."
+      }
+    ]
+  },
+  {
+    "slug": "mep-electrical-water",
+    "title_ar": "شبكات الكهرباء والمياه والصرف",
+    "title_en": "Electrical, Plumbing & Water Networks",
+    "short_desc_ar": "تصميم وتنفيذ وتحديث شبكات الكهرباء والمياه للمباني السكنية والتجارية والمرافق بأحدث المعايير الهندسية.",
+    "short_desc_en": "Engineering design, implementation, and maintenance of electrical, water supply, and drainage networks for residential and commercial facilities.",
+    "icon": "Zap",
+    "scope_ar": [
+      "تصميم وتنفيذ لوحات التوزيع والقواطع الكهربائية والتمديدات الأرضية والجدارية.",
+      "تأسيس وصيانة شبكات المياه الداخلية والخزانات الأرضية والعلوية وأنظمة الضخ.",
+      "تمديد شبكات الصرف الصحي ومعالجة التسربات وتركيب أنظمة التهوية الصحية.",
+      "أنظمة الإنارة الحديثة، الإنارة المعمارية، وتوزيع الأحمال المتوازنة.",
+      "فحص عزل الكابلات والدوائر الكهربائية واختبار ضغط شبكات التغذية المائية."
+    ],
+    "scope_en": [
+      "Design and installation of main/sub electrical panels, conduits, and circuits.",
+      "Laying and maintenance of internal water piping, ground/roof tanks, and boosting pumps.",
+      "Drainage network installation, leak detection, and advanced sanitary piping.",
+      "Modern architectural lighting, LED systems, and balanced load distribution.",
+      "Insulation resistance testing, megger checks, and hydrostatic pressure testing for water lines."
+    ],
+    "steps_ar": [
+      { "title": "دراسة المخططات وأحمال الطاقة والمياه", "desc": "حساب متطلبات الاستهلاك والتأكد من توافقها مع اشتراطات شركة الكهرباء والمياه الوطنية." },
+      { "title": "اختيار الخامات المعتمدة", "desc": "استخدام أنابيب وكابلات حاصلة على شهادات مطابقة الجودة السعودية (SASO)." },
+      { "title": "التمديد والتركيب المحكم", "desc": "تنفيذ التمديدات تحت إشراف فني متخصص وتطبيق حماية التماس الأرضي والعزل." },
+      { "title": "الاختبارات الفنية والضغط", "desc": "إجراء فحص ضغط المياه بالبار واختبار توازن الأحمال الكهربائية للتأكد من انعدام التسرب أو التحميل الزائد." },
+      { "title": "التسليم ومخططات كما نُفذ (As-Built)", "desc": "تسليم العميل مخططات واضحة للمسارات لسهولة الصيانة المستقبلية مع وثائق الضمان." }
+    ],
+    "steps_en": [
+      { "title": "Load Analysis & Schematics Review", "desc": "Calculating consumption requirements compliant with SEC and National Water Company standards." },
+      { "title": "Certified Materials Selection", "desc": "Utilizing SASO-certified pipes, fittings, breakers, and cables for durability and safety." },
+      { "title": "Precision Installation", "desc": "Executing MEP conduits and distribution under specialized supervision with complete earthing protection." },
+      { "title": "Pressure & Load Testing", "desc": "Conducting hydrostatic leak tests and electrical load balancing checks before closure." },
+      { "title": "Handover & As-Built Drawings", "desc": "Delivering as-built schematic documentation to facilitate future maintenance alongside warranty certs." }
+    ],
+    "faqs_ar": [
+      {
+        "q": "كيف يتم التعامل مع تسربات المياه المعقدة في المباني القائمة؟",
+        "a": "نعتمد على فحص مسارات الشبكة بأجهزة كشف موضعية لتحديد مصدر التسرب بدقة متناهية دون تكسير عشوائي، ثم استبدال الخط التالف واختبار الضغط مجدداً."
+      }
+    ],
+    "faqs_en": [
+      {
+        "q": "How do you handle hidden water leaks in existing buildings?",
+        "a": "We utilize localized detection techniques to accurately pinpoint the leak source without unnecessary demolition, replacing damaged sections and pressure testing."
+      }
+    ]
+  },
+  {
+    "slug": "project-management-engineering",
+    "title_ar": "إدارة المشاريع والاستشارات الهندسية",
+    "title_en": "Project Management & Engineering Consulting",
+    "short_desc_ar": "إشراف هندسي متكامل، ضبط الجودة والتكلفة، وإدارة المخططات والجداول الزمنية لضمان كفاءة التنفيذ وتفادي الهدر.",
+    "short_desc_en": "Comprehensive engineering supervision, quality & cost control, timeline governance, and construction management to eliminate waste and delays.",
+    "icon": "ClipboardCheck",
+    "scope_ar": [
+      "إعداد ومراجعة المخططات الهندسية وجداول الكميات ومواصفات العقود.",
+      "الإشراف الميداني المستمر على مقاولي التنفيذ ومطابقة الأعمال المنجزة.",
+      "مراقبة الجودة وفحص المواد الموردة للموقع ومطابقتها للمواصفات الفنية.",
+      "إدارة التكاليف وإعداد المستخلصات المرحلية ومتابعة الميزانية التشغيلية.",
+      "إدارة السلامة المهنية ومخاطر الموقع وتوثيق محاضر الاستلام."
+    ],
+    "scope_en": [
+      "Preparation and review of architectural drawings, BOQ, and contract technical specifications.",
+      "Continuous on-site supervision over subcontractors ensuring alignment with approved plans.",
+      "Quality assurance and material testing on site against approved technical parameters.",
+      "Cost management, progress payment certificates, and budget optimization.",
+      "Occupational health & safety management, site risk mitigation, and formal handover inspection."
+    ],
+    "steps_ar": [
+      { "title": "تحديد أهداف المشروع ونطاق العمل", "desc": "جلسة عمل تفصيلية مع المالك لتحديد الأولويات والميزانية المرصودة والتطلعات الفنية." },
+      { "title": "إعداد خطة إدارة المشروع (PMP)", "desc": "صياغة الجدول الزمني الحرج (CPM)، خطة إدارة المخاطر، وتوزيع المسؤوليات." },
+      { "title": "المتابعة الميدانية والتقارير الدورية", "desc": "إصدار تقارير أسبوعية وشهرية توضح نسب الإنجاز الفعلي مقابل المخطط مدعمة بالصور والبيانات." },
+      { "title": "ضبط التكاليف والمستخلصات", "desc": "تدقيق فواتير الموردين والمقاولين وضمان عدم صرف أي دفعة إلا بعد التأكد التام من سلامة الإنجاز." },
+      { "title": "الإغلاق الهندسي والتسليم", "desc": "تجهيز ملف التسليم الشامل وكتيبات التشغيل والصيانة والضمانات الرسمية." }
+    ],
+    "steps_en": [
+      { "title": "Scope & Objectives Alignment", "desc": "Detailed discovery session with the owner to define priorities, allocated budget, and technical benchmarks." },
+      { "title": "Project Management Plan (PMP)", "desc": "Formulating Critical Path Method (CPM) timelines, risk management matrix, and accountability charts." },
+      { "title": "On-Site Supervision & Periodic Reports", "desc": "Issuing weekly and monthly progress reports contrasting actual vs planned progress with photographic logs." },
+      { "title": "Cost Control & Payment Certification", "desc": "Auditing contractor submittals ensuring payments correlate exclusively to inspected milestones." },
+      { "title": "Engineering Closeout & Commissioning", "desc": "Compiling turnkey handover dossier, O&M manuals, and formal warranty certifications." }
+    ],
+    "faqs_ar": [
+      {
+        "q": "لماذا يحتاج مالك المبنى أو المشروع إلى استشاري إدارة مشاريع؟",
+        "a": "إدارة المشروع المستقلة تضمن حماية أموال المالك من الهدر والأخطاء التنفيذية والتأخير، وتضمن تنفيذ كل بند بأعلى جودة مطابقة للمواصفات دون زيادة غير مبررة في التكلفة."
+      }
+    ],
+    "faqs_en": [
+      {
+        "q": "Why does a building or project owner need project management consulting?",
+        "a": "Independent project management safeguards client investments against waste, technical errors, and delays, ensuring each phase meets specifications at optimized cost."
+      }
+    ]
+  }
+]

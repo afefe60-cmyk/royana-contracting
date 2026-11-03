@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none" width="100%" height="100%">
+  <rect width="800" height="600" fill="#475569"/>
+  <!-- Weathered Building Silhouette -->
+  <path d="M100 500V250L400 120L700 250V500H100Z" fill="#334155"/>
+  <rect x="180" y="280" width="100" height="120" rx="4" fill="#1E293B" stroke="#64748B" stroke-width="4"/>
+  <rect x="520" y="280" width="100" height="120" rx="4" fill="#1E293B" stroke="#64748B" stroke-width="4"/>
+  <rect x="350" y="360" width="100" height="140" rx="4" fill="#1E293B"/>
+  <!-- Cracks and salt wear indicator lines -->
+  <path d="M220 180L235 220L215 250L240 280" stroke="#94A3B8" stroke-width="3" stroke-dasharray="4 2"/>
+  <path d="M580 200L590 230L575 260" stroke="#94A3B8" stroke-width="2.5" stroke-dasharray="3 3"/>
+  <rect x="40" y="40" width="220" height="48" rx="8" fill="#DC2626" fill-opacity="0.9"/>
+  <text x="150" y="72" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">قبل الترميم (Before)</text>
+  <rect x="40" y="520" width="720" height="48" rx="8" fill="#0F172A" fill-opacity="0.85"/>
+  <text x="400" y="551" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="16" text-anchor="middle">مخطط درة العروس - حالة الواجهات والخرسانة قبل المعالجة</text>
+</svg>
