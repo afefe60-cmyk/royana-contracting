@@ -78,50 +78,57 @@ export default async function ContactPage({ params }: ContactPageProps) {
                   {isAr ? "معلومات الاتصال المباشر" : "Direct Contact Details"}
                 </h2>
 
-                {/* Phones */}
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-[#0B192C] flex items-center justify-center flex-shrink-0 text-[#C68B59]">
-                    <Phone className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <p className="text-xs text-slate-500 font-semibold mb-1">
-                      {isAr ? "أرقام الهاتف المعتمدة" : "Official Phone Numbers"}
-                    </p>
-                    <div className="flex flex-col gap-1">
+                {/* Managers Direct Channels */}
+                <div className="space-y-3">
+                  <p className="text-xs text-slate-500 font-bold uppercase tracking-wider">
+                    {isAr ? "قنوات الإدارة والمشاريع المباشرة" : "Direct Management Channels"}
+                  </p>
+
+                  {/* Projects Manager */}
+                  <div className="p-3.5 rounded-xl bg-white border border-slate-200 flex items-center justify-between">
+                    <div>
+                      <p className="text-xs font-bold text-[#0B192C]">
+                        {isAr ? "مدير المشروعات والمعاينات" : "Projects & Survey Manager"}
+                      </p>
                       <a
-                        href={phoneUrl}
-                        className="text-base font-bold text-[#0B192C] hover:text-[#C68B59] transition-colors"
+                        href="tel:+966508805861"
+                        className="text-sm font-bold text-[#C68B59] hover:underline"
                         dir="ltr"
                       >
-                        {settings.contact.phone_display}
-                      </a>
-                      <a
-                        href={phoneAltUrl}
-                        className="text-sm font-semibold text-slate-700 hover:text-[#C68B59] transition-colors"
-                        dir="ltr"
-                      >
-                        {settings.contact.phone_alt_display}
+                        050 880 5861
                       </a>
                     </div>
-                  </div>
-                </div>
-
-                {/* WhatsApp */}
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-[#25D366] flex items-center justify-center flex-shrink-0 text-[#0B192C]">
-                    <MessageCircle className="w-5 h-5 fill-[#0B192C]" />
-                  </div>
-                  <div>
-                    <p className="text-xs text-slate-500 font-semibold mb-1">
-                      {isAr ? "محادثة واتساب فورية" : "Instant WhatsApp"}
-                    </p>
                     <a
-                      href={whatsappUrl}
+                      href="https://wa.me/966508805861?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%AA%D9%88%D8%A7%D8%B5%D9%84%20%D9%85%D8%B9%20%D9%85%D8%AF%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D8%B4%D8%B1%D9%88%D8%B9%D8%A7%D8%AA."
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-sm font-bold text-[#0B192C] hover:text-[#25D366] transition-colors"
+                      className="px-3 py-1.5 rounded-lg bg-[#25D366] text-[#0B192C] font-bold text-xs hover:bg-[#20BA57] transition"
                     >
-                      {isAr ? "بدء محادثة فورية مع المهندس" : "Start Live Chat with Engineer"}
+                      {isAr ? "واتساب المشاريع" : "WhatsApp"}
+                    </a>
+                  </div>
+
+                  {/* Head Manager */}
+                  <div className="p-3.5 rounded-xl bg-white border border-slate-200 flex items-center justify-between">
+                    <div>
+                      <p className="text-xs font-bold text-[#0B192C]">
+                        {isAr ? "المدير العام والتعاقدات (Head Manager)" : "Head Manager"}
+                      </p>
+                      <a
+                        href="tel:+966568024374"
+                        className="text-sm font-bold text-[#0284C7] hover:underline"
+                        dir="ltr"
+                      >
+                        056 802 4374
+                      </a>
+                    </div>
+                    <a
+                      href="https://wa.me/966568024374?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%AA%D9%88%D8%A7%D8%B5%D9%84%20%D9%85%D8%B9%20%D8%A7%D9%84%D9%85%D8%AF%D9%8A%D8%B1%20%D8%A7%D9%84%D8%B9%D8%A7%D9%85."
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-3 py-1.5 rounded-lg bg-[#25D366] text-[#0B192C] font-bold text-xs hover:bg-[#20BA57] transition"
+                    >
+                      {isAr ? "واتساب الإدارة" : "WhatsApp"}
                     </a>
                   </div>
                 </div>

@@ -1,6 +1,7 @@
 import React from "react";
-import { ShieldCheck, MessageCircle, ArrowLeft, ArrowRight } from "lucide-react";
+import { ShieldCheck, MessageCircle, ArrowLeft, ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import { HeroVideoShowcase } from "@/components/home/HeroVideoShowcase";
 import { buildWhatsAppUrl } from "@/lib/utils";
 import type { BadgeItem } from "@/types";
 
@@ -26,22 +27,26 @@ export function HeroSection({
   );
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-50 py-16 sm:py-24 lg:py-28 border-b border-slate-200">
+    <section className="relative overflow-hidden bg-gradient-to-b from-[#0B192C]/[0.03] via-white to-slate-50 py-16 sm:py-24 border-b border-slate-200">
       {/* Subtle geometric engineering grid pattern */}
       <div
-        className="absolute inset-0 opacity-[0.03] pointer-events-none"
+        className="absolute inset-0 opacity-[0.04] pointer-events-none"
         style={{
-          backgroundImage: `radial-gradient(#0B192C 1px, transparent 1px)`,
-          backgroundSize: "24px 24px",
+          backgroundImage: `
+            linear-gradient(to right, #39B5FF 1px, transparent 1px),
+            linear-gradient(to bottom, #0B192C 1px, transparent 1px)
+          `,
+          backgroundSize: "32px 32px",
         }}
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-3xl mx-auto text-center">
-          {/* Verified Badges from site-settings (strictly conditional) */}
+        <div className="max-w-4xl mx-auto text-center">
+          {/* Verified Badges with Brand Cyan highlight */}
           {visibleBadges.length > 0 && (
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0B192C]/5 border border-[#C68B59]/30 text-xs sm:text-sm font-semibold text-[#0B192C] mb-6">
-              <ShieldCheck className="w-4 h-4 text-[#C68B59]" />
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#0B192C]/5 border border-[#39B5FF]/40 text-xs sm:text-sm font-bold text-[#0B192C] mb-6 shadow-2xs">
+              <span className="w-2 h-2 rounded-full bg-[#39B5FF] animate-pulse" />
+              <ShieldCheck className="w-4 h-4 text-[#39B5FF]" />
               <span>{isAr ? visibleBadges[0].text_ar : visibleBadges[0].text_en}</span>
             </div>
           )}
@@ -51,22 +56,26 @@ export function HeroSection({
             {isAr ? (
               <>
                 مقاولات عامة وترميم بجدة:{" "}
-                <span className="text-[#C68B59]">دقة في التنفيذ</span>، والتزام
-                بالمواصفات الهندسية
+                <span className="text-[#0284C7] underline decoration-[#39B5FF] decoration-4 underline-offset-8">
+                  دقة هندسية
+                </span>
+                ، والتزام بأعلى معايير الكود السعودي
               </>
             ) : (
               <>
                 General Contracting & Restoration in Jeddah:{" "}
-                <span className="text-[#C68B59]">Engineered Precision</span> &
-                Proven Reliability
+                <span className="text-[#0284C7] underline decoration-[#39B5FF] decoration-4 underline-offset-8">
+                  Engineered Precision
+                </span>
+                , Backed by Saudi Building Code
               </>
             )}
           </h1>
 
           {/* Subtitle */}
-          <p className="text-base sm:text-xl text-slate-600 leading-relaxed mb-10 max-w-2xl mx-auto">
+          <p className="text-base sm:text-xl text-slate-600 leading-relaxed mb-10 max-w-3xl mx-auto">
             {isAr
-              ? "ننفذ مشاريع الإنشاءات والترميم الشامل، وتحديث شبكات الكهرباء والمياه، والإشراف الهندسي المتكامل للفلل والمنشآت بجدة وفق كود البناء السعودي وضمان رسمي موثق."
+              ? "ننفذ مشاريع الإنشاءات والترميم الشامل، وتحديث شبكات الكهرباء والمياه، والإشراف الهندسي الميداني المباشر للفلل والمنشآت بجدة وفق أعلى معايير الجودة والضمان المعتمد."
               : "Executing turnkey construction, comprehensive villa restoration, MEP utilities, and on-site engineering management across Jeddah in full alignment with the Saudi Building Code."}
           </p>
 
@@ -77,9 +86,9 @@ export function HeroSection({
               href={`/${locale}/contact`}
               variant="primary"
               size="lg"
-              className="w-full sm:w-auto"
+              className="w-full sm:w-auto shadow-md hover:shadow-lg"
             >
-              <span>{isAr ? "اطلب عرض سعر الآن" : "Request a Quote Now"}</span>
+              <span>{isAr ? "اطلب عرض سعر ومعاينة" : "Request a Quote Now"}</span>
               {isAr ? (
                 <ArrowLeft className="w-5 h-5 text-[#0B192C]" />
               ) : (
@@ -93,19 +102,22 @@ export function HeroSection({
               external
               variant="whatsapp"
               size="lg"
-              className="w-full sm:w-auto"
+              className="w-full sm:w-auto shadow-md hover:shadow-lg"
             >
               <MessageCircle className="w-5 h-5 fill-[#0B192C] text-[#0B192C]" />
-              <span>{isAr ? "تواصل فوري عبر واتساب" : "Chat on WhatsApp"}</span>
+              <span>{isAr ? "محادثة فورية مع المهندس" : "Chat on WhatsApp"}</span>
             </Button>
           </div>
 
           {/* Localized trust note */}
-          <p className="mt-5 text-xs text-slate-500">
+          <p className="mt-4 text-xs text-slate-500">
             {isAr
               ? "معاينة ميدانية ورفع مساحي وإعداد مقايسة كميات (BOQ) دقيقة لمشروعك في جدة"
               : "On-site inspection, survey, and itemized BOQ preparation for your Jeddah project"}
           </p>
+
+          {/* Video Showcase Container in Hero */}
+          <HeroVideoShowcase locale={locale} />
         </div>
       </div>
     </section>

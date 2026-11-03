@@ -3,9 +3,10 @@ import type { Metadata } from "next";
 import { IBM_Plex_Sans_Arabic, Plus_Jakarta_Sans } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { FloatingWhatsApp } from "@/components/conversion/FloatingWhatsApp";
+import { SmartAssistantWidget } from "@/components/conversion/SmartAssistantWidget";
 import { MobileBottomBar } from "@/components/conversion/MobileBottomBar";
 import { CookieConsent } from "@/components/conversion/CookieConsent";
+import { SplashScreen } from "@/components/ui/SplashScreen";
 import { LocalBusinessSchema } from "@/components/seo/SchemaScripts";
 import { getSiteSettings } from "@/lib/content";
 
@@ -90,6 +91,7 @@ export default async function LocaleLayout({
         <LocalBusinessSchema locale={locale} />
       </head>
       <body className={isAr ? "font-arabic" : "font-sans"}>
+        <SplashScreen />
         <Header
           locale={locale}
           phone={settings.contact.phone}
@@ -98,10 +100,9 @@ export default async function LocaleLayout({
         <main className="min-h-screen">{children}</main>
         <Footer locale={locale} />
 
-        {/* Global Conversion Enhancers */}
-        <FloatingWhatsApp
-          phone={settings.contact.whatsapp}
-        />
+        {/* Intelligent Multi-Manager Assistant & WhatsApp Widget */}
+        <SmartAssistantWidget locale={locale} />
+        
         <MobileBottomBar
           locale={locale}
           phone={settings.contact.phone}
