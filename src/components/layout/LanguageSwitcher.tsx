@@ -43,11 +43,11 @@ export function LanguageSwitcher({
   return (
     <Link
       href={targetPath}
-      className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs sm:text-sm font-semibold rounded-md border border-slate-300 dark:border-slate-700 hover:border-[#C68B59] hover:text-[#C68B59] transition-colors"
+      className="inline-flex items-center gap-2 px-3 py-1.5 text-xs sm:text-sm font-bold text-white bg-[#162C46] border border-[#1E3E62] rounded-lg hover:border-[#39B5FF] hover:bg-[#1E3E62] transition-all shadow-sm group"
       aria-label={`تبديل اللغة إلى ${targetLabel}`}
     >
-      <Globe className="w-4 h-4 text-[#C68B59]" />
-      <span>{targetLabel}</span>
+      <Globe className="w-4 h-4 text-[#39B5FF] transition-transform group-hover:scale-110" />
+      <span className="font-semibold text-slate-100 group-hover:text-white transition-colors">{targetLabel}</span>
     </Link>
   );
 }
