@@ -8,6 +8,7 @@ import { BeforeAfterSlider } from "@/components/ui/BeforeAfterSlider";
 import { Button } from "@/components/ui/Button";
 import { BreadcrumbSchema } from "@/components/seo/SchemaScripts";
 import { FinalCTASection } from "@/components/home/FinalCTASection";
+import { InteractiveGallery } from "@/components/ui/InteractiveGallery";
 
 interface ProjectDetailPageProps {
   params: Promise<{ locale: string; id: string }>;
@@ -173,6 +174,18 @@ export default async function ProjectDetailPage({
                   ))}
                 </div>
               </div>
+
+              {/* Project Live Gallery */}
+              {project.gallery && project.gallery.length > 0 && (
+                <div className="pt-6 border-t border-slate-200">
+                  <InteractiveGallery
+                    images={project.gallery}
+                    title={isAr ? "معرض الصور الميدانية الحية للمشروع:" : "Live Field Execution Gallery:"}
+                    badgeLabel={isAr ? "توثيق ميداني حقيقي" : "Real Site Execution"}
+                    isAr={isAr}
+                  />
+                </div>
+              )}
 
               {/* Outcome */}
               <div className="p-6 sm:p-8 rounded-2xl bg-[#0B192C] text-white">

@@ -1,0 +1,48 @@
+{
+  "id": "factory-equipment-installation",
+  "title_ar": "مشروع توريد وتركيب خطوط الإنتاج والمعدات الصناعية",
+  "title_en": "Industrial Equipment & Production Lines Turnkey Installation",
+  "category": "industrial",
+  "city_ar": "جدة",
+  "city_en": "Jeddah",
+  "location_ar": "المدينة الصناعية بجدة",
+  "location_en": "Jeddah Industrial City",
+  "year": "2024",
+  "client_type_ar": "منشأة صناعية",
+  "client_type_en": "Industrial Plant",
+  "featured": true,
+  "draft": false,
+  "thumbnail": "/images/projects/factory-installation/cover.webp",
+  "before_image": null,
+  "after_image": "/images/projects/factory-installation/factory-installation-1.webp",
+  "gallery": [
+    "/images/projects/factory-installation/factory-installation-1.webp",
+    "/images/projects/factory-installation/factory-installation-2.webp",
+    "/images/projects/factory-installation/factory-installation-3.webp",
+    "/images/projects/factory-installation/factory-installation-4.webp",
+    "/images/projects/factory-installation/factory-installation-5.webp",
+    "/images/projects/factory-installation/factory-installation-6.webp",
+    "/images/projects/factory-installation/factory-installation-7.webp",
+    "/images/projects/factory-installation/factory-installation-8.webp"
+  ],
+  "challenge_ar": "رفع وتثبيت معدات ثقيلة وخطوط تجميع ميكانيكية ضخمة داخل صالة الإنتاج، مع ضرورة تحقيق محاذاة ليزرية دقيقة لسيور النقل والماكينات لضمان استقرار التشغيل وتقليل الاهتزازات التشغيلية.",
+  "challenge_en": "Erecting and aligning heavy machinery and high-speed conveyor lines with millimeter laser precision while adhering strictly to industrial safety and structural vibration dampers.",
+  "solution_ar": "استخدام روافع هيدروليكية ومعدات مناولة متخصصة، وصب وتثبيت قواعد خرسانية وميكانيكية ممتصة للاهتزاز، وربط شبكات التغذية الكهربائية والهوائية (Pneumatic) وفق أعلى معايير السلامة المهنية.",
+  "solution_en": "Deployment of heavy-duty hydraulic cranes, installation of engineered anti-vibration machinery footings, and seamless integration of pneumatic and high-voltage power feeds under strict safety protocols.",
+  "scope_ar": [
+    "دراسة المخططات الهندسية وتحديد مسارات خطوط الإنتاج والسيور الناقلة.",
+    "صب وتثبيت القواعد الخرسانية والهياكل المعدنية الحاملة للمعدات.",
+    "رفع وتجميع الماكينات ووحدات المعالجة وتثبيتها بدقة محاذاة عالية.",
+    "ربط لوحات التحكم الكهربائية وشبكات الهواء المضغوط.",
+    "إجراء الاختبارات التشغيلية التجريبية (Dry & Wet Commissioning) وضمان كفاءة الأداء."
+  ],
+  "scope_en": [
+    "Review of engineering layout blueprints and machinery conveyor positioning.",
+    "Casting and securing reinforced anti-vibration concrete footings and structural steel supports.",
+    "Rigging, hoisting, and precision mechanical assembly of production line modules.",
+    "Integration of motor control centers (MCC), pneumatic feeds, and automated sensors.",
+    "Execution of operational commissioning tests verifying continuous payload throughput."
+  ],
+  "outcome_ar": "تسليم المشروع وتشغيل خط الإنتاج بكفاءة ميكانيكية كاملة، مع تسليم تقارير المعايرة والضمان المعتمد للمنشأة الصناعية.",
+  "outcome_en": "Successful handover and continuous commissioning of the production facility backed by formal calibration logs and certified execution warranty."
+}

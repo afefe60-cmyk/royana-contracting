@@ -5,6 +5,7 @@ import { CheckCircle2, ArrowLeft, ArrowRight, ShieldCheck, Layers, Building } fr
 import { getSecondaryServices, getSecondaryServiceBySlug } from "@/lib/content";
 import { QuoteRequestForm } from "@/components/forms/QuoteRequestForm";
 import { BreadcrumbSchema } from "@/components/seo/SchemaScripts";
+import { InteractiveGallery } from "@/components/ui/InteractiveGallery";
 
 interface SectorDetailPageProps {
   params: Promise<{ locale: string; slug: string }>;
@@ -134,6 +135,18 @@ export default async function SectorDetailPage({
                   ))}
                 </div>
               </div>
+
+              {/* Real Products / Site Gallery */}
+              {sector.images && sector.images.length > 0 && (
+                <div className="pt-6 border-t border-slate-200">
+                  <InteractiveGallery
+                    images={sector.images}
+                    title={isAr ? "معرض النماذج والصور الميدانية المعتمدة:" : "Authentic Product & Site Gallery:"}
+                    badgeLabel={isAr ? "صور حقيقية موثقة" : "Verified Real Photos"}
+                    isAr={isAr}
+                  />
+                </div>
+              )}
             </div>
 
             {/* Quote Form Sidebar (5 cols) */}

@@ -119,13 +119,14 @@ export interface SecondaryService {
   specs_en: string[];
   applications_ar: string[];
   applications_en: string[];
+  images?: string[];
 }
 
 export interface Project {
   id: string;
   title_ar: string;
   title_en: string;
-  category: "restoration" | "construction" | "mep" | "consulting";
+  category: "restoration" | "construction" | "mep" | "consulting" | "industrial";
   city_ar: string;
   city_en: string;
   location_ar: string;

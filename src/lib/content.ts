@@ -5,6 +5,7 @@ import testimonialsData from "@/../content/testimonials.json";
 import clientsData from "@/../content/clients.json";
 import localSeoData from "@/../content/jeddah-contractor.json";
 import durratAlArousProject from "@/../content/projects/durrat-al-arus.json";
+import factoryInstallationProject from "@/../content/projects/factory-equipment-installation.json";
 import draftSampleProject from "@/../content/projects/draft-sample-project.json";
 import sampleDraftArticle from "@/../content/blog/sample-draft-article.json";
 
@@ -44,6 +45,7 @@ export function getSecondaryServiceBySlug(slug: string): SecondaryService | unde
 export function getProjects(includeDrafts: boolean = isDev): Project[] {
   const allProjects: Project[] = [
     durratAlArousProject as unknown as Project,
+    factoryInstallationProject as unknown as Project,
     draftSampleProject as unknown as Project,
   ];
 

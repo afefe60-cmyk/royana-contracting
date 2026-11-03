@@ -27,6 +27,12 @@
       "Food and FMCG storage facilities.",
       "Manufacturing facilities and packaging lines.",
       "Logistics providers, freight forwarders, and distribution hubs."
+    ],
+    "images": [
+      "/images/pallets/wooden-pallet-1.webp",
+      "/images/pallets/wooden-pallet-2.webp",
+      "/images/pallets/wooden-pallet-3.webp",
+      "/images/pallets/wooden-pallet-4.webp"
     ]
   },
   {
@@ -57,6 +63,11 @@
       "Heavy industrial plants, metallurgy, and construction material yards.",
       "Chemical storage warehouses and fire-risk restricted environments.",
       "High-turnover closed-loop distribution operations."
+    ],
+    "images": [
+      "/images/pallets/metal-pallet-1.webp",
+      "/images/pallets/metal-pallet-2.webp",
+      "/images/pallets/metal-pallet-3.webp"
     ]
   },
   {
@@ -87,6 +98,13 @@
       "Pharmaceutical plants and medical supply distributors.",
       "Cold storage facilities, food processors, and dairy operations.",
       "Cleanroom environments and testing laboratories."
+    ],
+    "images": [
+      "/images/pallets/plastic-pallet-1.webp",
+      "/images/pallets/plastic-pallet-2.webp",
+      "/images/pallets/plastic-pallet-3.webp",
+      "/images/pallets/plastic-pallet-4.webp",
+      "/images/pallets/plastic-pallet-5.webp"
     ]
   },
   {
@@ -147,6 +165,16 @@
       "F&B processing plants, packaging, bottling, and corrugated cardboard factories.",
       "Industrial manufacturing entities in Jeddah 1st, 2nd, and 3rd Industrial Cities.",
       "Parcel fulfillment and automated regional sorting warehouses."
+    ],
+    "images": [
+      "/images/projects/factory-installation/factory-installation-1.webp",
+      "/images/projects/factory-installation/factory-installation-2.webp",
+      "/images/projects/factory-installation/factory-installation-3.webp",
+      "/images/projects/factory-installation/factory-installation-4.webp",
+      "/images/projects/factory-installation/factory-installation-5.webp",
+      "/images/projects/factory-installation/factory-installation-6.webp",
+      "/images/projects/factory-installation/factory-installation-7.webp",
+      "/images/projects/factory-installation/factory-installation-8.webp"
     ]
   },
   {
