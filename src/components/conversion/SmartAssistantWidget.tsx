@@ -234,14 +234,14 @@ export function SmartAssistantWidget({ locale = "ar" }: SmartAssistantWidgetProp
         </div>
       )}
 
-      {/* Trigger Button */}
+      {/* Trigger Button - Compact circular on mobile, full pill on desktop */}
       <button
         onClick={() => setIsOpen(!isOpen)}
         aria-expanded={isOpen}
         aria-label={isAr ? "فتح مركز المساعدة والواتساب" : "Open WhatsApp & Support Hub"}
-        className="flex items-center gap-2.5 px-4 py-3 bg-[#0B192C] text-white font-bold rounded-full shadow-2xl hover:bg-[#162C46] hover:scale-105 border-2 border-[#39B5FF] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[#39B5FF]/30 group"
+        className="flex items-center gap-2 p-2.5 sm:px-4 sm:py-3 bg-[#0B192C] text-white font-bold rounded-full shadow-2xl hover:bg-[#162C46] hover:scale-105 border-2 border-[#39B5FF] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[#39B5FF]/30 group"
       >
-        <div className="w-7 h-7 rounded-full bg-[#25D366] flex items-center justify-center">
+        <div className="w-7 h-7 rounded-full bg-[#25D366] flex items-center justify-center flex-shrink-0">
           <MessageCircle className="w-4 h-4 fill-[#0B192C] text-[#0B192C]" />
         </div>
 
@@ -249,9 +249,9 @@ export function SmartAssistantWidget({ locale = "ar" }: SmartAssistantWidgetProp
           {isAr ? "تواصل مع الإدارة والمشاريع" : "Chat with Managers"}
         </span>
 
-        <span className="relative flex h-2.5 w-2.5">
+        <span className="relative flex h-2 w-2">
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#39B5FF] opacity-75"></span>
-          <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#39B5FF]"></span>
+          <span className="relative inline-flex rounded-full h-2 w-2 bg-[#39B5FF]"></span>
         </span>
       </button>
     </div>

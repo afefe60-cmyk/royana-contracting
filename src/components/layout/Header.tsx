@@ -69,14 +69,14 @@ export function Header({
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          {/* Official Logo with natural 3.12:1 proportions */}
+        <div className="flex items-center justify-between h-16 sm:h-20">
+          {/* Official Logo with natural proportions */}
           <Link
             href={`/${locale}`}
-            className="flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-[#39B5FF] rounded-lg p-1 group"
+            className="flex items-center focus:outline-none focus:ring-2 focus:ring-[#39B5FF] rounded-lg p-0.5 group"
             aria-label={isAr ? "رؤيانا الحديثة للمقاولات - الصفحة الرئيسية" : "Royana Modern Contracting - Home"}
           >
-            <div className="relative h-12 sm:h-14 w-40 sm:w-48 aspect-[3.12/1] transition-transform group-hover:scale-102">
+            <div className="relative h-11 sm:h-14 w-36 sm:w-48 aspect-[3.12/1] transition-transform group-hover:scale-102">
               <Image
                 src="/images/logo-white.webp"
                 alt="شعار مؤسسة رؤيانا الحديثة للمقاولات"
@@ -114,9 +114,8 @@ export function Header({
             })}
           </nav>
 
-          {/* Actions & CTA */}
+          {/* Actions & CTA (Desktop) */}
           <div className="hidden sm:flex items-center gap-3">
-            {/* Phone direct link */}
             <a
               href={phoneUrl}
               onClick={() => trackCallClick(phone)}
@@ -128,10 +127,8 @@ export function Header({
               <span dir="ltr">{phoneDisplay}</span>
             </a>
 
-            {/* Language Switcher */}
             <LanguageSwitcher currentLocale={locale} />
 
-            {/* Request Quote Button */}
             <Button
               href={`/${locale}/contact`}
               variant="primary"
@@ -142,9 +139,17 @@ export function Header({
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Clean Mobile Controls (Quick Call + Hamburger Menu) */}
           <div className="flex items-center gap-2 lg:hidden">
-            <LanguageSwitcher currentLocale={locale} />
+            <a
+              href={phoneUrl}
+              onClick={() => trackCallClick(phone)}
+              className="w-9 h-9 rounded-full bg-[#162C46] flex items-center justify-center text-[#39B5FF] border border-[#1E3E62]"
+              aria-label="اتصال مباشر"
+            >
+              <Phone className="w-4 h-4" />
+            </a>
+
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label={mobileMenuOpen ? "إغلاق القائمة" : "فتح القائمة الرئيسية"}
@@ -161,7 +166,7 @@ export function Header({
         </div>
       </div>
 
-      {/* Mobile Drawer Navigation */}
+      {/* Mobile Drawer Navigation with clean language switcher */}
       {mobileMenuOpen && (
         <div className="lg:hidden border-t border-[#1E3E62] bg-[#0B192C] shadow-2xl animate-in slide-in-from-top-2 duration-200">
           <nav
@@ -179,6 +184,13 @@ export function Header({
             ))}
 
             <div className="pt-4 border-t border-[#1E3E62] space-y-3">
+              <div className="flex items-center justify-between px-2">
+                <span className="text-xs text-slate-400 font-semibold">
+                  {isAr ? "لغة الموقع:" : "Language:"}
+                </span>
+                <LanguageSwitcher currentLocale={locale} />
+              </div>
+
               <a
                 href={phoneUrl}
                 onClick={() => trackCallClick(phone)}
