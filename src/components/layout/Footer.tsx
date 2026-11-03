@@ -34,14 +34,14 @@ export function Footer({ locale }: FooterProps) {
           <div className="space-y-4">
             <Link
               href={`/${locale}`}
-              className="inline-block relative w-48 h-12"
+              className="inline-block relative w-52 sm:w-60 h-14"
               aria-label={isAr ? "رؤيانا للمقاولات" : "Royana Contracting"}
             >
               <Image
-                src="/images/logo-white.svg"
+                src="/images/logo-white.webp"
                 alt="مؤسسة رؤيانا الحديثة للمقاولات"
                 fill
-                className="object-contain"
+                className="object-contain object-right"
               />
             </Link>
             <p className="text-sm text-slate-400 leading-relaxed">

@@ -90,7 +90,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       name: "مؤسسة رؤيانا الحديثة للمقاولات",
       logo: {
         "@type": "ImageObject",
-        url: "https://royana.com.sa/images/logo.svg",
+        url: "https://royana.com.sa/images/logo.png",
       },
     },
   };

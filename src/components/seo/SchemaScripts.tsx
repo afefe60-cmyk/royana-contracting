@@ -11,7 +11,7 @@ export function LocalBusinessSchema({ locale }: LocalBusinessSchemaProps) {
     "@context": "https://schema.org",
     "@type": ["GeneralContractor", "LocalBusiness"],
     name: isAr ? "مؤسسة رؤيانا الحديثة للمقاولات" : "Royana Modern Contracting Establishment",
-    image: "https://royana.com.sa/images/logo.svg",
+    image: "https://royana.com.sa/images/logo.png",
     url: "https://royana.com.sa",
     telephone: "+966508805861",
     email: "info@royana.com.sa",

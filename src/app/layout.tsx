@@ -9,6 +9,10 @@ export const metadata: Metadata = {
   },
   description:
     "مؤسسة مقاولات عامة رائدة في جدة متخصصة في أعمال الإنشاءات والبناء، الترميم والتشطيب، صيانة شبكات الكهرباء والمياه، والإشراف الهندسي.",
+  icons: {
+    icon: "/images/favicon.png",
+    apple: "/images/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({

@@ -77,13 +77,13 @@ export function Header({
             className="flex items-center gap-3 focus:outline-none focus:ring-2 focus:ring-[#C68B59] rounded-lg p-1"
             aria-label={isAr ? "رؤيانا الحديثة للمقاولات - الصفحة الرئيسية" : "Royana Modern Contracting - Home"}
           >
-            <div className="relative w-44 h-12">
+            <div className="relative w-48 sm:w-56 h-14">
               <Image
-                src="/images/logo.svg"
+                src="/images/logo.webp"
                 alt="شعار مؤسسة رؤيانا الحديثة للمقاولات"
                 fill
                 priority
-                className="object-contain"
+                className="object-contain object-right"
               />
             </div>
           </Link>
