@@ -4,37 +4,30 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
 export function SplashScreen() {
-  const [visible, setVisible] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const [fading, setFading] = useState(false);
+  const [visible, setVisible] = useState(true);
 
   useEffect(() => {
-    // Only show once per browser session
-    try {
-      const seen = sessionStorage.getItem("royana_splash_seen");
-      if (!seen) {
-        setVisible(true);
-        // Start fading after 1.2s
-        const fadeTimer = setTimeout(() => {
-          setFading(true);
-        }, 1300);
+    setMounted(true);
 
-        // Remove completely after 1.7s
-        const removeTimer = setTimeout(() => {
-          setVisible(false);
-          sessionStorage.setItem("royana_splash_seen", "true");
-        }, 1750);
+    // Fade out after 1.1s
+    const fadeTimer = setTimeout(() => {
+      setFading(true);
+    }, 1100);
 
-        return () => {
-          clearTimeout(fadeTimer);
-          clearTimeout(removeTimer);
-        };
-      }
-    } catch {
-      // Ignore sessionStorage issues in private mode
-    }
+    // Completely unmount after fade completes (1.5s)
+    const removeTimer = setTimeout(() => {
+      setVisible(false);
+    }, 1550);
+
+    return () => {
+      clearTimeout(fadeTimer);
+      clearTimeout(removeTimer);
+    };
   }, []);
 
-  if (!visible) return null;
+  if (!mounted || !visible) return null;
 
   return (
     <div
@@ -42,15 +35,15 @@ export function SplashScreen() {
       aria-live="polite"
       onClick={() => {
         setFading(true);
-        setTimeout(() => setVisible(false), 300);
+        setTimeout(() => setVisible(false), 250);
       }}
-      className={`fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#070d18] transition-opacity duration-500 cursor-pointer select-none ${
+      className={`fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-[#070d18] transition-opacity duration-500 cursor-pointer select-none ${
         fading ? "opacity-0 pointer-events-none" : "opacity-100"
       }`}
     >
       {/* Background Architectural Grid Pattern */}
       <div
-        className="absolute inset-0 opacity-[0.06] pointer-events-none"
+        className="absolute inset-0 opacity-[0.08] pointer-events-none"
         style={{
           backgroundImage: `
             linear-gradient(to right, #00d2ff 1px, transparent 1px),
@@ -63,9 +56,9 @@ export function SplashScreen() {
       {/* Center glowing brand beam */}
       <div className="relative z-10 flex flex-col items-center max-w-sm px-6 text-center">
         {/* Subtle cyan glow halo */}
-        <div className="absolute -inset-6 bg-[#00d2ff]/20 blur-3xl rounded-full pointer-events-none" />
+        <div className="absolute -inset-10 bg-[#00d2ff]/25 blur-3xl rounded-full pointer-events-none animate-pulse" />
 
-        <div className="relative w-64 sm:w-80 h-24 mb-6 animate-pulse drop-shadow-[0_0_15px_rgba(0,210,255,0.35)]">
+        <div className="relative w-64 sm:w-80 h-24 mb-6 drop-shadow-[0_0_25px_rgba(0,210,255,0.45)]">
           <Image
             src="/images/logo-white.webp"
             alt="رؤيانا الحديثة للمقاولات"
@@ -82,9 +75,14 @@ export function SplashScreen() {
         </p>
 
         {/* Minimal Progress Bar */}
-        <div className="w-48 h-1 bg-[#121e34] rounded-full overflow-hidden">
-          <div className="h-full bg-gradient-to-r from-[#00d2ff] via-[#38bdf8] to-[#3a7bd5] rounded-full animate-[progress_1.4s_ease-in-out_infinite]" />
+        <div className="w-56 h-1.5 bg-[#121e34] rounded-full overflow-hidden border border-sky-400/20 shadow-[0_0_15px_rgba(0,210,255,0.2)]">
+          <div className="h-full bg-gradient-to-r from-[#00d2ff] via-[#38bdf8] to-[#3a7bd5] rounded-full animate-[progress_1.2s_ease-in-out_infinite]" />
         </div>
+
+        {/* Skip hint */}
+        <span className="text-[11px] text-slate-500 mt-4 tracking-wide">
+          انقر في أي مكان للتخطي • Click anywhere to skip
+        </span>
       </div>
     </div>
   );
