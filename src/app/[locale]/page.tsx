@@ -9,6 +9,7 @@ import {
 import { HeroSection } from "@/components/home/HeroSection";
 import { StatsBar } from "@/components/home/StatsBar";
 import { CoreServicesSection } from "@/components/home/CoreServicesSection";
+import { IndustrialSectorsSection } from "@/components/home/IndustrialSectorsSection";
 import { FeaturedProjectsSection } from "@/components/home/FeaturedProjectsSection";
 import { ProcessStepsSection } from "@/components/home/ProcessStepsSection";
 import { WhyRoyanaSection } from "@/components/home/WhyRoyanaSection";
@@ -45,6 +46,11 @@ export default async function HomePage({ params }: HomePageProps) {
       <CoreServicesSection
         services={services}
         locale={locale}
+      />
+
+      <IndustrialSectorsSection
+        locale={locale}
+        whatsappPhone={siteSettings.contact.whatsapp}
       />
 
       <FeaturedProjectsSection

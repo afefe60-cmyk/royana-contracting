@@ -150,5 +150,63 @@
         "a": "Independent project management safeguards client investments against waste, technical errors, and delays, ensuring each phase meets specifications at optimized cost."
       }
     ]
+  },
+  {
+    "slug": "factory-equipment-installation",
+    "title_ar": "تركيب وتجهيز خطوط الإنتاج والماكينات الصناعية",
+    "title_en": "Industrial Machinery & Factory Turnkey Setup",
+    "short_desc_ar": "رفع وتثبيت الماكينات الثقيلة، صب القواعد الخرسانية الماصة للاهتزاز، المحاذاة الليزرية لسيور النقل، وتجهيز الهناجر والمصانع بالمدينة الصناعية بجدة (مدن).",
+    "short_desc_en": "Heavy industrial rigging, anti-vibration machinery footings, laser conveyor alignment, and turnkey MEP plant integration across Jeddah Industrial Cities (MODON).",
+    "icon": "Factory",
+    "scope_ar": [
+      "دراسة المخططات الهندسية للمصنع وتحديد مسارات خطوط الإنتاج وأماكن الأحمال الثقيلة.",
+      "صب وتدعيم القواعد الخرسانية والهياكل الفولاذية الممتصة للاهتزازات التشغيلية.",
+      "رفع ومناولة ونقل الماكينات ووحدات التصنيع بروافع هيدروليكية ومعدات متخصصة.",
+      "المحاذاة الدقيقة بالليزر لسيور النقل والمحركات لمنع التآكل الميكانيكي والانحراف.",
+      "تمديد شبكات الكهرباء الصناعية (MCC)، لوحات التحكم، وشبكات الهواء المضغوط (Pneumatic).",
+      "إجراء التشغيل التجريبي ومعايرة الأداء (Commissioning) وتسليم تقارير السلامة المعتمدة."
+    ],
+    "scope_en": [
+      "Engineering blueprint review, production line routing, and dynamic load zone mapping.",
+      "Casting and anchoring anti-vibration concrete machine footings and structural steel frames.",
+      "Heavy equipment rigging, hoisting, and placement utilizing certified hydraulic mobile cranes.",
+      "Millimeter laser alignment of conveyors, drives, and gearboxes preventing premature wear.",
+      "Installation of Motor Control Centers (MCC), power feeds, and high-pressure pneumatic ducting.",
+      "Dry and wet commissioning runs with formal safety sign-off protocols and warranty logs."
+    ],
+    "steps_ar": [
+      { "title": "المعاينة الميدانية للهنجر أو المصنع", "desc": "فحص أرضيات المصنع، المداخل، وارتفاعات الأوناش وتوثيق أبعاد وأوزان الماكينات." },
+      { "title": "المخطط التنفيذي وتوزيع الأحمال", "desc": "إعداد الحسابات الإنشائية للقواعد وخطة الرفع والتحريك ومسارات الكيابل وشبكات الهواء." },
+      { "title": "تجهيز القواعد الإنشائية والميكانيكية", "desc": "صب الخرسانة المقواة بمثبطات الاهتزاز وتركيب مسامير التثبيت الكيميائية والميكانيكية." },
+      { "title": "الرفع والتركيب والمحاذاة الليزرية", "desc": "إنزال الماكينات وضبط اتزانها بالليزر وتوصيل أنظمة القوى والتحكم الآلي." },
+      { "title": "التشغيل التجريبي والتسليم النهائي", "desc": "اختبار خط الإنتاج تحت الحمل الكامل وتسليم سجلات المعايرة والضمان المعتمد." }
+    ],
+    "steps_en": [
+      { "title": "Site Survey & Industrial Layout", "desc": "Inspecting floor slabs, access gates, crane clearances, and cataloging machinery weights." },
+      { "title": "Load Matrix & Rigging Plan", "desc": "Developing structural footing calculations, rigging path analysis, and utility schematics." },
+      { "title": "Foundation & Anchor Installation", "desc": "Pouring vibration-isolated concrete pads and setting heavy-duty chemical/mechanical anchors." },
+      { "title": "Rigging, Placement & Laser Alignment", "desc": "Hoisting units, laser-leveling drivetrains, and terminating power and pneumatic circuits." },
+      { "title": "Commissioning & Handover", "desc": "Testing lines under continuous payload with formal calibration reports and warranty sign-off." }
+    ],
+    "faqs_ar": [
+      {
+        "q": "هل تنفذون أعمال التجهيز داخل المدن الصناعية بجدة (مدن الأولى والثانية)؟",
+        "a": "نعم، فرقنا الهندسية معتمدة ومؤهلة للعمل داخل مدن بجدة (MODON) ومناطق المستودعات بالخمرة وعسفان ومدينة الملك عبدالله الاقتصادية وفق كافة اشتراطات السلامة المهنية."
+      },
+      {
+        "q": "هل يتضمن العمل تجهيز شبكات الهواء المضغوط واللوحات الكهربائية للماكينات؟",
+        "a": "نعم، نقدم حلاً هندسياً متكاملاً يشمل القواعد الإنشائية، التمديدات الكهروميكانيكية (MEP)، شبكات الهواء (Pneumatics)، وربط لوحات التحكم الآلية."
+      }
+    ],
+    "faqs_en": [
+      {
+        "q": "Do you execute machinery installation inside Jeddah Industrial Cities (MODON 1 & 2)?",
+        "a": "Yes, our certified engineering crew operates across MODON Jeddah, Al-Khumrah logistics parks, Asfan, and King Abdullah Economic City (KAEC) following strict OSHA standards."
+      },
+      {
+        "q": "Does the service cover pneumatic feeds and industrial electrical panels?",
+        "a": "Yes, we provide turnkey solutions covering structural foundations, MEP connections, pneumatic networks, and automated Motor Control Center (MCC) panels."
+      }
+    ]
   }
 ]

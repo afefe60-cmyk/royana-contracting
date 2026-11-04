@@ -41,21 +41,21 @@ export function Header({
   const navLinks = isAr
     ? [
         { label: "الرئيسية", href: `/${locale}` },
-        { label: "خدماتنا", href: `/${locale}/services` },
+        { label: "خدمات المقاولات", href: `/${locale}/services` },
+        { label: "توريد الطبالي", href: `/${locale}/other-sectors` },
+        { label: "تركيب المصانع", href: `/${locale}/projects/factory-equipment-installation` },
         { label: "المشاريع", href: `/${locale}/projects` },
-        { label: "قطاعات أخرى", href: `/${locale}/other-sectors` },
         { label: "من نحن", href: `/${locale}/about` },
-        { label: "المدونة", href: `/${locale}/blog` },
-        { label: "اتصل بنا", href: `/${locale}/contact` },
+        { label: "طلب تسعير", href: `/${locale}/contact` },
       ]
     : [
         { label: "Home", href: `/${locale}` },
-        { label: "Services", href: `/${locale}/services` },
+        { label: "Contracting", href: `/${locale}/services` },
+        { label: "Pallets Supply", href: `/${locale}/other-sectors` },
+        { label: "Factory Installation", href: `/${locale}/projects/factory-equipment-installation` },
         { label: "Projects", href: `/${locale}/projects` },
-        { label: "Other Sectors", href: `/${locale}/other-sectors` },
-        { label: "About Us", href: `/${locale}/about` },
-        { label: "Blog", href: `/${locale}/blog` },
-        { label: "Contact", href: `/${locale}/contact` },
+        { label: "About", href: `/${locale}/about` },
+        { label: "B2B Quote", href: `/${locale}/contact` },
       ];
 
   const phoneUrl = buildPhoneUrl(phone);

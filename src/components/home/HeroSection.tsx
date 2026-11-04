@@ -177,8 +177,8 @@ export function HeroSection({
         {/* Subtitle */}
         <p className="text-sm sm:text-lg lg:text-xl text-slate-200 leading-relaxed mb-8 sm:mb-10 max-w-2xl mx-auto font-medium drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]">
           {isAr
-            ? "إنشاءات وترميم شامل، صيانة شبكات، وإشراف هندسي ميداني مباشر للفلل والمنشآت بجدة وفق أعلى معايير الجودة والضمان المعتمد."
-            : "Turnkey construction, comprehensive villa restoration, MEP utilities, and on-site engineering management across Jeddah in full alignment with the Saudi Building Code."}
+            ? "مقاولات وترميم إنشائي، تجهيز وتركيب خطوط إنتاج المصانع، وتوريد الطبالي اللوجستية المعتمدة بجدة وفق أعلى معايير الكود السعودي."
+            : "Turnkey building construction, industrial machinery installation, and certified pallet manufacturing in Jeddah compliant with Saudi standards."}
         </p>
 
         {/* Action CTAs - Hidden on mobile screens to keep the hero uncluttered & rely on MobileBottomBar */}
