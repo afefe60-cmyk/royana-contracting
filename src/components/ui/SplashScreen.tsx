@@ -6,25 +6,37 @@ import Image from "next/image";
 export function SplashScreen() {
   const [mounted, setMounted] = useState(false);
   const [fading, setFading] = useState(false);
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
+    try {
+      // Only show on first visit in the session so internal navigation is instant
+      const seen = sessionStorage.getItem("royana_splash_seen");
+      if (seen) {
+        return;
+      }
 
-    // Quick sleek intro - fade out after 650ms
-    const fadeTimer = setTimeout(() => {
-      setFading(true);
-    }, 650);
+      setVisible(true);
+      setMounted(true);
+      sessionStorage.setItem("royana_splash_seen", "true");
 
-    // Completely unmount after fade completes (950ms)
-    const removeTimer = setTimeout(() => {
+      // Quick sleek intro - fade out after 600ms
+      const fadeTimer = setTimeout(() => {
+        setFading(true);
+      }, 600);
+
+      // Completely unmount after fade completes (850ms)
+      const removeTimer = setTimeout(() => {
+        setVisible(false);
+      }, 850);
+
+      return () => {
+        clearTimeout(fadeTimer);
+        clearTimeout(removeTimer);
+      };
+    } catch {
       setVisible(false);
-    }, 950);
-
-    return () => {
-      clearTimeout(fadeTimer);
-      clearTimeout(removeTimer);
-    };
+    }
   }, []);
 
   if (!mounted || !visible) return null;
@@ -35,9 +47,9 @@ export function SplashScreen() {
       aria-live="polite"
       onClick={() => {
         setFading(true);
-        setTimeout(() => setVisible(false), 250);
+        setTimeout(() => setVisible(false), 200);
       }}
-      className={`fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-[#070d18] transition-opacity duration-500 cursor-pointer select-none ${
+      className={`fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-[#070d18] transition-opacity duration-300 cursor-pointer select-none ${
         fading ? "opacity-0 pointer-events-none" : "opacity-100"
       }`}
     >
@@ -81,7 +93,7 @@ export function SplashScreen() {
 
         {/* Skip hint */}
         <span className="text-[11px] text-slate-500 mt-4 tracking-wide">
-          انقر في أي مكان للتخطي • Click anywhere to skip
+          انقر للتخطي • Click to skip
         </span>
       </div>
     </div>
