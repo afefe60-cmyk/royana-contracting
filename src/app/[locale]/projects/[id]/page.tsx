@@ -41,6 +41,10 @@ export async function generateMetadata({
   const title = isAr ? project.title_ar : project.title_en;
   const description = isAr ? project.solution_ar : project.solution_en;
 
+  const projectImage = project.thumbnail?.startsWith("http")
+    ? project.thumbnail
+    : `https://royana.com.sa${project.thumbnail || "/images/og-share.jpg"}`;
+
   return {
     title: `${title} | مشاريع رؤيانا للمقاولات`,
     description,
@@ -51,6 +55,20 @@ export async function generateMetadata({
       title,
       description,
       url: `https://royana.com.sa/${locale}/projects/${id}`,
+      images: [
+        {
+          url: projectImage,
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [projectImage],
     },
   };
 }

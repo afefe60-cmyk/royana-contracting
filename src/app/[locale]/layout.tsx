@@ -41,16 +41,23 @@ export async function generateMetadata({
   const { locale } = await params;
   const isAr = locale === "ar";
 
+  const siteTitle = isAr
+    ? "مؤسسة رؤيانا الحديثة للمقاولات | جدة"
+    : "Royana Modern Contracting Establishment | Jeddah";
+
+  const siteDescription = isAr
+    ? "مقاولات عامة وترميم إنشائي معتمد بالكود السعودي، تجهيز وتركيب خطوط إنتاج المصانع، وتوريد وتصنيع الطبالي الخشبية والبلاستيكية والمعدنية بجدة."
+    : "Certified general contracting, villa restoration per Saudi Building Code, turnkey factory machinery rigging, and industrial pallets manufacturing in Jeddah.";
+
+  const shareImageUrl = "https://royana.com.sa/images/og-share.jpg";
+
   return {
+    metadataBase: new URL("https://royana.com.sa"),
     title: {
-      default: isAr
-        ? "مؤسسة رؤيانا الحديثة للمقاولات | جدة"
-        : "Royana Modern Contracting Establishment | Jeddah",
+      default: siteTitle,
       template: isAr ? "%s | رؤيانا للمقاولات" : "%s | Royana Contracting",
     },
-    description: isAr
-      ? "مؤسسة مقاولات عامة معتمدة بجدة متخصصة في أعمال الإنشاءات والبناء، الترميم والتشطيبات، شبكات الكهرباء والمياه، والإشراف الهندسي وفق كود البناء السعودي."
-      : "Certified general contracting establishment in Jeddah specializing in construction, restoration, MEP infrastructure, and engineering supervision per Saudi Building Code.",
+    description: siteDescription,
     alternates: {
       canonical: `https://royana.com.sa/${locale}`,
       languages: {
@@ -59,16 +66,27 @@ export async function generateMetadata({
       },
     },
     openGraph: {
-      title: isAr
-        ? "مؤسسة رؤيانا الحديثة للمقاولات | جدة"
-        : "Royana Modern Contracting | Jeddah",
-      description: isAr
-        ? "نبني بثقة ونرمم بدقة: خدمات المقاولات والترميم والإشراف الهندسي بجدة."
-        : "Precision engineering, construction, and restoration services across Jeddah.",
+      title: siteTitle,
+      description: siteDescription,
       url: `https://royana.com.sa/${locale}`,
       siteName: isAr ? "رؤيانا الحديثة للمقاولات" : "Royana Contracting",
       locale: isAr ? "ar_SA" : "en_US",
       type: "website",
+      images: [
+        {
+          url: shareImageUrl,
+          width: 1200,
+          height: 630,
+          alt: siteTitle,
+          type: "image/jpeg",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: siteTitle,
+      description: siteDescription,
+      images: [shareImageUrl],
     },
   };
 }
