@@ -12,12 +12,11 @@
   "client_type_en": "Private Residential",
   "featured": true,
   "draft": false,
-  "thumbnail": "/images/projects/durrat-al-arus-thumb.svg",
-  "before_image": "/images/projects/durrat-al-arus-before.svg",
-  "after_image": "/images/projects/durrat-al-arus-after.svg",
+  "thumbnail": "/images/projects/durrat-al-arus-finished.jpg",
+  "before_image": null,
+  "after_image": "/images/projects/durrat-al-arus-finished.jpg",
   "gallery": [
-    "/images/projects/durrat-al-arus-before.svg",
-    "/images/projects/durrat-al-arus-after.svg"
+    "/images/projects/durrat-al-arus-finished.jpg"
   ],
   "challenge_ar": "معالجة تأثيرات الرطوبة الساحلية العالية والأملاح البحرية على الواجهات الخرسانية والتشطيبات الخارجية، وضرورة استعادة الكفاءة الإنشائية والجمالية للمبنى وفق معايير الحماية البحرية.",
   "challenge_en": "Addressing the severe impact of coastal humidity and saline airborne salts on concrete facades and exterior finishes, restoring structural integrity and aesthetics per marine-grade standards.",
