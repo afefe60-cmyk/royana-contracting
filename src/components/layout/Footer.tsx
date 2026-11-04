@@ -27,14 +27,14 @@ export function Footer({ locale }: FooterProps) {
   const phoneAltUrl = buildPhoneUrl(settings.contact.phone_alt);
 
   return (
-    <footer className="bg-[#0B192C] text-slate-300 border-t border-[#1E3E62] pt-14 pb-24 md:pb-14">
+    <footer className="bg-[#050912] text-slate-300 border-t border-sky-400/15 pt-14 pb-24 md:pb-14 relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Col 1: About & Identity */}
           <div className="space-y-4">
             <Link
               href={`/${locale}`}
-              className="inline-block relative w-52 sm:w-60 h-14"
+              className="inline-block relative w-52 sm:w-60 h-14 drop-shadow-[0_0_12px_rgba(0,210,255,0.25)]"
               aria-label={isAr ? "رؤيانا للمقاولات" : "Royana Contracting"}
             >
               <Image
@@ -44,20 +44,20 @@ export function Footer({ locale }: FooterProps) {
                 className="object-contain object-right"
               />
             </Link>
-            <p className="text-sm text-slate-400 leading-relaxed">
+            <p className="text-sm text-slate-400 leading-relaxed font-normal">
               {isAr
                 ? "مؤسسة مقاولات عامة رائدة في جدة، متخصصة في أعمال الإنشاءات والبناء، الترميم والتشطيبات، وشبكات الكهرباء والمياه، والإشراف الهندسي المتكامل وفق كود البناء السعودي."
                 : "A premier general contracting establishment in Jeddah specializing in construction, restoration, MEP infrastructure, and comprehensive engineering management."}
             </p>
 
-            {/* Social Links (Strictly conditional - only show if NOT null!) */}
+            {/* Social Links */}
             <div className="flex items-center gap-3 pt-2">
               {settings.social.linkedin && (
                 <a
                   href={settings.social.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-full bg-[#1E3E62] flex items-center justify-center text-slate-300 hover:text-white hover:bg-[#C68B59] transition-colors"
+                  className="w-9 h-9 rounded-full bg-[#0d1728] border border-sky-400/20 flex items-center justify-center text-slate-300 hover:text-[#00d2ff] hover:border-[#00d2ff] hover:bg-sky-500/10 transition-all"
                   aria-label="LinkedIn"
                 >
                   <Linkedin className="w-4 h-4" />
@@ -68,7 +68,7 @@ export function Footer({ locale }: FooterProps) {
                   href={settings.social.x}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-full bg-[#1E3E62] flex items-center justify-center text-slate-300 hover:text-white hover:bg-[#C68B59] transition-colors"
+                  className="w-9 h-9 rounded-full bg-[#0d1728] border border-sky-400/20 flex items-center justify-center text-slate-300 hover:text-[#00d2ff] hover:border-[#00d2ff] hover:bg-sky-500/10 transition-all"
                   aria-label="X (Twitter)"
                 >
                   <Twitter className="w-4 h-4" />
@@ -79,7 +79,7 @@ export function Footer({ locale }: FooterProps) {
                   href={settings.social.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-full bg-[#1E3E62] flex items-center justify-center text-slate-300 hover:text-white hover:bg-[#C68B59] transition-colors"
+                  className="w-9 h-9 rounded-full bg-[#0d1728] border border-sky-400/20 flex items-center justify-center text-slate-300 hover:text-[#00d2ff] hover:border-[#00d2ff] hover:bg-sky-500/10 transition-all"
                   aria-label="Instagram"
                 >
                   <Instagram className="w-4 h-4" />
@@ -90,7 +90,7 @@ export function Footer({ locale }: FooterProps) {
 
           {/* Col 2: Core Services */}
           <div>
-            <h3 className="text-white text-base font-bold mb-4 border-b border-[#1E3E62] pb-2 inline-block">
+            <h3 className="text-white text-base font-bold mb-4 border-b border-sky-400/20 pb-2 inline-block">
               {isAr ? "خدماتنا الأساسية" : "Core Services"}
             </h3>
             <ul className="space-y-2.5 text-sm">
@@ -98,7 +98,7 @@ export function Footer({ locale }: FooterProps) {
                 <li key={srv.slug}>
                   <Link
                     href={`/${locale}/services/${srv.slug}`}
-                    className="hover:text-[#C68B59] transition-colors block py-0.5"
+                    className="hover:text-[#00d2ff] transition-colors block py-0.5 text-slate-300"
                   >
                     {isAr ? srv.title_ar : srv.title_en}
                   </Link>
@@ -107,7 +107,7 @@ export function Footer({ locale }: FooterProps) {
               <li>
                 <Link
                   href={`/${locale}/other-sectors`}
-                  className="hover:text-[#C68B59] transition-colors block py-0.5 text-slate-400"
+                  className="hover:text-[#00d2ff] transition-colors block py-0.5 text-slate-400"
                 >
                   {isAr ? "قطاعات أخرى (طبالي، مصانع، طاقة)" : "Other Sectors (Pallets, Solar, Factory)"}
                 </Link>
@@ -117,7 +117,7 @@ export function Footer({ locale }: FooterProps) {
 
           {/* Col 3: Local Services in Jeddah */}
           <div>
-            <h3 className="text-white text-base font-bold mb-4 border-b border-[#1E3E62] pb-2 inline-block">
+            <h3 className="text-white text-base font-bold mb-4 border-b border-sky-400/20 pb-2 inline-block">
               {isAr ? "خدمات المقاولات في جدة" : "Jeddah Contracting Services"}
             </h3>
             <ul className="space-y-2.5 text-sm">
@@ -125,7 +125,7 @@ export function Footer({ locale }: FooterProps) {
                 <li key={page.slug}>
                   <Link
                     href={`/${locale}/jeddah-contractor/${page.slug}`}
-                    className="hover:text-[#C68B59] transition-colors block py-0.5 text-slate-400"
+                    className="hover:text-[#00d2ff] transition-colors block py-0.5 text-slate-400"
                   >
                     {isAr ? page.meta_title_ar.split("|")[0].trim() : page.meta_title_en.split("|")[0].trim()}
                   </Link>
@@ -136,12 +136,12 @@ export function Footer({ locale }: FooterProps) {
 
           {/* Col 4: Contact & Location */}
           <div className="space-y-3.5 text-sm">
-            <h3 className="text-white text-base font-bold mb-4 border-b border-[#1E3E62] pb-2 inline-block">
+            <h3 className="text-white text-base font-bold mb-4 border-b border-sky-400/20 pb-2 inline-block">
               {isAr ? "بيانات التواصل" : "Contact Details"}
             </h3>
 
             <div className="flex items-start gap-3">
-              <MapPin className="w-5 h-5 text-[#C68B59] flex-shrink-0 mt-0.5" />
+              <MapPin className="w-5 h-5 text-[#00d2ff] flex-shrink-0 mt-0.5" />
               <span>
                 {isAr
                   ? `${settings.address.city_ar}، ${settings.address.street_ar}`
@@ -150,18 +150,18 @@ export function Footer({ locale }: FooterProps) {
             </div>
 
             <div className="flex items-center gap-3">
-              <Phone className="w-5 h-5 text-[#C68B59] flex-shrink-0" />
+              <Phone className="w-5 h-5 text-[#00d2ff] flex-shrink-0" />
               <div className="flex flex-col">
                 <a
                   href={phoneUrl}
-                  className="hover:text-white transition-colors"
+                  className="hover:text-[#00d2ff] transition-colors"
                   dir="ltr"
                 >
                   {settings.contact.phone_display}
                 </a>
                 <a
                   href={phoneAltUrl}
-                  className="hover:text-white transition-colors text-xs text-slate-400"
+                  className="hover:text-[#00d2ff] transition-colors text-xs text-slate-400"
                   dir="ltr"
                 >
                   {settings.contact.phone_alt_display}
@@ -170,17 +170,17 @@ export function Footer({ locale }: FooterProps) {
             </div>
 
             <div className="flex items-center gap-3">
-              <Mail className="w-5 h-5 text-[#C68B59] flex-shrink-0" />
+              <Mail className="w-5 h-5 text-[#00d2ff] flex-shrink-0" />
               <a
                 href={`mailto:${settings.contact.email}`}
-                className="hover:text-white transition-colors"
+                className="hover:text-[#00d2ff] transition-colors"
               >
                 {settings.contact.email}
               </a>
             </div>
 
             <div className="flex items-start gap-3 text-xs text-slate-400 pt-1">
-              <Clock className="w-4 h-4 text-[#C68B59] flex-shrink-0 mt-0.5" />
+              <Clock className="w-4 h-4 text-[#00d2ff] flex-shrink-0 mt-0.5" />
               <div>
                 <p>{isAr ? settings.working_hours.days_ar : settings.working_hours.days_en}</p>
                 <p>{isAr ? settings.working_hours.time_ar : settings.working_hours.time_en}</p>
@@ -190,7 +190,7 @@ export function Footer({ locale }: FooterProps) {
         </div>
 
         {/* Bottom Bar: Copyright & Legal */}
-        <div className="mt-12 pt-6 border-t border-[#1E3E62] flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
+        <div className="mt-12 pt-6 border-t border-sky-400/15 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
           <p>
             {isAr
               ? `جميع الحقوق محفوظة © ${new Date().getFullYear()} مؤسسة رؤيانا الحديثة للمقاولات.`
@@ -200,21 +200,21 @@ export function Footer({ locale }: FooterProps) {
           <div className="flex items-center gap-4">
             <Link
               href={`/${locale}/privacy`}
-              className="hover:text-[#C68B59] transition-colors"
+              className="hover:text-[#00d2ff] transition-colors"
             >
               {isAr ? "سياسة الخصوصية (PDPL)" : "Privacy Policy (PDPL)"}
             </Link>
             <span>•</span>
             <Link
               href={`/${locale}/terms`}
-              className="hover:text-[#C68B59] transition-colors"
+              className="hover:text-[#00d2ff] transition-colors"
             >
               {isAr ? "الشروط والأحكام" : "Terms & Conditions"}
             </Link>
             <span>•</span>
             <Link
               href={`/${locale}/contact`}
-              className="hover:text-[#C68B59] transition-colors"
+              className="hover:text-[#00d2ff] transition-colors"
             >
               {isAr ? "طلب عرض سعر" : "Request Quote"}
             </Link>

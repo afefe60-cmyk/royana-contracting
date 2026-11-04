@@ -28,9 +28,9 @@ export async function generateMetadata({
 }
 
 const iconMap: Record<string, React.ReactNode> = {
-  Building2: <Building2 className="w-10 h-10 text-[#C68B59]" />,
-  Zap: <Zap className="w-10 h-10 text-[#C68B59]" />,
-  ClipboardCheck: <ClipboardCheck className="w-10 h-10 text-[#C68B59]" />,
+  Building2: <Building2 className="w-10 h-10 text-[#00d2ff]" />,
+  Zap: <Zap className="w-10 h-10 text-[#00d2ff]" />,
+  ClipboardCheck: <ClipboardCheck className="w-10 h-10 text-[#00d2ff]" />,
 };
 
 export default async function ServicesPage({ params }: ServicesPageProps) {
@@ -47,18 +47,18 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
     <>
       <BreadcrumbSchema items={breadcrumbs} />
 
-      <section className="bg-slate-50 py-16 sm:py-20 border-b border-slate-200">
+      <section className="bg-[#0d1728]/70 py-16 sm:py-20 border-b border-sky-400/15 relative z-10 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <span className="text-xs sm:text-sm font-bold text-[#C68B59] uppercase tracking-wider">
+            <span className="inline-block px-3.5 py-1 rounded-full bg-sky-500/10 border border-sky-400/30 text-xs sm:text-sm font-bold text-[#00d2ff] uppercase tracking-wider mb-3">
               {isAr ? "مجالات العمل التخصصية" : "Engineering Disciplines"}
             </span>
-            <h1 className="mt-2 text-3xl sm:text-5xl font-extrabold text-[#0B192C]">
+            <h1 className="mt-2 text-3xl sm:text-5xl font-extrabold text-white">
               {isAr
                 ? "خدمات المقاولات والإنشاءات والترميم بجدة"
                 : "Contracting, Construction & Restoration in Jeddah"}
             </h1>
-            <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
+            <p className="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
               {isAr
                 ? "نقدم حلولاً هندسية متكاملة مدعومة بإشراف ميداني مستمر، وضمان رسمي موثق على كافة الأعمال المنفذة وفق الكود السعودي."
                 : "Delivering turnkey engineering solutions backed by resident on-site supervision and formal warranties compliant with the Saudi Building Code."}
@@ -67,45 +67,45 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
         </div>
       </section>
 
-      <section className="py-16 sm:py-20 bg-white">
+      <section className="py-16 sm:py-20 relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-12">
             {services.map((srv, idx) => (
               <div
                 key={srv.slug}
-                className="p-8 sm:p-10 rounded-2xl bg-slate-50 border border-slate-200 hover:border-[#C68B59] transition-all shadow-xs"
+                className="p-8 sm:p-10 rounded-3xl bg-[#121e34]/75 border border-sky-400/15 hover:border-sky-400/40 hover:bg-[#1a2c4c]/90 backdrop-blur-md transition-all shadow-xl"
               >
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                   <div className="lg:col-span-4">
-                    <div className="w-16 h-16 rounded-2xl bg-[#0B192C] flex items-center justify-center mb-6">
-                      {iconMap[srv.icon] || <Building2 className="w-10 h-10 text-[#C68B59]" />}
+                    <div className="w-16 h-16 rounded-2xl bg-sky-500/10 border border-sky-400/20 flex items-center justify-center mb-6">
+                      {iconMap[srv.icon] || <Building2 className="w-10 h-10 text-[#00d2ff]" />}
                     </div>
-                    <span className="text-xs font-bold text-[#C68B59] uppercase tracking-wider">
+                    <span className="text-xs font-bold text-[#00d2ff] uppercase tracking-wider">
                       {isAr ? `الخدمة ${idx + 1}` : `Service 0${idx + 1}`}
                     </span>
-                    <h2 className="text-2xl font-bold text-[#0B192C] mt-1 mb-3">
+                    <h2 className="text-2xl font-bold text-white mt-1 mb-3">
                       {isAr ? srv.title_ar : srv.title_en}
                     </h2>
-                    <p className="text-sm text-slate-600 leading-relaxed mb-6">
+                    <p className="text-sm text-slate-300 leading-relaxed mb-6 font-normal">
                       {isAr ? srv.short_desc_ar : srv.short_desc_en}
                     </p>
                     <Link
                       href={`/${locale}/services/${srv.slug}`}
-                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#C68B59] text-[#0B192C] font-bold text-sm hover:bg-[#B57B4B] transition-colors shadow-xs"
+                      className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-[#00d2ff] to-[#3a7bd5] text-white font-extrabold text-sm shadow-[0_4px_15px_rgba(0,210,255,0.35)] hover:shadow-[0_6px_22px_rgba(0,210,255,0.5)] hover:-translate-y-0.5 transition-all"
                     >
                       <span>{isAr ? "نطاق العمل ومراحل التنفيذ" : "Detailed Scope & Process"}</span>
                       {isAr ? <ArrowLeft className="w-4 h-4" /> : <ArrowRight className="w-4 h-4" />}
                     </Link>
                   </div>
 
-                  <div className="lg:col-span-8 bg-white p-6 sm:p-8 rounded-xl border border-slate-200">
-                    <h3 className="text-base font-bold text-[#0B192C] mb-4">
+                  <div className="lg:col-span-8 bg-[#0d1728]/80 p-6 sm:p-8 rounded-2xl border border-sky-400/15 backdrop-blur-sm">
+                    <h3 className="text-base font-bold text-white mb-4">
                       {isAr ? "ما يشمله نطاق الأعمال:" : "Included Scope of Work:"}
                     </h3>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       {(isAr ? srv.scope_ar : srv.scope_en).map((item, i) => (
-                        <div key={i} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700">
-                          <CheckCircle2 className="w-4 h-4 text-[#C68B59] flex-shrink-0 mt-0.5" />
+                        <div key={i} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-200">
+                          <CheckCircle2 className="w-4 h-4 text-[#00d2ff] flex-shrink-0 mt-0.5" />
                           <span>{item}</span>
                         </div>
                       ))}

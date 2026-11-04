@@ -81,17 +81,17 @@ export default async function LocalSeoDetailPage({
       <LocalBusinessSchema locale={locale} />
 
       {/* Header Banner */}
-      <section className="bg-slate-50 py-16 sm:py-20 border-b border-slate-200">
+      <section className="bg-[#0d1728]/70 py-16 sm:py-20 border-b border-sky-400/15 relative z-10 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-[#0B192C] text-xs font-bold text-[#C68B59] mb-4">
-              <MapPin className="w-3.5 h-3.5" />
+            <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-sky-500/10 border border-sky-400/30 text-xs font-bold text-[#00d2ff] mb-4">
+              <MapPin className="w-3.5 h-3.5 text-[#00d2ff]" />
               <span>{isAr ? "خدمات مخصصة لمحافظة جدة" : "Tailored for Jeddah Province"}</span>
             </div>
-            <h1 className="text-3xl sm:text-5xl font-extrabold text-[#0B192C] leading-tight">
+            <h1 className="text-3xl sm:text-5xl font-extrabold text-white leading-tight">
               {h1}
             </h1>
-            <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
+            <p className="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
               {intro}
             </p>
           </div>
@@ -99,19 +99,19 @@ export default async function LocalSeoDetailPage({
       </section>
 
       {/* Main Grid */}
-      <section className="py-16 sm:py-20 bg-white">
+      <section className="py-16 sm:py-20 relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             {/* Key Advantages & FAQs (7 cols) */}
             <div className="lg:col-span-7 space-y-12">
               <div>
-                <h2 className="text-2xl font-bold text-[#0B192C] mb-6">
+                <h2 className="text-2xl font-bold text-white mb-6">
                   {isAr ? "مميزات التنفيذ مع مؤسسة رؤيانا بجدة:" : "Execution Highlights with Royana in Jeddah:"}
                 </h2>
-                <div className="space-y-4 bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-200">
+                <div className="space-y-4 bg-[#121e34]/75 p-6 sm:p-8 rounded-3xl border border-sky-400/15 backdrop-blur-md shadow-xl">
                   {keyPoints.map((pt, idx) => (
-                    <div key={idx} className="flex items-start gap-3 text-sm sm:text-base text-slate-800">
-                      <CheckCircle2 className="w-5 h-5 text-[#C68B59] flex-shrink-0 mt-0.5" />
+                    <div key={idx} className="flex items-start gap-3 text-sm sm:text-base text-slate-200">
+                      <CheckCircle2 className="w-5 h-5 text-[#00d2ff] flex-shrink-0 mt-0.5" />
                       <span>{pt}</span>
                     </div>
                   ))}
@@ -121,22 +121,22 @@ export default async function LocalSeoDetailPage({
               {/* Local FAQs */}
               {faqs.length > 0 && (
                 <div>
-                  <h2 className="text-2xl font-bold text-[#0B192C] mb-6">
+                  <h2 className="text-2xl font-bold text-white mb-6">
                     {isAr ? "الأسئلة الشائعة في مشاريع جدة:" : "Jeddah Contracting FAQs:"}
                   </h2>
                   <div className="space-y-4">
                     {faqs.map((faq, idx) => (
                       <div
                         key={idx}
-                        className="p-6 rounded-xl bg-slate-50 border border-slate-200"
+                        className="p-6 rounded-2xl bg-[#121e34]/75 border border-sky-400/15 backdrop-blur-md shadow-md"
                       >
                         <div className="flex items-start gap-3">
-                          <HelpCircle className="w-5 h-5 text-[#C68B59] flex-shrink-0 mt-0.5" />
+                          <HelpCircle className="w-5 h-5 text-[#00d2ff] flex-shrink-0 mt-0.5" />
                           <div>
-                            <h3 className="text-base font-bold text-[#0B192C] mb-2">
+                            <h3 className="text-base font-bold text-white mb-2">
                               {faq.q}
                             </h3>
-                            <p className="text-sm text-slate-600 leading-relaxed">
+                            <p className="text-sm text-slate-300 leading-relaxed font-normal">
                               {faq.a}
                             </p>
                           </div>

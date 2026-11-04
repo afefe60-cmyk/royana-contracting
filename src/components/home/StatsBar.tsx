@@ -11,12 +11,10 @@ interface StatsBarProps {
 
 export function StatsBar({ stats, locale }: StatsBarProps) {
   const isAr = locale === "ar";
-  // Filter only visible stats with non-null values
   const activeStats = stats.filter(
     (item) => item.visible && item.value !== null && !isNaN(item.value)
   );
 
-  // If no stats are available, hide completely without any blank space!
   if (activeStats.length === 0) {
     return null;
   }
@@ -24,7 +22,7 @@ export function StatsBar({ stats, locale }: StatsBarProps) {
   return (
     <section
       aria-label={isAr ? "إحصائيات وإنجازات المؤسسة" : "Company Track Record"}
-      className="bg-[#0B192C] text-white py-10 border-y border-[#1E3E62]"
+      className="bg-[#0d1728]/90 text-white py-10 border-y border-sky-400/15 relative z-10 backdrop-blur-md"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
@@ -40,7 +38,7 @@ export function StatsBar({ stats, locale }: StatsBarProps) {
         >
           {activeStats.map((item) => (
             <div key={item.id} className="space-y-1">
-              <div className="text-3xl sm:text-5xl font-extrabold text-[#C68B59] flex items-center justify-center gap-0.5">
+              <div className="text-3xl sm:text-5xl font-extrabold text-[#00d2ff] flex items-center justify-center gap-0.5 drop-shadow-[0_0_18px_rgba(0,210,255,0.3)]">
                 <span>{item.suffix}</span>
                 <span>{formatNumber(item.value!, locale)}</span>
               </div>

@@ -24,26 +24,26 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     ref
   ) => {
     const baseStyles =
-      "inline-flex items-center justify-center font-bold rounded-lg transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none cursor-pointer";
+      "inline-flex items-center justify-center font-bold rounded-full transition-all duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none cursor-pointer";
 
     const variantStyles = {
-      // Primary button: Accent bronze background with deep navy text (strictly NO white text)
+      // Primary button: Tech Cyan-Blue Gradient with white text and glowing shadow (Royana Tech style)
       primary:
-        "bg-[#C68B59] hover:bg-[#B57B4B] text-[#0B192C] shadow-sm focus-visible:outline-[#C68B59]",
+        "bg-gradient-to-r from-[#00d2ff] via-[#38bdf8] to-[#3a7bd5] text-white font-extrabold shadow-[0_4px_15px_rgba(0,210,255,0.35)] hover:shadow-[0_6px_22px_rgba(0,210,255,0.55)] hover:-translate-y-0.5 focus-visible:outline-[#00d2ff]",
       secondary:
-        "bg-[#0B192C] hover:bg-[#162C46] text-[#FFFFFF] shadow-sm focus-visible:outline-[#0B192C]",
+        "bg-[#121e34] border border-sky-400/20 text-white hover:bg-[#1a2c4c] hover:border-sky-400/50 shadow-md focus-visible:outline-[#38bdf8]",
       outline:
-        "border-2 border-[#C68B59] text-[#0B192C] hover:bg-[#C68B59] hover:text-[#0B192C] focus-visible:outline-[#C68B59]",
+        "border border-sky-400/30 bg-white/5 text-slate-100 hover:bg-sky-500/15 hover:border-[#00d2ff] hover:text-[#00d2ff] hover:-translate-y-0.5 backdrop-blur-sm focus-visible:outline-[#00d2ff]",
       ghost:
-        "text-[#1E293B] hover:bg-slate-100 focus-visible:outline-slate-400",
+        "text-slate-200 hover:text-[#00d2ff] hover:bg-white/5 focus-visible:outline-sky-400",
       whatsapp:
-        "bg-[#25D366] hover:bg-[#20BA57] text-[#0B192C] shadow-md focus-visible:outline-[#25D366]",
+        "bg-[#25D366] hover:bg-[#20BA57] text-[#070d18] font-extrabold shadow-[0_4px_15px_rgba(37,211,102,0.35)] hover:shadow-[0_6px_22px_rgba(37,211,102,0.55)] hover:-translate-y-0.5 focus-visible:outline-[#25D366]",
     };
 
     const sizeStyles = {
-      sm: "text-xs px-3 py-1.5 gap-1.5",
-      md: "text-sm sm:text-base px-5 py-2.5 gap-2",
-      lg: "text-base sm:text-lg px-7 py-3.5 gap-2.5",
+      sm: "text-xs px-3.5 py-1.5 gap-1.5",
+      md: "text-sm sm:text-base px-6 py-2.5 gap-2",
+      lg: "text-base sm:text-lg px-8 py-3.5 gap-2.5",
     };
 
     const combinedClassName = cn(
@@ -66,6 +66,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           </a>
         );
       }
+
       return (
         <Link href={href} className={combinedClassName}>
           {children}

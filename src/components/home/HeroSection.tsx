@@ -38,7 +38,6 @@ export function HeroSection({
       videoRef.current.defaultMuted = true;
       videoRef.current.muted = true;
       videoRef.current.play().catch((err) => {
-        // Autoplay handled safely by browser
         console.log("Autoplay deferral:", err);
       });
     }
@@ -52,8 +51,8 @@ export function HeroSection({
   );
 
   return (
-    <section className="relative w-full min-h-[80vh] sm:min-h-[85vh] lg:min-h-[90vh] overflow-hidden flex items-center justify-center bg-[#0B192C]">
-      {/* 1. Seamless Silent Background Video (strictly no sound and no pause/play controls) */}
+    <section className="relative w-full min-h-[80vh] sm:min-h-[85vh] lg:min-h-[90vh] overflow-hidden flex items-center justify-center bg-[#070d18]">
+      {/* 1. Silent Background Video */}
       <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
         <video
           ref={videoRef}
@@ -63,44 +62,42 @@ export function HeroSection({
           playsInline
           src={videoSrc}
           poster={posterSrc}
-          className="w-full h-full object-cover scale-105"
+          className="w-full h-full object-cover scale-105 opacity-40 sm:opacity-50"
         >
           <source src={videoSrc} type="video/mp4" />
         </video>
       </div>
 
-      {/* 2. Architectural Contrast Protection Layer (Balanced on mobile to make video vivid while keeping text crisp) */}
-      <div className="absolute inset-0 bg-gradient-to-t from-[#0B192C] via-[#0B192C]/50 to-[#0B192C]/65 sm:via-[#0B192C]/80 sm:to-[#0B192C]/85 z-10 pointer-events-none" />
-
-      {/* Subtle Blueprint Mesh */}
+      {/* 2. Royana Tech Contrast & Radial Mesh Layer */}
+      <div className="absolute inset-0 bg-gradient-to-t from-[#070d18] via-[#070d18]/70 to-[#070d18]/80 z-10 pointer-events-none" />
       <div
-        className="absolute inset-0 opacity-[0.05] pointer-events-none z-10"
+        className="absolute inset-0 opacity-[0.07] pointer-events-none z-10"
         style={{
           backgroundImage: `
-            linear-gradient(to right, #39B5FF 1px, transparent 1px),
-            linear-gradient(to bottom, #39B5FF 1px, transparent 1px)
+            linear-gradient(to right, #00d2ff 1px, transparent 1px),
+            linear-gradient(to bottom, #00d2ff 1px, transparent 1px)
           `,
           backgroundSize: "48px 48px",
         }}
       />
 
-      {/* 3. Disciplined Responsive Content Container */}
+      {/* 3. Hero Content Container */}
       <div className="relative z-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white py-12 sm:py-20 lg:py-24 flex flex-col items-center">
         {/* Verified Badge with Cyan glow */}
         {visibleBadges.length > 0 && (
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 sm:px-4 sm:py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-[#39B5FF]/50 text-[11px] sm:text-xs font-bold text-white mb-4 sm:mb-6 shadow-lg">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#39B5FF] animate-pulse" />
-            <ShieldCheck className="w-3.5 h-3.5 text-[#39B5FF]" />
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-500/10 backdrop-blur-md border border-sky-400/30 text-xs font-bold text-[#00d2ff] mb-4 sm:mb-6 shadow-[0_0_20px_rgba(0,210,255,0.2)]">
+            <span className="w-2 h-2 rounded-full bg-[#00d2ff] animate-pulse" />
+            <ShieldCheck className="w-4 h-4 text-[#00d2ff]" />
             <span>{isAr ? visibleBadges[0].text_ar : visibleBadges[0].text_en}</span>
           </div>
         )}
 
-        {/* Grand Responsive H1 Headline */}
-        <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-[1.25] sm:leading-[1.2] mb-3 sm:mb-6 drop-shadow-md">
+        {/* Grand H1 Headline */}
+        <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.25] sm:leading-[1.2] mb-4 sm:mb-6 drop-shadow-lg">
           {isAr ? (
             <>
               مقاولات عامة وترميم بجدة:{" "}
-              <span className="text-[#39B5FF] drop-shadow-[0_2px_12px_rgba(57,181,255,0.4)]">
+              <span className="bg-gradient-to-r from-[#00d2ff] via-[#38bdf8] to-[#818cf8] bg-clip-text text-transparent drop-shadow-[0_2px_15px_rgba(0,210,255,0.35)]">
                 دقة هندسية
               </span>
               ، والتزام معتمد بالكود السعودي
@@ -108,7 +105,7 @@ export function HeroSection({
           ) : (
             <>
               General Contracting & Restoration in Jeddah:{" "}
-              <span className="text-[#39B5FF] drop-shadow-[0_2px_12px_rgba(57,181,255,0.4)]">
+              <span className="bg-gradient-to-r from-[#00d2ff] via-[#38bdf8] to-[#818cf8] bg-clip-text text-transparent drop-shadow-[0_2px_15px_rgba(0,210,255,0.35)]">
                 Engineered Precision
               </span>
               , Compliant with Saudi Building Code
@@ -116,62 +113,60 @@ export function HeroSection({
           )}
         </h1>
 
-        {/* Concise Subtitle on Mobile to preserve first-fold vertical fit */}
-        <p className="text-xs sm:text-base lg:text-lg text-slate-200 leading-relaxed mb-6 sm:mb-8 max-w-2xl mx-auto drop-shadow-sm font-medium">
+        {/* Subtitle */}
+        <p className="text-sm sm:text-lg lg:text-xl text-slate-300 leading-relaxed mb-8 sm:mb-10 max-w-2xl mx-auto font-medium">
           {isAr
             ? "إنشاءات وترميم شامل، صيانة شبكات، وإشراف هندسي ميداني مباشر للفلل والمنشآت بجدة وفق أعلى معايير الجودة والضمان المعتمد."
             : "Turnkey construction, comprehensive villa restoration, MEP utilities, and on-site engineering management across Jeddah in full alignment with the Saudi Building Code."}
         </p>
 
-        {/* Action CTAs: hidden on mobile to avoid duplication with persistent bottom action bar and showcase background video */}
-        <div className="hidden sm:flex flex-col sm:flex-row items-center justify-center gap-3 w-full sm:w-auto mb-8 sm:mb-10">
-          {/* Primary Quote Button: bronze background with navy text */}
+        {/* Action CTAs */}
+        <div className="hidden sm:flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto mb-10 sm:mb-12">
           <Button
             href={`/${locale}/contact`}
             variant="primary"
-            size="md"
-            className="w-full sm:w-auto shadow-xl py-2.5 sm:py-3.5 px-6 sm:px-8 text-sm sm:text-base"
+            size="lg"
+            className="w-full sm:w-auto"
           >
             <span>{isAr ? "اطلب عرض سعر ومعاينة" : "Request a Quote Now"}</span>
             {isAr ? (
-              <ArrowLeft className="w-4 h-4 text-[#0B192C]" />
+              <ArrowLeft className="w-5 h-5 text-white" />
             ) : (
-              <ArrowRight className="w-4 h-4 text-[#0B192C]" />
+              <ArrowRight className="w-5 h-5 text-white" />
             )}
           </Button>
 
-          {/* WhatsApp Direct CTA */}
           <Button
             href={whatsappUrl}
             external
             variant="whatsapp"
-            size="md"
-            className="w-full sm:w-auto shadow-xl py-2.5 sm:py-3.5 px-6 sm:px-8 text-sm sm:text-base"
+            size="lg"
+            className="w-full sm:w-auto"
           >
-            <MessageCircle className="w-4 h-4 fill-[#0B192C] text-[#0B192C]" />
+            <MessageCircle className="w-5 h-5 fill-[#070d18] text-[#070d18]" />
             <span>{isAr ? "محادثة فورية مع المهندس" : "Chat on WhatsApp"}</span>
           </Button>
         </div>
 
         {/* Quick Highlights Strip inside the hero */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-3 w-full max-w-3xl pt-4 sm:pt-6 border-t border-white/15">
-          <div className="flex items-center justify-center gap-1.5 p-2 rounded-xl bg-white/5 backdrop-blur-xs border border-white/10 text-[11px] sm:text-xs text-slate-200">
-            <ShieldCheck className="w-3.5 h-3.5 text-[#39B5FF] flex-shrink-0" />
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 w-full max-w-4xl pt-6 border-t border-sky-400/15">
+          <div className="flex items-center justify-center gap-2 p-2.5 rounded-2xl bg-[#121e34]/70 backdrop-blur-md border border-sky-400/15 text-xs sm:text-sm text-slate-200 shadow-sm">
+            <ShieldCheck className="w-4 h-4 text-[#00d2ff] flex-shrink-0" />
             <span className="font-semibold">{isAr ? "كود البناء السعودي" : "Saudi Code"}</span>
           </div>
 
-          <div className="flex items-center justify-center gap-1.5 p-2 rounded-xl bg-white/5 backdrop-blur-xs border border-white/10 text-[11px] sm:text-xs text-slate-200">
-            <Ruler className="w-3.5 h-3.5 text-[#39B5FF] flex-shrink-0" />
+          <div className="flex items-center justify-center gap-2 p-2.5 rounded-2xl bg-[#121e34]/70 backdrop-blur-md border border-sky-400/15 text-xs sm:text-sm text-slate-200 shadow-sm">
+            <Ruler className="w-4 h-4 text-[#00d2ff] flex-shrink-0" />
             <span className="font-semibold">{isAr ? "إشراف هندسي ميداني" : "Site Oversight"}</span>
           </div>
 
-          <div className="flex items-center justify-center gap-1.5 p-2 rounded-xl bg-white/5 backdrop-blur-xs border border-white/10 text-[11px] sm:text-xs text-slate-200">
-            <FileCheck className="w-3.5 h-3.5 text-[#39B5FF] flex-shrink-0" />
+          <div className="flex items-center justify-center gap-2 p-2.5 rounded-2xl bg-[#121e34]/70 backdrop-blur-md border border-sky-400/15 text-xs sm:text-sm text-slate-200 shadow-sm">
+            <FileCheck className="w-4 h-4 text-[#00d2ff] flex-shrink-0" />
             <span className="font-semibold">{isAr ? "مقايسة BOQ دقيقة" : "Detailed BOQ"}</span>
           </div>
 
-          <div className="flex items-center justify-center gap-1.5 p-2 rounded-xl bg-white/5 backdrop-blur-xs border border-white/10 text-[11px] sm:text-xs text-slate-200">
-            <CheckCircle2 className="w-3.5 h-3.5 text-[#39B5FF] flex-shrink-0" />
+          <div className="flex items-center justify-center gap-2 p-2.5 rounded-2xl bg-[#121e34]/70 backdrop-blur-md border border-sky-400/15 text-xs sm:text-sm text-slate-200 shadow-sm">
+            <CheckCircle2 className="w-4 h-4 text-[#00d2ff] flex-shrink-0" />
             <span className="font-semibold">{isAr ? "ضمان رسمي معتمد" : "Official Warranty"}</span>
           </div>
         </div>

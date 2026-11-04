@@ -1,7 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { CheckCircle2, ArrowLeft, ArrowRight, ShieldCheck, Layers, Building } from "lucide-react";
+import { CheckCircle2, ShieldCheck, Building } from "lucide-react";
 import { getSecondaryServices, getSecondaryServiceBySlug } from "@/lib/content";
 import { QuoteRequestForm } from "@/components/forms/QuoteRequestForm";
 import { BreadcrumbSchema } from "@/components/seo/SchemaScripts";
@@ -79,16 +79,16 @@ export default async function SectorDetailPage({
       <BreadcrumbSchema items={breadcrumbs} />
 
       {/* Header Banner */}
-      <section className="bg-slate-50 py-16 sm:py-20 border-b border-slate-200">
+      <section className="bg-[#0d1728]/70 py-16 sm:py-20 border-b border-sky-400/15 relative z-10 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <span className="text-xs sm:text-sm font-bold text-[#C68B59] uppercase tracking-wider">
+            <span className="inline-block px-3.5 py-1 rounded-full bg-sky-500/10 border border-sky-400/30 text-xs sm:text-sm font-bold text-[#00d2ff] uppercase tracking-wider mb-3">
               {isAr ? "توريدات وحلول قطاعية" : "Specialized Sector Supply"}
             </span>
-            <h1 className="mt-2 text-3xl sm:text-5xl font-extrabold text-[#0B192C]">
+            <h1 className="mt-2 text-3xl sm:text-5xl font-extrabold text-white">
               {title}
             </h1>
-            <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
+            <p className="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
               {description}
             </p>
           </div>
@@ -96,21 +96,21 @@ export default async function SectorDetailPage({
       </section>
 
       {/* Main Grid */}
-      <section className="py-16 sm:py-20 bg-white">
+      <section className="py-16 sm:py-20 relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             {/* Specs & Applications (7 cols) */}
             <div className="lg:col-span-7 space-y-10">
               {/* Technical Specs */}
               <div>
-                <h2 className="text-2xl font-bold text-[#0B192C] mb-6 flex items-center gap-2">
-                  <ShieldCheck className="w-6 h-6 text-[#C68B59]" />
+                <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
+                  <ShieldCheck className="w-6 h-6 text-[#00d2ff]" />
                   <span>{isAr ? "المواصفات الفنية ومعايير الجودة:" : "Technical Specifications & Standards:"}</span>
                 </h2>
-                <div className="space-y-3.5 bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-200">
+                <div className="space-y-3.5 bg-[#121e34]/75 p-6 sm:p-8 rounded-3xl border border-sky-400/15 backdrop-blur-md shadow-xl">
                   {specs.map((item, idx) => (
-                    <div key={idx} className="flex items-start gap-3 text-sm sm:text-base text-slate-800">
-                      <CheckCircle2 className="w-5 h-5 text-[#C68B59] flex-shrink-0 mt-0.5" />
+                    <div key={idx} className="flex items-start gap-3 text-sm sm:text-base text-slate-200">
+                      <CheckCircle2 className="w-5 h-5 text-[#00d2ff] flex-shrink-0 mt-0.5" />
                       <span>{item}</span>
                     </div>
                   ))}
@@ -119,17 +119,17 @@ export default async function SectorDetailPage({
 
               {/* Practical Applications */}
               <div>
-                <h2 className="text-2xl font-bold text-[#0B192C] mb-6 flex items-center gap-2">
-                  <Building className="w-6 h-6 text-[#C68B59]" />
+                <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
+                  <Building className="w-6 h-6 text-[#00d2ff]" />
                   <span>{isAr ? "مجالات الاستخدام والتطبيقات:" : "Industry Applications & Use Cases:"}</span>
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {applications.map((app, idx) => (
                     <div
                       key={idx}
-                      className="p-5 rounded-xl border border-slate-200 bg-white shadow-2xs text-sm font-semibold text-slate-800 flex items-center gap-3"
+                      className="p-5 rounded-2xl border border-sky-400/15 bg-[#121e34]/75 backdrop-blur-md shadow-md text-sm font-semibold text-slate-200 flex items-center gap-3"
                     >
-                      <span className="w-3 h-3 rounded-full bg-[#C68B59] flex-shrink-0" />
+                      <span className="w-2.5 h-2.5 rounded-full bg-[#00d2ff] shadow-[0_0_8px_rgba(0,210,255,0.7)] flex-shrink-0" />
                       <span>{app}</span>
                     </div>
                   ))}
@@ -138,7 +138,7 @@ export default async function SectorDetailPage({
 
               {/* Real Products / Site Gallery */}
               {sector.images && sector.images.length > 0 && (
-                <div className="pt-6 border-t border-slate-200">
+                <div className="pt-6 border-t border-sky-400/15">
                   <InteractiveGallery
                     images={sector.images}
                     title={isAr ? "معرض النماذج والصور الميدانية المعتمدة:" : "Authentic Product & Site Gallery:"}

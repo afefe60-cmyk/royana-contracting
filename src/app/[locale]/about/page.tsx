@@ -74,18 +74,18 @@ export default async function AboutPage({ params }: AboutPageProps) {
       <BreadcrumbSchema items={breadcrumbs} />
 
       {/* Hero Banner */}
-      <section className="bg-slate-50 py-16 sm:py-20 border-b border-slate-200">
+      <section className="bg-[#0d1728]/70 py-16 sm:py-20 border-b border-sky-400/15 relative z-10 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <span className="text-xs sm:text-sm font-bold text-[#C68B59] uppercase tracking-wider">
+            <span className="inline-block px-3.5 py-1 rounded-full bg-sky-500/10 border border-sky-400/30 text-xs sm:text-sm font-bold text-[#00d2ff] uppercase tracking-wider mb-3">
               {isAr ? "نبذة عن المؤسسة" : "About the Establishment"}
             </span>
-            <h1 className="mt-2 text-3xl sm:text-5xl font-extrabold text-[#0B192C]">
+            <h1 className="mt-2 text-3xl sm:text-5xl font-extrabold text-white">
               {isAr
                 ? "مؤسسة رؤيانا الحديثة للمقاولات"
                 : "Royana Modern Contracting Establishment"}
             </h1>
-            <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
+            <p className="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
               {isAr
                 ? "مؤسسة مقاولات عامة سعودية مقرها جدة، تعمل برؤية هندسية واضحة تضع الجودة والسلامة والالتزام في مقدمة أولوياتها لبناء علاقات طويلة الأمد مع عملائنا وشركائنا."
                 : "A Saudi general contracting establishment headquartered in Jeddah, operating with transparent engineering discipline prioritizing safety and lasting client trust."}
@@ -95,14 +95,14 @@ export default async function AboutPage({ params }: AboutPageProps) {
       </section>
 
       {/* Story & Vision & Mission */}
-      <section className="py-16 sm:py-20 bg-white">
+      <section className="py-16 sm:py-20 relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
             <div>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0B192C] mb-6">
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-white mb-6">
                 {isAr ? "قصتنا ومنهجيتنا في العمل" : "Our Story & Operating Philosophy"}
               </h2>
-              <div className="space-y-4 text-sm sm:text-base text-slate-600 leading-relaxed">
+              <div className="space-y-4 text-sm sm:text-base text-slate-300 leading-relaxed font-normal">
                 <p>
                   {isAr
                     ? "تأسست مؤسسة رؤيانا الحديثة للمقاولات في مدينة جدة لتكون الشريك الهندسي الموثوق لملاك العقارات والشركات والمصانع الباحثين عن الجودة العالية دون مساومة."
@@ -118,14 +118,14 @@ export default async function AboutPage({ params }: AboutPageProps) {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {/* Vision */}
-              <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200">
-                <div className="w-12 h-12 rounded-xl bg-[#0B192C] flex items-center justify-center mb-4">
-                  <Eye className="w-6 h-6 text-[#C68B59]" />
+              <div className="p-6 rounded-2xl bg-[#121e34]/75 border border-sky-400/15 hover:border-sky-400/40 hover:bg-[#1a2c4c]/90 backdrop-blur-md transition-all shadow-xl">
+                <div className="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-400/20 flex items-center justify-center mb-4">
+                  <Eye className="w-6 h-6 text-[#00d2ff]" />
                 </div>
-                <h3 className="text-lg font-bold text-[#0B192C] mb-2">
+                <h3 className="text-lg font-bold text-white mb-2">
                   {isAr ? "رؤيتنا" : "Our Vision"}
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
                   {isAr
                     ? "أن نكون الخيار الأول في جدة ومنطقة مكة المكرمة لأعمال المقاولات والترميم التي تتطلب دقة هندسية عالية وموثوقية تنفيذية تامة."
                     : "To stand as the preferred contracting and restoration partner across Jeddah and Makkah Province, recognized for engineering rigor."}
@@ -133,14 +133,14 @@ export default async function AboutPage({ params }: AboutPageProps) {
               </div>
 
               {/* Mission */}
-              <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200">
-                <div className="w-12 h-12 rounded-xl bg-[#0B192C] flex items-center justify-center mb-4">
-                  <Target className="w-6 h-6 text-[#C68B59]" />
+              <div className="p-6 rounded-2xl bg-[#121e34]/75 border border-sky-400/15 hover:border-sky-400/40 hover:bg-[#1a2c4c]/90 backdrop-blur-md transition-all shadow-xl">
+                <div className="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-400/20 flex items-center justify-center mb-4">
+                  <Target className="w-6 h-6 text-[#00d2ff]" />
                 </div>
-                <h3 className="text-lg font-bold text-[#0B192C] mb-2">
+                <h3 className="text-lg font-bold text-white mb-2">
                   {isAr ? "رسالتنا" : "Our Mission"}
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
                   {isAr
                     ? "تقديم خدمات بناء وترميم متكاملة تحمي استثمارات عملائنا، وتلتزم بأعلى معايير الكود السعودي وضمان الأعمال المنفذة."
                     : "Delivering turnkey construction and restoration that safeguards investments, honoring the Saudi Building Code with certified warranties."}
@@ -150,12 +150,12 @@ export default async function AboutPage({ params }: AboutPageProps) {
           </div>
 
           {/* Core Values */}
-          <div className="pt-12 border-t border-slate-200">
+          <div className="pt-12 border-t border-sky-400/15">
             <div className="text-center max-w-2xl mx-auto mb-12">
-              <span className="text-xs font-bold text-[#C68B59] uppercase tracking-wider">
+              <span className="inline-block px-3.5 py-1 rounded-full bg-sky-500/10 border border-sky-400/30 text-xs font-bold text-[#00d2ff] uppercase tracking-wider mb-3">
                 {isAr ? "مبادئنا المهنية" : "Our Engineering Values"}
               </span>
-              <h2 className="mt-2 text-2xl sm:text-3xl font-extrabold text-[#0B192C]">
+              <h2 className="mt-2 text-2xl sm:text-3xl font-extrabold text-white">
                 {isAr ? "القيم التي توجه كل قرار هندسي نتخذه" : "Values Guiding Every Milestone We Execute"}
               </h2>
             </div>
@@ -164,12 +164,12 @@ export default async function AboutPage({ params }: AboutPageProps) {
               {values.map((val, idx) => (
                 <div
                   key={idx}
-                  className="p-6 rounded-2xl bg-slate-50 border border-slate-200"
+                  className="p-6 rounded-2xl bg-[#121e34]/75 border border-sky-400/15 hover:border-sky-400/40 hover:bg-[#1a2c4c]/90 backdrop-blur-md shadow-xl transition-all"
                 >
-                  <h3 className="text-base font-bold text-[#0B192C] mb-2">
+                  <h3 className="text-base font-bold text-white mb-2">
                     {isAr ? val.title_ar : val.title_en}
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
                     {isAr ? val.desc_ar : val.desc_en}
                   </p>
                 </div>
@@ -177,29 +177,29 @@ export default async function AboutPage({ params }: AboutPageProps) {
             </div>
           </div>
 
-          {/* Credentials & Documents (Strictly conditional - only show if real info exists!) */}
+          {/* Credentials & Documents */}
           {hasCredentials && (
-            <div className="mt-16 pt-12 border-t border-slate-200">
-              <h2 className="text-2xl font-bold text-[#0B192C] mb-6">
+            <div className="mt-16 pt-12 border-t border-sky-400/15">
+              <h2 className="text-2xl font-bold text-white mb-6">
                 {isAr ? "التراخيص والاعتمادات الرسمية" : "Official Licenses & Accreditations"}
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                 {settings.credentials.commercial_registration && (
-                  <div className="p-6 rounded-xl bg-slate-50 border border-slate-200">
-                    <p className="text-xs text-slate-500 mb-1">{isAr ? "السجل التجاري" : "Commercial Registration"}</p>
-                    <p className="text-lg font-bold text-[#0B192C]">{settings.credentials.commercial_registration}</p>
+                  <div className="p-6 rounded-2xl bg-[#121e34]/75 border border-sky-400/15 backdrop-blur-md">
+                    <p className="text-xs text-slate-400 mb-1">{isAr ? "السجل التجاري" : "Commercial Registration"}</p>
+                    <p className="text-lg font-bold text-[#00d2ff]">{settings.credentials.commercial_registration}</p>
                   </div>
                 )}
                 {settings.credentials.vat_number && (
-                  <div className="p-6 rounded-xl bg-slate-50 border border-slate-200">
-                    <p className="text-xs text-slate-500 mb-1">{isAr ? "الرقم الضريبي" : "VAT Number"}</p>
-                    <p className="text-lg font-bold text-[#0B192C]">{settings.credentials.vat_number}</p>
+                  <div className="p-6 rounded-2xl bg-[#121e34]/75 border border-sky-400/15 backdrop-blur-md">
+                    <p className="text-xs text-slate-400 mb-1">{isAr ? "الرقم الضريبي" : "VAT Number"}</p>
+                    <p className="text-lg font-bold text-[#00d2ff]">{settings.credentials.vat_number}</p>
                   </div>
                 )}
                 {settings.credentials.classification.grade && (
-                  <div className="p-6 rounded-xl bg-slate-50 border border-slate-200">
-                    <p className="text-xs text-slate-500 mb-1">{isAr ? "تصنيف المقاولين" : "Contractor Classification"}</p>
-                    <p className="text-lg font-bold text-[#0B192C]">
+                  <div className="p-6 rounded-2xl bg-[#121e34]/75 border border-sky-400/15 backdrop-blur-md">
+                    <p className="text-xs text-slate-400 mb-1">{isAr ? "تصنيف المقاولين" : "Contractor Classification"}</p>
+                    <p className="text-lg font-bold text-[#00d2ff]">
                       {settings.credentials.classification.grade} - {settings.credentials.classification.field}
                     </p>
                   </div>

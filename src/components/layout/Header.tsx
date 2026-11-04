@@ -64,19 +64,19 @@ export function Header({
     <header
       className={`sticky top-0 z-40 transition-all duration-300 ${
         scrolled
-          ? "bg-[#0B192C]/95 backdrop-blur-md shadow-lg border-b border-[#1E3E62]/80"
-          : "bg-[#0B192C]/90 backdrop-blur-sm border-b border-[#1E3E62]/50"
+          ? "bg-[#070d18]/90 backdrop-blur-md shadow-[0_10px_30px_rgba(0,0,0,0.5)] border-b border-sky-400/20"
+          : "bg-[#070d18]/80 backdrop-blur-sm border-b border-sky-400/15"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
-          {/* Official Logo with natural proportions */}
+          {/* Official Logo with Royana Tech cyan drop shadow */}
           <Link
             href={`/${locale}`}
-            className="flex items-center focus:outline-none focus:ring-2 focus:ring-[#39B5FF] rounded-lg p-0.5 group"
+            className="flex items-center focus:outline-none focus:ring-2 focus:ring-[#00d2ff] rounded-lg p-0.5 group"
             aria-label={isAr ? "رؤيانا الحديثة للمقاولات - الصفحة الرئيسية" : "Royana Modern Contracting - Home"}
           >
-            <div className="relative h-11 sm:h-14 w-36 sm:w-48 aspect-[3.12/1] transition-transform group-hover:scale-102">
+            <div className="relative h-11 sm:h-14 w-36 sm:w-48 aspect-[3.12/1] transition-transform group-hover:scale-102 drop-shadow-[0_0_12px_rgba(0,210,255,0.25)]">
               <Image
                 src="/images/logo-white.webp"
                 alt="شعار مؤسسة رؤيانا الحديثة للمقاولات"
@@ -102,10 +102,10 @@ export function Header({
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`px-3 py-2 text-sm font-semibold rounded-lg transition-all ${
+                  className={`px-3 py-2 text-sm font-semibold rounded-full transition-all relative ${
                     isActive
-                      ? "text-[#39B5FF] bg-white/10 font-bold border-b-2 border-[#39B5FF]"
-                      : "text-slate-200 hover:text-white hover:bg-white/5"
+                      ? "text-[#00d2ff] bg-sky-500/10 font-bold border border-sky-400/30 shadow-[0_0_15px_rgba(0,210,255,0.2)]"
+                      : "text-slate-300 hover:text-[#00d2ff] hover:bg-white/5"
                   }`}
                 >
                   {link.label}
@@ -119,9 +119,9 @@ export function Header({
             <a
               href={phoneUrl}
               onClick={() => trackCallClick(phone)}
-              className="flex items-center gap-2 text-xs xl:text-sm font-bold text-slate-200 hover:text-[#39B5FF] transition-colors"
+              className="flex items-center gap-2 text-xs xl:text-sm font-bold text-slate-200 hover:text-[#00d2ff] transition-colors"
             >
-              <span className="w-8 h-8 rounded-full bg-[#1E3E62] flex items-center justify-center text-[#39B5FF]">
+              <span className="w-8 h-8 rounded-full bg-[#0d1728] border border-sky-400/20 flex items-center justify-center text-[#00d2ff] shadow-sm">
                 <Phone className="w-4 h-4" />
               </span>
               <span dir="ltr">{phoneDisplay}</span>
@@ -133,7 +133,6 @@ export function Header({
               href={`/${locale}/contact`}
               variant="primary"
               size="sm"
-              className="shadow-md"
             >
               {isAr ? "اطلب عرض سعر" : "Get a Quote"}
             </Button>
@@ -146,7 +145,7 @@ export function Header({
             <a
               href={phoneUrl}
               onClick={() => trackCallClick(phone)}
-              className="w-9 h-9 rounded-full bg-[#162C46] flex items-center justify-center text-[#39B5FF] border border-[#1E3E62] hover:bg-[#1E3E62] hover:border-[#39B5FF] hover:scale-105 active:scale-95 transition-all shadow-sm"
+              className="w-9 h-9 rounded-full bg-[#0d1728] flex items-center justify-center text-[#00d2ff] border border-sky-400/20 hover:border-[#00d2ff] hover:scale-105 active:scale-95 transition-all shadow-sm"
               aria-label={isAr ? "اتصال هاتفي مباشر" : "Direct Phone Call"}
               title={phoneDisplay}
             >
@@ -157,10 +156,10 @@ export function Header({
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label={mobileMenuOpen ? "إغلاق القائمة" : "فتح القائمة الرئيسية"}
               aria-expanded={mobileMenuOpen}
-              className="p-2 rounded-lg text-slate-200 hover:bg-[#1E3E62] focus:outline-none focus:ring-2 focus:ring-[#39B5FF]"
+              className="p-2 rounded-lg text-slate-200 hover:bg-sky-500/10 hover:text-[#00d2ff] focus:outline-none focus:ring-2 focus:ring-[#00d2ff]"
             >
               {mobileMenuOpen ? (
-                <X className="w-6 h-6 text-[#39B5FF]" />
+                <X className="w-6 h-6 text-[#00d2ff]" />
               ) : (
                 <Menu className="w-6 h-6 text-white" />
               )}
@@ -169,9 +168,9 @@ export function Header({
         </div>
       </div>
 
-      {/* Mobile Drawer Navigation with clean language switcher */}
+      {/* Mobile Drawer Navigation */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-[#1E3E62] bg-[#0B192C] shadow-2xl animate-in slide-in-from-top-2 duration-200">
+        <div className="lg:hidden border-t border-sky-400/20 bg-[#070d18]/95 backdrop-blur-xl shadow-2xl animate-in slide-in-from-top-2 duration-200">
           <nav
             aria-label={isAr ? "قائمة الجوال" : "Mobile Menu"}
             className="px-4 pt-3 pb-6 space-y-1.5"
@@ -180,13 +179,13 @@ export function Header({
               <Link
                 key={link.href}
                 href={link.href}
-                className="block px-3 py-2.5 rounded-lg text-base font-semibold text-slate-200 hover:bg-[#1E3E62] hover:text-[#39B5FF]"
+                className="block px-3 py-2.5 rounded-xl text-base font-semibold text-slate-200 hover:bg-sky-500/10 hover:text-[#00d2ff] transition-colors"
               >
                 {link.label}
               </Link>
             ))}
 
-            <div className="pt-4 border-t border-[#1E3E62] space-y-3">
+            <div className="pt-4 border-t border-sky-400/15 space-y-3">
               <div className="flex items-center justify-between px-2">
                 <span className="text-xs text-slate-400 font-semibold">
                   {isAr ? "لغة الموقع:" : "Language:"}
@@ -197,9 +196,9 @@ export function Header({
               <a
                 href={phoneUrl}
                 onClick={() => trackCallClick(phone)}
-                className="flex items-center justify-center gap-2 w-full py-2.5 rounded-lg bg-[#162C46] text-white font-bold text-sm"
+                className="flex items-center justify-center gap-2 w-full py-2.5 rounded-full bg-[#0d1728] border border-sky-400/20 text-white font-bold text-sm"
               >
-                <Phone className="w-4 h-4 text-[#39B5FF]" />
+                <Phone className="w-4 h-4 text-[#00d2ff]" />
                 <span dir="ltr">{phoneDisplay}</span>
               </a>
 

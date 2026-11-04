@@ -103,40 +103,44 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
 
-      <article className="py-16 sm:py-20 bg-white">
+      <article className="py-16 sm:py-20 relative z-10 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-8">
             <Link
               href={`/${locale}/blog`}
-              className="inline-flex items-center gap-2 text-xs font-bold text-[#C68B59] hover:text-[#0B192C] transition-colors mb-6"
+              className="inline-flex items-center gap-2 text-xs font-bold text-[#00d2ff] hover:text-white transition-colors mb-6 group"
             >
-              {isAr ? <ArrowRight className="w-3.5 h-3.5" /> : <ArrowLeft className="w-3.5 h-3.5" />}
+              {isAr ? (
+                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+              ) : (
+                <ArrowLeft className="w-3.5 h-3.5 group-hover:-translate-x-1 transition-transform" />
+              )}
               <span>{isAr ? "العودة لكافة المقالات" : "Back to Blog"}</span>
             </Link>
 
-            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-[#0B192C] leading-tight mb-6">
+            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-6">
               {title}
             </h1>
 
-            <div className="flex flex-wrap items-center gap-4 text-xs sm:text-sm text-slate-500 pb-6 border-b border-slate-200">
-              <span className="flex items-center gap-1.5 font-medium text-slate-700">
-                <User className="w-4 h-4 text-[#C68B59]" />
+            <div className="flex flex-wrap items-center gap-4 text-xs sm:text-sm text-slate-300 pb-6 border-b border-sky-400/15">
+              <span className="flex items-center gap-1.5 font-medium text-slate-200">
+                <User className="w-4 h-4 text-[#00d2ff]" />
                 <span>{author}</span>
               </span>
               <span>•</span>
               <span className="flex items-center gap-1.5">
-                <Calendar className="w-4 h-4 text-[#C68B59]" />
+                <Calendar className="w-4 h-4 text-[#00d2ff]" />
                 <span>{post.date}</span>
               </span>
               <span>•</span>
               <span className="flex items-center gap-1.5">
-                <Clock className="w-4 h-4 text-[#C68B59]" />
+                <Clock className="w-4 h-4 text-[#00d2ff]" />
                 <span>{isAr ? post.read_time_ar : post.read_time_en}</span>
               </span>
             </div>
           </div>
 
-          <div className="relative aspect-[16/9] rounded-2xl overflow-hidden mb-10 border border-slate-200">
+          <div className="relative aspect-[16/9] rounded-3xl overflow-hidden mb-10 border border-sky-400/20 shadow-2xl bg-[#0d1728]">
             <Image
               src={post.thumbnail}
               alt={title}
@@ -146,11 +150,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             />
           </div>
 
-          <div className="prose prose-slate max-w-none text-base sm:text-lg leading-relaxed text-slate-700">
-            <p className="font-semibold text-xl text-[#0B192C] mb-6 leading-relaxed">
+          <div className="bg-[#121e34]/75 p-6 sm:p-10 rounded-3xl border border-sky-400/15 backdrop-blur-md shadow-xl text-base sm:text-lg leading-relaxed text-slate-200">
+            <p className="font-semibold text-xl text-white mb-6 leading-relaxed border-b border-sky-400/15 pb-6">
               {summary}
             </p>
-            <div className="space-y-4">
+            <div className="space-y-5 text-slate-300 font-normal">
               {content.split("\n\n").map((para, i) => (
                 <p key={i}>{para}</p>
               ))}

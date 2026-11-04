@@ -44,7 +44,7 @@ export function SplashScreen() {
         setFading(true);
         setTimeout(() => setVisible(false), 300);
       }}
-      className={`fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#0B192C] transition-opacity duration-500 cursor-pointer select-none ${
+      className={`fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#070d18] transition-opacity duration-500 cursor-pointer select-none ${
         fading ? "opacity-0 pointer-events-none" : "opacity-100"
       }`}
     >
@@ -53,8 +53,8 @@ export function SplashScreen() {
         className="absolute inset-0 opacity-[0.06] pointer-events-none"
         style={{
           backgroundImage: `
-            linear-gradient(to right, #39B5FF 1px, transparent 1px),
-            linear-gradient(to bottom, #39B5FF 1px, transparent 1px)
+            linear-gradient(to right, #00d2ff 1px, transparent 1px),
+            linear-gradient(to bottom, #00d2ff 1px, transparent 1px)
           `,
           backgroundSize: "40px 40px",
         }}
@@ -63,9 +63,9 @@ export function SplashScreen() {
       {/* Center glowing brand beam */}
       <div className="relative z-10 flex flex-col items-center max-w-sm px-6 text-center">
         {/* Subtle cyan glow halo */}
-        <div className="absolute -inset-4 bg-[#39B5FF]/15 blur-2xl rounded-full pointer-events-none" />
+        <div className="absolute -inset-6 bg-[#00d2ff]/20 blur-3xl rounded-full pointer-events-none" />
 
-        <div className="relative w-64 sm:w-80 h-24 mb-6 animate-pulse">
+        <div className="relative w-64 sm:w-80 h-24 mb-6 animate-pulse drop-shadow-[0_0_15px_rgba(0,210,255,0.35)]">
           <Image
             src="/images/logo-white.webp"
             alt="رؤيانا الحديثة للمقاولات"
@@ -76,14 +76,14 @@ export function SplashScreen() {
         </div>
 
         {/* Engineering tagline */}
-        <p className="text-xs sm:text-sm font-semibold text-[#39B5FF] tracking-wider mb-5 flex items-center gap-2">
-          <span className="w-2 h-2 rounded-full bg-[#39B5FF] animate-ping" />
+        <p className="text-xs sm:text-sm font-semibold text-[#00d2ff] tracking-wider mb-5 flex items-center gap-2">
+          <span className="w-2 h-2 rounded-full bg-[#00d2ff] animate-ping" />
           <span>هندسة • إنشاءات • ترميم • إشراف</span>
         </p>
 
         {/* Minimal Progress Bar */}
-        <div className="w-48 h-1 bg-[#1E3E62] rounded-full overflow-hidden">
-          <div className="h-full bg-gradient-to-r from-[#39B5FF] via-[#38BDF8] to-[#C68B59] rounded-full animate-[progress_1.4s_ease-in-out_infinite]" />
+        <div className="w-48 h-1 bg-[#121e34] rounded-full overflow-hidden">
+          <div className="h-full bg-gradient-to-r from-[#00d2ff] via-[#38bdf8] to-[#3a7bd5] rounded-full animate-[progress_1.4s_ease-in-out_infinite]" />
         </div>
       </div>
     </div>

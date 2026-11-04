@@ -1,7 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { CheckCircle2, ArrowLeft, ArrowRight, HelpCircle } from "lucide-react";
+import { CheckCircle2, HelpCircle } from "lucide-react";
 import { getServices, getServiceBySlug } from "@/lib/content";
 import { QuoteRequestForm } from "@/components/forms/QuoteRequestForm";
 import {
@@ -89,16 +89,16 @@ export default async function ServiceDetailPage({
       <FAQSchema faqs={faqs} />
 
       {/* Header Banner */}
-      <section className="bg-slate-50 py-16 sm:py-20 border-b border-slate-200">
+      <section className="bg-[#0d1728]/70 py-16 sm:py-20 border-b border-sky-400/15 relative z-10 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <span className="text-xs sm:text-sm font-bold text-[#C68B59] uppercase tracking-wider">
+            <span className="inline-block px-3.5 py-1 rounded-full bg-sky-500/10 border border-sky-400/30 text-xs sm:text-sm font-bold text-[#00d2ff] uppercase tracking-wider mb-3">
               {isAr ? "خدمات المقاولات التخصصية" : "Specialized Contracting Services"}
             </span>
-            <h1 className="mt-2 text-3xl sm:text-5xl font-extrabold text-[#0B192C]">
+            <h1 className="mt-2 text-3xl sm:text-5xl font-extrabold text-white">
               {title}
             </h1>
-            <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
+            <p className="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
               {description}
             </p>
           </div>
@@ -106,20 +106,20 @@ export default async function ServiceDetailPage({
       </section>
 
       {/* Main Content & Quote Form Grid */}
-      <section className="py-16 sm:py-20 bg-white">
+      <section className="py-16 sm:py-20 relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-            {/* Left/Main Column: Scope & Steps & FAQs (8 cols) */}
+            {/* Left Column: Scope & Steps & FAQs (7 cols) */}
             <div className="lg:col-span-7 space-y-12">
               {/* Scope of Work */}
               <div>
-                <h2 className="text-2xl font-bold text-[#0B192C] mb-6">
+                <h2 className="text-2xl font-bold text-white mb-6">
                   {isAr ? "ما يشمله نطاق الأعمال:" : "Included Scope of Work:"}
                 </h2>
-                <div className="space-y-3.5 bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-200">
+                <div className="space-y-3.5 bg-[#121e34]/75 p-6 sm:p-8 rounded-3xl border border-sky-400/15 backdrop-blur-md shadow-xl">
                   {scope.map((item, idx) => (
-                    <div key={idx} className="flex items-start gap-3 text-sm sm:text-base text-slate-800">
-                      <CheckCircle2 className="w-5 h-5 text-[#C68B59] flex-shrink-0 mt-0.5" />
+                    <div key={idx} className="flex items-start gap-3 text-sm sm:text-base text-slate-200">
+                      <CheckCircle2 className="w-5 h-5 text-[#00d2ff] flex-shrink-0 mt-0.5" />
                       <span>{item}</span>
                     </div>
                   ))}
@@ -128,23 +128,23 @@ export default async function ServiceDetailPage({
 
               {/* Execution Steps */}
               <div>
-                <h2 className="text-2xl font-bold text-[#0B192C] mb-6">
+                <h2 className="text-2xl font-bold text-white mb-6">
                   {isAr ? "مراحل وخطوات التنفيذ:" : "Execution Process & Stages:"}
                 </h2>
                 <div className="space-y-4">
                   {steps.map((st, idx) => (
                     <div
                       key={idx}
-                      className="p-5 rounded-xl border border-slate-200 bg-white flex items-start gap-4 shadow-2xs"
+                      className="p-5 rounded-2xl border border-sky-400/15 bg-[#121e34]/75 backdrop-blur-md flex items-start gap-4 shadow-md"
                     >
-                      <span className="w-8 h-8 rounded-full bg-[#0B192C] text-[#C68B59] font-bold text-sm flex items-center justify-center flex-shrink-0">
+                      <span className="w-8 h-8 rounded-full bg-sky-500/10 border border-sky-400/30 text-[#00d2ff] font-bold text-sm flex items-center justify-center flex-shrink-0">
                         {idx + 1}
                       </span>
                       <div>
-                        <h3 className="text-base font-bold text-[#0B192C] mb-1">
+                        <h3 className="text-base font-bold text-white mb-1">
                           {st.title}
                         </h3>
-                        <p className="text-sm text-slate-600 leading-relaxed">
+                        <p className="text-sm text-slate-300 leading-relaxed font-normal">
                           {st.desc}
                         </p>
                       </div>
@@ -156,22 +156,22 @@ export default async function ServiceDetailPage({
               {/* FAQs */}
               {faqs.length > 0 && (
                 <div>
-                  <h2 className="text-2xl font-bold text-[#0B192C] mb-6">
+                  <h2 className="text-2xl font-bold text-white mb-6">
                     {isAr ? "الأسئلة الشائعة حول الخدمة:" : "Frequently Asked Questions:"}
                   </h2>
                   <div className="space-y-4">
                     {faqs.map((faq, idx) => (
                       <div
                         key={idx}
-                        className="p-6 rounded-xl bg-slate-50 border border-slate-200"
+                        className="p-6 rounded-2xl bg-[#121e34]/75 border border-sky-400/15 backdrop-blur-md shadow-md"
                       >
                         <div className="flex items-start gap-3">
-                          <HelpCircle className="w-5 h-5 text-[#C68B59] flex-shrink-0 mt-0.5" />
+                          <HelpCircle className="w-5 h-5 text-[#00d2ff] flex-shrink-0 mt-0.5" />
                           <div>
-                            <h3 className="text-base font-bold text-[#0B192C] mb-2">
+                            <h3 className="text-base font-bold text-white mb-2">
                               {faq.q}
                             </h3>
-                            <p className="text-sm text-slate-600 leading-relaxed">
+                            <p className="text-sm text-slate-300 leading-relaxed font-normal">
                               {faq.a}
                             </p>
                           </div>

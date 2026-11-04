@@ -3,22 +3,46 @@
 @tailwind utilities;
 
 :root {
-  --font-arabic: 'IBM Plex Sans Arabic', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --bg-primary: #070d18;
+  --bg-secondary: #0d1728;
+  --bg-card: rgba(18, 30, 52, 0.75);
+  --bg-card-hover: rgba(26, 44, 76, 0.9);
+  --border-color: rgba(56, 189, 248, 0.15);
+  --border-glow: rgba(56, 189, 248, 0.4);
+
+  --primary: #2563eb;
+  --primary-glow: #3b82f6;
+  --accent: #00d2ff;
+  --accent-gradient: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
+  --secondary-gradient: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --text-dim: #64748b;
+
+  --font-arabic: 'Cairo', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
   -webkit-tap-highlight-color: transparent;
   overflow-x: hidden;
+  background-color: #070d18;
+  color: #f8fafc;
 }
 
 body {
-  color: #1E293B;
-  background-color: #FFFFFF;
+  color: #f8fafc;
+  background-color: #070d18;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  min-height: 100vh;
+  background-image: 
+    radial-gradient(circle at 15% 15%, rgba(37, 99, 235, 0.12) 0%, transparent 40%),
+    radial-gradient(circle at 85% 85%, rgba(0, 210, 255, 0.08) 0%, transparent 45%);
+  background-attachment: fixed;
 }
 
 /* Reduced motion support */
@@ -36,4 +60,26 @@ body {
 /* Safe area insets for mobile modern browsers */
 .safe-area-bottom {
   padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
+}
+
+/* Glassmorphism helpers matching Royana Tech */
+.tech-card {
+  background: rgba(18, 30, 52, 0.75);
+  border: 1px solid rgba(56, 189, 248, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tech-card:hover {
+  background: rgba(26, 44, 76, 0.9);
+  border-color: rgba(56, 189, 248, 0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5), 0 0 25px rgba(0, 210, 255, 0.2);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #00d2ff 0%, #38bdf8 50%, #818cf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

@@ -37,16 +37,16 @@ export default async function TermsPage({ params }: TermsPageProps) {
     <>
       <BreadcrumbSchema items={breadcrumbs} />
 
-      <section className="bg-slate-50 py-16 sm:py-20 border-b border-slate-200">
+      <section className="bg-[#0d1728]/70 py-16 sm:py-20 border-b border-sky-400/15 relative z-10 backdrop-blur-md">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#0B192C] text-xs font-bold text-[#C68B59] mb-4">
-            <FileText className="w-4 h-4" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-sky-500/10 border border-sky-400/30 text-xs font-bold text-[#00d2ff] mb-4">
+            <FileText className="w-4 h-4 text-[#00d2ff]" />
             <span>{isAr ? "اتفاقية الاستخدام والتعاقد" : "Terms of Service"}</span>
           </div>
-          <h1 className="text-3xl sm:text-5xl font-extrabold text-[#0B192C]">
+          <h1 className="text-3xl sm:text-5xl font-extrabold text-white">
             {isAr ? "الشروط والأحكام" : "Terms & Conditions"}
           </h1>
-          <p className="mt-4 text-sm sm:text-base text-slate-600">
+          <p className="mt-4 text-sm sm:text-base text-slate-300">
             {isAr
               ? "تحدد هذه الوثيقة الضوابط والشروط المنظمة لاستخدام موقع مؤسسة رؤيانا الحديثة للمقاولات وطلب خدماتها."
               : "These terms govern the use of Royana Modern Contracting website and service inquiries."}
@@ -54,62 +54,78 @@ export default async function TermsPage({ params }: TermsPageProps) {
         </div>
       </section>
 
-      <section className="py-16 sm:py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-slate max-w-none text-slate-700 leading-relaxed text-sm sm:text-base space-y-8">
-          {isAr ? (
-            <>
-              <div>
-                <h2 className="text-xl font-bold text-[#0B192C] mb-3">1. عروض الأسعار والمقايسات (BOQ)</h2>
-                <p>
-                  أي تقديرات أسعار مبدئية مقدمة عبر الموقع أو الهاتف تعتبر استرشادية، ولا تصبح نهائية وملزمة قانونياً إلا بعد إجراء المعاينة الميدانية لموقع العمل بجدة، وتدقيق المخططات، وتوقيع العقد الرسمي المعتمد.
-                </p>
-              </div>
+      <section className="py-16 sm:py-20 relative z-10">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-[#121e34]/75 p-6 sm:p-12 rounded-3xl border border-sky-400/15 backdrop-blur-md shadow-2xl text-slate-200 leading-relaxed text-sm sm:text-base space-y-8">
+            {isAr ? (
+              <>
+                <div>
+                  <h2 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
+                    <span className="text-[#00d2ff]">1.</span> عروض الأسعار والمقايسات (BOQ)
+                  </h2>
+                  <p className="text-slate-300">
+                    أي تقديرات أسعار مبدئية مقدمة عبر الموقع أو الهاتف تعتبر استرشادية، ولا تصبح نهائية وملزمة قانونياً إلا بعد إجراء المعاينة الميدانية لموقع العمل بجدة، وتدقيق المخططات، وتوقيع العقد الرسمي المعتمد.
+                  </p>
+                </div>
 
-              <div>
-                <h2 className="text-xl font-bold text-[#0B192C] mb-3">2. التراخيص والتصاريح البلدية</h2>
-                <p>
-                  يلتزم العميل بتوفير رخص البناء أو رخص الترميم الصادرة من أمانة محافظة جدة عبر منصة بلدي قبل مباشرة الأعمال في الموقع، مع تقديم الدعم الهندسي اللازم من قبلنا لإعداد المخططات المطلوبة.
-                </p>
-              </div>
+                <div>
+                  <h2 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
+                    <span className="text-[#00d2ff]">2.</span> التراخيص والتصاريح البلدية
+                  </h2>
+                  <p className="text-slate-300">
+                    يلتزم العميل بتوفير رخص البناء أو رخص الترميم الصادرة من أمانة محافظة جدة عبر منصة بلدي قبل مباشرة الأعمال في الموقع، مع تقديم الدعم الهندسي اللازم من قبلنا لإعداد المخططات المطلوبة.
+                  </p>
+                </div>
 
-              <div>
-                <h2 className="text-xl font-bold text-[#0B192C] mb-3">3. الضمانات وخدمات ما بعد التسليم</h2>
-                <p>
-                  تخضع كافة أعمال الإنشاء والعزل والترميم المنجزة لضمانات رسمية موثقة في العقد، وتحدد بنود العقد بوضوح مدد التغطية وفق طبيعة الأعمال والمواد المعتمدة.
-                </p>
-              </div>
+                <div>
+                  <h2 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
+                    <span className="text-[#00d2ff]">3.</span> الضمانات وخدمات ما بعد التسليم
+                  </h2>
+                  <p className="text-slate-300">
+                    تخضع كافة أعمال الإنشاء والعزل والترميم المنجزة لضمانات رسمية موثقة في العقد، وتحدد بنود العقد بوضوح مدد التغطية وفق طبيعة الأعمال والمواد المعتمدة.
+                  </p>
+                </div>
 
-              <div>
-                <h2 className="text-xl font-bold text-[#0B192C] mb-3">4. الملكية الفكرية</h2>
-                <p>
-                  جميع المواد والنصوص والتصاميم والعلامات التجارية المنشورة في هذا الموقع مملوكة حصرياً لمؤسسة رؤيانا الحديثة للمقاولات ومحمية بموجب الأنظمة المرعية في المملكة العربية السعودية.
-                </p>
-              </div>
-            </>
-          ) : (
-            <>
-              <div>
-                <h2 className="text-xl font-bold text-[#0B192C] mb-3">1. Quotations & Bill of Quantities (BOQ)</h2>
-                <p>
-                  Preliminary online ballpark estimates are indicative. Binding contractual commitments are finalized strictly following diagnostic on-site surveys in Jeddah and mutual contract sign-off.
-                </p>
-              </div>
+                <div>
+                  <h2 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
+                    <span className="text-[#00d2ff]">4.</span> الملكية الفكرية
+                  </h2>
+                  <p className="text-slate-300">
+                    جميع المواد والنصوص والتصاميم والعلامات التجارية المنشورة في هذا الموقع مملوكة حصرياً لمؤسسة رؤيانا الحديثة للمقاولات ومحمية بموجب الأنظمة المرعية في المملكة العربية السعودية.
+                  </p>
+                </div>
+              </>
+            ) : (
+              <>
+                <div>
+                  <h2 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
+                    <span className="text-[#00d2ff]">1.</span> Quotations & Bill of Quantities (BOQ)
+                  </h2>
+                  <p className="text-slate-300">
+                    Preliminary online ballpark estimates are indicative. Binding contractual commitments are finalized strictly following diagnostic on-site surveys in Jeddah and mutual contract sign-off.
+                  </p>
+                </div>
 
-              <div>
-                <h2 className="text-xl font-bold text-[#0B192C] mb-3">2. Municipal Building & Renovation Permits</h2>
-                <p>
-                  Clients are responsible for securing necessary municipal permits via the Balady platform before physical mobilization, with technical drawing support provided by our team.
-                </p>
-              </div>
+                <div>
+                  <h2 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
+                    <span className="text-[#00d2ff]">2.</span> Municipal Building & Renovation Permits
+                  </h2>
+                  <p className="text-slate-300">
+                    Clients are responsible for securing necessary municipal permits via the Balady platform before physical mobilization, with technical drawing support provided by our team.
+                  </p>
+                </div>
 
-              <div>
-                <h2 className="text-xl font-bold text-[#0B192C] mb-3">3. Warranties & Handover Terms</h2>
-                <p>
-                  All structural, waterproofing, and renovation milestones are governed by formal warranties documented in the signed contract, establishing clear liabilities.
-                </p>
-              </div>
-            </>
-          )}
+                <div>
+                  <h2 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
+                    <span className="text-[#00d2ff]">3.</span> Warranties & Handover Terms
+                  </h2>
+                  <p className="text-slate-300">
+                    All structural, waterproofing, and renovation milestones are governed by formal warranties documented in the signed contract, establishing clear liabilities.
+                  </p>
+                </div>
+              </>
+            )}
+          </div>
         </div>
       </section>
     </>

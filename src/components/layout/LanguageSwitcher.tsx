@@ -30,7 +30,7 @@ export function LanguageSwitcher({
     return (
       <Link
         href={targetPath}
-        className="w-9 h-9 rounded-full bg-[#162C46] flex items-center justify-center text-[#39B5FF] border border-[#1E3E62] hover:bg-[#1E3E62] hover:border-[#39B5FF] hover:scale-105 active:scale-95 transition-all shadow-sm"
+        className="w-9 h-9 rounded-full bg-[#0d1728] flex items-center justify-center text-[#00d2ff] border border-sky-400/20 hover:border-[#00d2ff] hover:bg-sky-500/10 hover:scale-105 active:scale-95 transition-all shadow-sm"
         aria-label={currentLocale === "ar" ? "تغيير اللغة إلى English" : "Switch language to Arabic"}
         title={targetLabel}
       >
@@ -43,11 +43,11 @@ export function LanguageSwitcher({
   return (
     <Link
       href={targetPath}
-      className="inline-flex items-center gap-2 px-3 py-1.5 text-xs sm:text-sm font-bold text-white bg-[#162C46] border border-[#1E3E62] rounded-lg hover:border-[#39B5FF] hover:bg-[#1E3E62] transition-all shadow-sm group"
+      className="inline-flex items-center gap-2 px-3.5 py-1.5 text-xs sm:text-sm font-bold text-white bg-[#0d1728] border border-sky-400/20 rounded-full hover:border-[#00d2ff] hover:bg-sky-500/10 transition-all shadow-sm group"
       aria-label={`تبديل اللغة إلى ${targetLabel}`}
     >
-      <Globe className="w-4 h-4 text-[#39B5FF] transition-transform group-hover:scale-110" />
-      <span className="font-semibold text-slate-100 group-hover:text-white transition-colors">{targetLabel}</span>
+      <Globe className="w-4 h-4 text-[#00d2ff] transition-transform group-hover:scale-110" />
+      <span className="font-semibold text-slate-100 group-hover:text-[#00d2ff] transition-colors">{targetLabel}</span>
     </Link>
   );
 }

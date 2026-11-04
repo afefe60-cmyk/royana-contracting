@@ -29,16 +29,16 @@ export function MobileBottomBar({
   return (
     <nav
       aria-label={isAr ? "شريط التحويل السريع للجوال" : "Mobile Quick Action Bar"}
-      className="md:hidden fixed bottom-0 inset-x-0 z-50 bg-[#0B192C] border-t border-[#1E3E62] px-2 py-2 shadow-2xl safe-area-bottom"
+      className="md:hidden fixed bottom-0 inset-x-0 z-50 bg-[#070d18]/95 backdrop-blur-xl border-t border-sky-400/20 px-3 py-2 shadow-[0_-10px_25px_rgba(0,0,0,0.5)] safe-area-bottom"
     >
-      <div className="grid grid-cols-3 gap-1.5 max-w-md mx-auto text-center">
+      <div className="grid grid-cols-3 gap-2 max-w-md mx-auto text-center">
         {/* Phone Call */}
         <a
           href={phoneUrl}
           onClick={() => trackCallClick(phone)}
-          className="flex flex-col items-center justify-center py-2 px-1 rounded-lg bg-[#162C46] text-[#F8FAFC] hover:bg-[#1E3E62] transition-colors focus:ring-2 focus:ring-[#C68B59]"
+          className="flex flex-col items-center justify-center py-2 px-1 rounded-xl bg-[#0d1728] border border-sky-400/20 text-slate-200 hover:text-[#00d2ff] hover:border-[#00d2ff] transition-all"
         >
-          <Phone className="w-5 h-5 text-[#C68B59] mb-1" />
+          <Phone className="w-4 h-4 text-[#00d2ff] mb-1" />
           <span className="text-xs font-semibold">
             {isAr ? "اتصال" : "Call"}
           </span>
@@ -50,10 +50,10 @@ export function MobileBottomBar({
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => trackWhatsAppClick("mobile_bar")}
-          className="flex flex-col items-center justify-center py-2 px-1 rounded-lg bg-[#25D366] text-[#0B192C] font-bold hover:bg-[#20BA57] transition-colors focus:ring-2 focus:ring-white"
+          className="flex flex-col items-center justify-center py-2 px-1 rounded-xl bg-[#25D366] text-[#070d18] font-extrabold hover:bg-[#20BA57] transition-all shadow-[0_2px_10px_rgba(37,211,102,0.3)]"
         >
-          <MessageCircle className="w-5 h-5 fill-[#0B192C] text-[#0B192C] mb-1" />
-          <span className="text-xs font-extrabold text-[#0B192C]">
+          <MessageCircle className="w-4 h-4 fill-[#070d18] text-[#070d18] mb-1" />
+          <span className="text-xs font-extrabold">
             {isAr ? "واتساب" : "WhatsApp"}
           </span>
         </a>
@@ -61,10 +61,10 @@ export function MobileBottomBar({
         {/* Request Quote */}
         <Link
           href={`/${locale}/contact`}
-          className="flex flex-col items-center justify-center py-2 px-1 rounded-lg bg-[#C68B59] text-[#0B192C] font-bold hover:bg-[#B57B4B] transition-colors focus:ring-2 focus:ring-white"
+          className="flex flex-col items-center justify-center py-2 px-1 rounded-xl bg-gradient-to-r from-[#00d2ff] to-[#3a7bd5] text-white font-extrabold transition-all shadow-[0_2px_12px_rgba(0,210,255,0.35)]"
         >
-          <FileText className="w-5 h-5 text-[#0B192C] mb-1" />
-          <span className="text-xs font-extrabold text-[#0B192C]">
+          <FileText className="w-4 h-4 text-white mb-1" />
+          <span className="text-xs font-extrabold">
             {isAr ? "عرض سعر" : "Quote"}
           </span>
         </Link>

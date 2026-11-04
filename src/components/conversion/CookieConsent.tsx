@@ -69,18 +69,18 @@ export function CookieConsent({
     <div
       role="region"
       aria-label={isAr ? "إشعار الخصوصية وملفات تعريف الارتباط" : "Privacy and Cookie Notice"}
-      className="fixed bottom-16 md:bottom-6 inset-x-4 max-w-2xl mx-auto z-50 bg-[#0B192C]/95 backdrop-blur-md border border-[#1E3E62] text-slate-100 p-4 sm:p-5 rounded-2xl shadow-2xl transition-all"
+      className="fixed bottom-16 md:bottom-6 inset-x-4 max-w-2xl mx-auto z-50 bg-[#070d18]/95 backdrop-blur-xl border border-sky-400/25 text-slate-100 p-4 sm:p-5 rounded-2xl shadow-2xl transition-all"
     >
       <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 justify-between">
         <div className="flex items-start gap-3">
-          <ShieldCheck className="w-6 h-6 text-[#C68B59] flex-shrink-0 mt-0.5" />
-          <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+          <ShieldCheck className="w-6 h-6 text-[#00d2ff] flex-shrink-0 mt-0.5" />
+          <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
             {isAr ? (
               <>
                 نحترم خصوصيتك وفق <strong>نظام حماية البيانات الشخصية السعودي (PDPL)</strong>. نستخدم ملفات تعريف الارتباط لتحسين تجربة التصفح وقياس الأداء. يمكنك مراجعة{" "}
                 <Link
                   href={`/${locale}/privacy`}
-                  className="text-[#C68B59] underline underline-offset-4 hover:text-white"
+                  className="text-[#00d2ff] underline underline-offset-4 hover:text-white font-bold"
                 >
                   سياسة الخصوصية
                 </Link>
@@ -91,7 +91,7 @@ export function CookieConsent({
                 We value your privacy compliant with the <strong>Saudi Personal Data Protection Law (PDPL)</strong>. We use cookies for analytics and site optimization. Read our{" "}
                 <Link
                   href={`/${locale}/privacy`}
-                  className="text-[#C68B59] underline underline-offset-4 hover:text-white"
+                  className="text-[#00d2ff] underline underline-offset-4 hover:text-white font-bold"
                 >
                   Privacy Policy
                 </Link>
@@ -104,13 +104,13 @@ export function CookieConsent({
         <div className="flex items-center gap-2 w-full sm:w-auto justify-end flex-shrink-0">
           <button
             onClick={handleDecline}
-            className="px-3.5 py-2 text-xs text-slate-400 hover:text-white rounded-lg hover:bg-slate-800 transition"
+            className="px-3.5 py-2 text-xs text-slate-400 hover:text-white rounded-full hover:bg-sky-500/10 transition cursor-pointer"
           >
             {isAr ? "رفض" : "Decline"}
           </button>
           <button
             onClick={handleAccept}
-            className="px-5 py-2 text-xs sm:text-sm font-bold bg-[#C68B59] text-[#0B192C] rounded-lg hover:bg-[#B57B4B] transition shadow"
+            className="px-5 py-2 text-xs sm:text-sm font-bold bg-gradient-to-r from-[#00d2ff] to-[#3a7bd5] text-white rounded-full hover:shadow-[0_0_20px_rgba(0,210,255,0.5)] transition shadow cursor-pointer"
           >
             {isAr ? "موافق" : "Accept"}
           </button>

@@ -42,16 +42,16 @@ export default async function BlogPage({ params }: BlogPageProps) {
     <>
       <BreadcrumbSchema items={breadcrumbs} />
 
-      <section className="bg-slate-50 py-16 sm:py-20 border-b border-slate-200">
+      <section className="bg-[#0d1728]/70 py-16 sm:py-20 border-b border-sky-400/15 relative z-10 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <span className="text-xs sm:text-sm font-bold text-[#C68B59] uppercase tracking-wider">
+            <span className="inline-block px-3.5 py-1 rounded-full bg-sky-500/10 border border-sky-400/30 text-xs sm:text-sm font-bold text-[#00d2ff] uppercase tracking-wider mb-3">
               {isAr ? "المعرفة والخبرة الهندسية" : "Engineering Knowledge & Insights"}
             </span>
-            <h1 className="mt-2 text-3xl sm:text-5xl font-extrabold text-[#0B192C]">
+            <h1 className="mt-2 text-3xl sm:text-5xl font-extrabold text-white">
               {isAr ? "المدونة والإرشادات الإنشائية" : "Construction & Restoration Blog"}
             </h1>
-            <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
+            <p className="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
               {isAr
                 ? "مقالات توجيهية وإرشادات متخصصة لملاك العقارات في جدة ومنطقة مكة المكرمة لحماية استثماراتهم الإنشائية."
                 : "Practical engineering advice for property owners in Jeddah and Makkah Province."}
@@ -60,21 +60,21 @@ export default async function BlogPage({ params }: BlogPageProps) {
         </div>
       </section>
 
-      <section className="py-16 sm:py-20 bg-white">
+      <section className="py-16 sm:py-20 relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {posts.length === 0 ? (
-            <div className="text-center py-16 bg-slate-50 rounded-2xl border border-slate-200 p-8 max-w-2xl mx-auto">
-              <h2 className="text-lg font-bold text-[#0B192C] mb-2">
+            <div className="text-center py-16 bg-[#121e34]/75 rounded-3xl border border-sky-400/15 p-8 max-w-2xl mx-auto backdrop-blur-md">
+              <h2 className="text-lg font-bold text-white mb-2">
                 {isAr ? "جاري إعداد المقالات الهندسية" : "Articles Currently in Curation"}
               </h2>
-              <p className="text-sm text-slate-600 mb-6">
+              <p className="text-sm text-slate-300 mb-6 font-normal">
                 {isAr
                   ? "يقوم فريقنا الهندسي حالياً بكتابة وتدقيق مقالات تخصصية حول كود البناء السعودي ومعالجة رطوبة جدة."
                   : "Our engineering staff is preparing peer-reviewed articles on coastal remediation and building codes."}
               </p>
               <Link
                 href={`/${locale}/contact`}
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#C68B59] text-[#0B192C] font-bold text-sm hover:bg-[#B57B4B] transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-[#00d2ff] to-[#3a7bd5] text-white font-extrabold text-sm shadow-[0_4px_15px_rgba(0,210,255,0.35)] hover:shadow-[0_6px_22px_rgba(0,210,255,0.5)] transition-all"
               >
                 <span>{isAr ? "استشر مهندسنا مباشرة" : "Consult Our Engineers"}</span>
                 {isAr ? <ArrowLeft className="w-4 h-4" /> : <ArrowRight className="w-4 h-4" />}
@@ -85,10 +85,10 @@ export default async function BlogPage({ params }: BlogPageProps) {
               {posts.map((post) => (
                 <article
                   key={post.slug}
-                  className="rounded-2xl border border-slate-200 overflow-hidden bg-white hover:border-[#C68B59] hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
+                  className="rounded-3xl border border-sky-400/15 overflow-hidden bg-[#121e34]/75 backdrop-blur-md hover:border-sky-400/40 hover:bg-[#1a2c4c]/90 hover:-translate-y-1.5 shadow-xl transition-all duration-300 flex flex-col justify-between group"
                 >
                   <div>
-                    <div className="relative aspect-[16/9] bg-slate-100 overflow-hidden">
+                    <div className="relative aspect-[16/9] bg-[#0d1728] overflow-hidden">
                       <Image
                         src={post.thumbnail}
                         alt={isAr ? post.title_ar : post.title_en}
@@ -98,32 +98,32 @@ export default async function BlogPage({ params }: BlogPageProps) {
                     </div>
 
                     <div className="p-6">
-                      <div className="flex items-center gap-3 text-xs text-slate-500 mb-3">
+                      <div className="flex items-center gap-3 text-xs text-[#00d2ff] mb-3 font-semibold">
                         <span className="flex items-center gap-1">
-                          <Calendar className="w-3.5 h-3.5 text-[#C68B59]" />
+                          <Calendar className="w-3.5 h-3.5 text-[#00d2ff]" />
                           <span>{post.date}</span>
                         </span>
                         <span>•</span>
                         <span className="flex items-center gap-1">
-                          <Clock className="w-3.5 h-3.5 text-[#C68B59]" />
+                          <Clock className="w-3.5 h-3.5 text-[#00d2ff]" />
                           <span>{isAr ? post.read_time_ar : post.read_time_en}</span>
                         </span>
                       </div>
 
-                      <h2 className="text-lg font-bold text-[#0B192C] mb-3 line-clamp-2">
+                      <h2 className="text-lg font-bold text-white mb-3 line-clamp-2 group-hover:text-[#00d2ff] transition-colors">
                         {isAr ? post.title_ar : post.title_en}
                       </h2>
 
-                      <p className="text-xs sm:text-sm text-slate-600 leading-relaxed line-clamp-3 mb-4">
+                      <p className="text-xs sm:text-sm text-slate-300 leading-relaxed line-clamp-3 mb-4 font-normal">
                         {isAr ? post.summary_ar : post.summary_en}
                       </p>
                     </div>
                   </div>
 
-                  <div className="p-6 pt-0 border-t border-slate-100">
+                  <div className="p-6 pt-0 border-t border-sky-400/10">
                     <Link
                       href={`/${locale}/blog/${post.slug}`}
-                      className="inline-flex items-center gap-2 text-sm font-bold text-[#0B192C] group-hover:text-[#C68B59] transition-colors mt-4"
+                      className="inline-flex items-center gap-2 text-sm font-bold text-[#00d2ff] group-hover:text-white transition-colors mt-4"
                     >
                       <span>{isAr ? "قراءة المقال كاملاً" : "Read Full Article"}</span>
                       {isAr ? <ArrowLeft className="w-4 h-4" /> : <ArrowRight className="w-4 h-4" />}

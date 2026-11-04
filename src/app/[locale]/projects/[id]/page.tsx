@@ -2,7 +2,7 @@ import React from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import { MapPin, Calendar, CheckCircle, ArrowLeft, ArrowRight } from "lucide-react";
+import { MapPin, Calendar, CheckCircle } from "lucide-react";
 import { getProjects, getProjectById } from "@/lib/content";
 import { BeforeAfterSlider } from "@/components/ui/BeforeAfterSlider";
 import { Button } from "@/components/ui/Button";
@@ -85,23 +85,23 @@ export default async function ProjectDetailPage({
       <BreadcrumbSchema items={breadcrumbs} />
 
       {/* Header Banner */}
-      <section className="bg-slate-50 py-16 sm:py-20 border-b border-slate-200">
+      <section className="bg-[#0d1728]/70 py-16 sm:py-20 border-b border-sky-400/15 relative z-10 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl">
             <div className="flex flex-wrap items-center gap-3 mb-4">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-[#0B192C] text-xs font-bold text-[#C68B59]">
+              <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-sky-500/10 border border-sky-400/30 text-xs font-bold text-[#00d2ff]">
                 <MapPin className="w-3.5 h-3.5" />
                 <span>{location} - {city}</span>
               </span>
               {project.year && (
-                <span className="inline-flex items-center gap-1 px-3 py-1 rounded-md bg-white border border-slate-200 text-xs text-slate-600">
-                  <Calendar className="w-3.5 h-3.5" />
+                <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[#121e34] border border-sky-400/20 text-xs text-slate-300">
+                  <Calendar className="w-3.5 h-3.5 text-[#00d2ff]" />
                   <span>{project.year}</span>
                 </span>
               )}
             </div>
 
-            <h1 className="text-3xl sm:text-5xl font-extrabold text-[#0B192C] leading-tight">
+            <h1 className="text-3xl sm:text-5xl font-extrabold text-white leading-tight">
               {title}
             </h1>
           </div>
@@ -109,12 +109,12 @@ export default async function ProjectDetailPage({
       </section>
 
       {/* Main Content */}
-      <section className="py-16 sm:py-20 bg-white">
+      <section className="py-16 sm:py-20 relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Visual Showcase: Before/After Slider */}
           {project.before_image && project.after_image ? (
             <div className="mb-14 max-w-4xl mx-auto">
-              <h2 className="text-lg font-bold text-[#0B192C] mb-4 text-center">
+              <h2 className="text-lg font-bold text-white mb-4 text-center">
                 {isAr
                   ? "مقارنة الواجهات والتشطيب (اسحب المؤشر للمقارنة)"
                   : "Facade & Finishing Comparison (Drag slider)"}
@@ -127,7 +127,7 @@ export default async function ProjectDetailPage({
               />
             </div>
           ) : (
-            <div className="mb-14 max-w-4xl mx-auto relative aspect-[16/10] rounded-2xl overflow-hidden border border-slate-200">
+            <div className="mb-14 max-w-4xl mx-auto relative aspect-[16/10] rounded-3xl overflow-hidden border border-sky-400/20 shadow-2xl bg-[#0d1728]">
               <Image
                 src={project.thumbnail}
                 alt={title}
@@ -141,34 +141,34 @@ export default async function ProjectDetailPage({
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 max-w-5xl mx-auto">
             <div className="lg:col-span-8 space-y-10">
               {/* Challenge */}
-              <div className="p-6 sm:p-8 rounded-2xl bg-slate-50 border border-slate-200">
-                <h3 className="text-xs font-bold uppercase tracking-wider text-[#C68B59] mb-2">
+              <div className="p-6 sm:p-8 rounded-3xl bg-[#121e34]/75 border border-sky-400/15 backdrop-blur-md shadow-xl">
+                <h3 className="text-xs font-bold uppercase tracking-wider text-[#00d2ff] mb-2">
                   {isAr ? "التحدي الفني والإنشائي بالموقع" : "Technical Challenge"}
                 </h3>
-                <p className="text-base text-slate-700 leading-relaxed">
+                <p className="text-base text-slate-300 leading-relaxed font-normal">
                   {challenge}
                 </p>
               </div>
 
               {/* Solution */}
-              <div className="p-6 sm:p-8 rounded-2xl bg-white border border-slate-200 shadow-xs">
-                <h3 className="text-xs font-bold uppercase tracking-wider text-[#C68B59] mb-2">
+              <div className="p-6 sm:p-8 rounded-3xl bg-[#121e34]/75 border border-sky-400/15 backdrop-blur-md shadow-xl">
+                <h3 className="text-xs font-bold uppercase tracking-wider text-[#00d2ff] mb-2">
                   {isAr ? "الحل الهندسي والتنفيذ المعتمد" : "Engineering Solution"}
                 </h3>
-                <p className="text-base text-slate-700 leading-relaxed">
+                <p className="text-base text-slate-300 leading-relaxed font-normal">
                   {solution}
                 </p>
               </div>
 
               {/* Scope */}
               <div>
-                <h3 className="text-xl font-bold text-[#0B192C] mb-4">
+                <h3 className="text-xl font-bold text-white mb-4">
                   {isAr ? "نطاق الأعمال المنفذة بالتفصيل:" : "Executed Scope of Work:"}
                 </h3>
                 <div className="space-y-3">
                   {scope.map((item, idx) => (
-                    <div key={idx} className="flex items-start gap-3 text-sm sm:text-base text-slate-700">
-                      <CheckCircle className="w-5 h-5 text-[#16A34A] flex-shrink-0 mt-0.5" />
+                    <div key={idx} className="flex items-start gap-3 text-sm sm:text-base text-slate-200">
+                      <CheckCircle className="w-5 h-5 text-[#00d2ff] flex-shrink-0 mt-0.5" />
                       <span>{item}</span>
                     </div>
                   ))}
@@ -177,7 +177,7 @@ export default async function ProjectDetailPage({
 
               {/* Project Live Gallery */}
               {project.gallery && project.gallery.length > 0 && (
-                <div className="pt-6 border-t border-slate-200">
+                <div className="pt-6 border-t border-sky-400/15">
                   <InteractiveGallery
                     images={project.gallery}
                     title={isAr ? "معرض الصور الميدانية الحية للمشروع:" : "Live Field Execution Gallery:"}
@@ -188,11 +188,11 @@ export default async function ProjectDetailPage({
               )}
 
               {/* Outcome */}
-              <div className="p-6 sm:p-8 rounded-2xl bg-[#0B192C] text-white">
-                <h3 className="text-xs font-bold uppercase tracking-wider text-[#C68B59] mb-2">
+              <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-[#0d1728] to-[#121e34] border border-sky-400/25 text-white shadow-xl">
+                <h3 className="text-xs font-bold uppercase tracking-wider text-[#00d2ff] mb-2">
                   {isAr ? "النتيجة النهائية المحققة" : "Final Outcome & Impact"}
                 </h3>
-                <p className="text-base text-slate-200 leading-relaxed">
+                <p className="text-base text-slate-200 leading-relaxed font-normal">
                   {outcome}
                 </p>
               </div>
@@ -200,11 +200,11 @@ export default async function ProjectDetailPage({
 
             {/* Sidebar CTA */}
             <div className="lg:col-span-4 space-y-6">
-              <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 sticky top-28">
-                <h4 className="text-base font-bold text-[#0B192C] mb-2">
+              <div className="p-6 rounded-3xl bg-[#121e34]/80 border border-sky-400/20 backdrop-blur-md sticky top-28 shadow-2xl">
+                <h4 className="text-base font-bold text-white mb-2">
                   {isAr ? "هل ترغب بترميم أو بناء مبنى مماثل؟" : "Planning a Similar Project?"}
                 </h4>
-                <p className="text-xs sm:text-sm text-slate-600 mb-6 leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-300 mb-6 leading-relaxed font-normal">
                   {isAr
                     ? "مهندسونا متواجدون في جدة ومستعدون لمعاينة موقعك وتقديم تقرير فني ومقايسة دقيقة."
                     : "Our engineers are based in Jeddah and ready to inspect your site and provide a certified BOQ."}

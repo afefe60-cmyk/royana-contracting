@@ -68,7 +68,7 @@ export function BeforeAfterSlider({
       onTouchStart={() => setIsDragging(true)}
       onTouchEnd={() => setIsDragging(false)}
       onTouchMove={handleTouchMove}
-      className="relative w-full aspect-[4/3] sm:aspect-[16/10] overflow-hidden rounded-xl border border-slate-200 shadow-md select-none cursor-ew-resize focus:outline-none focus:ring-2 focus:ring-[#C68B59]"
+      className="relative w-full aspect-[4/3] sm:aspect-[16/10] overflow-hidden rounded-2xl border border-sky-400/20 shadow-2xl select-none cursor-ew-resize focus:outline-none focus:ring-2 focus:ring-[#00d2ff]"
     >
       {/* After Image (Background) */}
       <div className="absolute inset-0 w-full h-full">
@@ -80,7 +80,7 @@ export function BeforeAfterSlider({
           className="object-cover"
           priority
         />
-        <span className="absolute top-4 right-4 z-10 px-3 py-1 rounded bg-[#16A34A] text-white text-xs sm:text-sm font-bold shadow">
+        <span className="absolute top-4 right-4 z-10 px-3 py-1 rounded-full bg-[#16A34A] text-white text-xs sm:text-sm font-bold shadow-md">
           {afterLabel}
         </span>
       </div>
@@ -98,17 +98,17 @@ export function BeforeAfterSlider({
           className="object-cover"
           priority
         />
-        <span className="absolute top-4 left-4 z-10 px-3 py-1 rounded bg-[#DC2626] text-white text-xs sm:text-sm font-bold shadow">
+        <span className="absolute top-4 left-4 z-10 px-3 py-1 rounded-full bg-[#DC2626] text-white text-xs sm:text-sm font-bold shadow-md">
           {beforeLabel}
         </span>
       </div>
 
       {/* Divider Bar & Handle */}
       <div
-        className="absolute top-0 bottom-0 z-20 w-1 bg-white shadow-lg pointer-events-none"
+        className="absolute top-0 bottom-0 z-20 w-1 bg-[#00d2ff] shadow-[0_0_10px_rgba(0,210,255,0.7)] pointer-events-none"
         style={{ left: `${sliderPosition}%` }}
       >
-        <div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-[#0B192C] border-2 border-[#C68B59] flex items-center justify-center shadow-lg text-[#C68B59]">
+        <div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-[#070d18] border-2 border-[#00d2ff] flex items-center justify-center shadow-[0_0_15px_rgba(0,210,255,0.5)] text-[#00d2ff]">
           <svg
             className="w-4 h-4"
             fill="none"

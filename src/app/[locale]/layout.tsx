@@ -1,6 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
-import { IBM_Plex_Sans_Arabic, Plus_Jakarta_Sans } from "next/font/google";
+import { Cairo, Plus_Jakarta_Sans } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { SmartAssistantWidget } from "@/components/conversion/SmartAssistantWidget";
@@ -10,9 +10,9 @@ import { SplashScreen } from "@/components/ui/SplashScreen";
 import { LocalBusinessSchema } from "@/components/seo/SchemaScripts";
 import { getSiteSettings } from "@/lib/content";
 
-const ibmArabic = IBM_Plex_Sans_Arabic({
-  subsets: ["arabic"],
-  weight: ["300", "400", "500", "600", "700"],
+const cairo = Cairo({
+  subsets: ["arabic", "latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
   variable: "--font-arabic",
   display: "swap",
 });
@@ -85,7 +85,7 @@ export default async function LocaleLayout({
     <html
       lang={locale}
       dir={isAr ? "rtl" : "ltr"}
-      className={`${ibmArabic.variable} ${plusJakarta.variable}`}
+      className={`${cairo.variable} ${plusJakarta.variable}`}
     >
       <head>
         <LocalBusinessSchema locale={locale} />

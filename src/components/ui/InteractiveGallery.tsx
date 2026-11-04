@@ -46,12 +46,12 @@ export function InteractiveGallery({
     <div className="w-full">
       {title && (
         <div className="flex items-center justify-between mb-6">
-          <h2 className="text-xl sm:text-2xl font-bold text-[#0B192C] flex items-center gap-2">
-            <ShieldCheck className="w-6 h-6 text-[#39B5FF]" />
+          <h2 className="text-xl sm:text-2xl font-bold text-white flex items-center gap-2">
+            <ShieldCheck className="w-6 h-6 text-[#00d2ff]" />
             <span>{title}</span>
           </h2>
           {badgeLabel && (
-            <span className="text-xs font-bold px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">
+            <span className="text-xs font-bold px-3 py-1 rounded-full bg-sky-500/10 text-[#00d2ff] border border-sky-400/30">
               {badgeLabel}
             </span>
           )}
@@ -65,7 +65,7 @@ export function InteractiveGallery({
             key={idx}
             type="button"
             onClick={() => setActiveIdx(idx)}
-            className="group relative aspect-[4/3] rounded-xl overflow-hidden bg-slate-100 border border-slate-200 hover:border-[#39B5FF] hover:shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-[#39B5FF]"
+            className="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-[#0d1728] border border-sky-400/20 hover:border-[#00d2ff] hover:shadow-[0_0_20px_rgba(0,210,255,0.3)] transition-all focus:outline-none focus:ring-2 focus:ring-[#00d2ff] cursor-pointer"
             aria-label={isAr ? `معاينة الصورة ${idx + 1}` : `Preview image ${idx + 1}`}
           >
             <Image
@@ -76,12 +76,12 @@ export function InteractiveGallery({
               className="object-cover transition-transform duration-300 group-hover:scale-105"
             />
             {/* Subtle hover overlay with zoom icon */}
-            <div className="absolute inset-0 bg-[#0B192C]/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-              <span className="p-2 rounded-full bg-white/20 backdrop-blur-xs text-white">
+            <div className="absolute inset-0 bg-[#070d18]/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+              <span className="p-2 rounded-full bg-[#00d2ff]/20 border border-[#00d2ff]/50 backdrop-blur-xs text-[#00d2ff]">
                 <ZoomIn className="w-5 h-5" />
               </span>
             </div>
-            <span className="absolute bottom-1.5 right-1.5 text-[10px] font-bold px-2 py-0.5 rounded-md bg-[#0B192C]/80 backdrop-blur-xs text-white">
+            <span className="absolute bottom-1.5 right-1.5 text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#070d18]/85 backdrop-blur-xs text-white border border-sky-400/20">
               {idx + 1} / {images.length}
             </span>
           </button>
