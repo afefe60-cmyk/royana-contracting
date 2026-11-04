@@ -181,13 +181,13 @@ export function HeroSection({
             : "Turnkey construction, comprehensive villa restoration, MEP utilities, and on-site engineering management across Jeddah in full alignment with the Saudi Building Code."}
         </p>
 
-        {/* Action CTAs */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full sm:w-auto mb-10 sm:mb-12">
+        {/* Action CTAs - Hidden on mobile screens to keep the hero uncluttered & rely on MobileBottomBar */}
+        <div className="hidden sm:flex flex-row items-center justify-center gap-4 w-auto mb-10 sm:mb-12">
           <Button
             href={`/${locale}/contact`}
             variant="primary"
             size="lg"
-            className="w-full sm:w-auto shadow-[0_0_25px_rgba(0,210,255,0.3)]"
+            className="w-auto shadow-[0_0_25px_rgba(0,210,255,0.3)]"
           >
             <span>{isAr ? "اطلب عرض سعر ومعاينة" : "Request a Quote Now"}</span>
             {isAr ? (
@@ -202,7 +202,7 @@ export function HeroSection({
             external
             variant="whatsapp"
             size="lg"
-            className="w-full sm:w-auto"
+            className="w-auto"
           >
             <MessageCircle className="w-5 h-5 fill-[#070d18] text-[#070d18]" />
             <span>{isAr ? "محادثة فورية مع المهندس" : "Chat on WhatsApp"}</span>
