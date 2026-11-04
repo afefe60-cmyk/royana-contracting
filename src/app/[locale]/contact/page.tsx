@@ -16,13 +16,44 @@ export async function generateMetadata({
   const { locale } = await params;
   const isAr = locale === "ar";
 
+  const title = isAr
+    ? "اتصل بنا واطلب عرض سعر ومعاينة | مؤسسة رؤيانا بجدة"
+    : "Contact Us & Request a Quote | Royana Contracting";
+
+  const description = isAr
+    ? "تواصل مع مؤسسة رؤيانا الحديثة للمقاولات بجدة: هاتف 0508805861، بريد info@royana.com.sa، أو اطلب معاينة وعرض سعر فوري لمشروعك."
+    : "Contact Royana Contracting in Jeddah: Phone 0508805861, email info@royana.com.sa, or schedule an on-site engineering survey.";
+
+  const shareImageUrl = "https://royana.com.sa/images/og-share.jpg";
+
   return {
-    title: isAr ? "اتصل بنا واطلب عرض سعر" : "Contact Us & Request a Quote",
-    description: isAr
-      ? "تواصل مع مؤسسة رؤيانا الحديثة للمقاولات بجدة: هاتف 0508805861، بريد info@royana.com.sa، أو اطلب معاينة وعرض سعر فوري لمشروعك."
-      : "Contact Royana Contracting in Jeddah: Phone 0508805861, email info@royana.com.sa, or schedule an on-site engineering survey.",
+    title,
+    description,
     alternates: {
       canonical: `https://royana.com.sa/${locale}/contact`,
+    },
+    openGraph: {
+      title,
+      description,
+      url: `https://royana.com.sa/${locale}/contact`,
+      siteName: isAr ? "رؤيانا الحديثة للمقاولات" : "Royana Contracting",
+      locale: isAr ? "ar_SA" : "en_US",
+      type: "website",
+      images: [
+        {
+          url: shareImageUrl,
+          width: 1200,
+          height: 630,
+          alt: title,
+          type: "image/jpeg",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [shareImageUrl],
     },
   };
 }

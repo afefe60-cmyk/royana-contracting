@@ -41,8 +41,12 @@ export async function generateMetadata({
   const title = isAr ? service.title_ar : service.title_en;
   const description = isAr ? service.short_desc_ar : service.short_desc_en;
 
+  const shareImageUrl = slug === "factory-equipment-installation"
+    ? "https://royana.com.sa/images/projects/factory-installation/cover.jpg"
+    : "https://royana.com.sa/images/og-share.jpg";
+
   return {
-    title: `${title} في جدة`,
+    title: `${title} في جدة | رؤيانا للمقاولات`,
     description,
     alternates: {
       canonical: `https://royana.com.sa/${locale}/services/${slug}`,
@@ -51,6 +55,24 @@ export async function generateMetadata({
       title: `${title} | مؤسسة رؤيانا للمقاولات`,
       description,
       url: `https://royana.com.sa/${locale}/services/${slug}`,
+      siteName: isAr ? "رؤيانا الحديثة للمقاولات" : "Royana Contracting",
+      locale: isAr ? "ar_SA" : "en_US",
+      type: "article",
+      images: [
+        {
+          url: shareImageUrl,
+          width: 1200,
+          height: 630,
+          alt: title,
+          type: "image/jpeg",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${title} | مؤسسة رؤيانا للمقاولات`,
+      description,
+      images: [shareImageUrl],
     },
   };
 }

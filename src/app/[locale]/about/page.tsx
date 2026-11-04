@@ -15,13 +15,44 @@ export async function generateMetadata({
   const { locale } = await params;
   const isAr = locale === "ar";
 
+  const title = isAr
+    ? "من نحن | مؤسسة رؤيانا الحديثة للمقاولات بجدة"
+    : "About Us | Royana Modern Contracting";
+
+  const description = isAr
+    ? "تعرف على مؤسسة رؤيانا الحديثة للمقاولات بجدة، رؤيتنا، رسالتنا، قيمنا الهندسية، ومعايير الجودة المعتمدة وفق كود البناء السعودي."
+    : "Learn about Royana Modern Contracting in Jeddah: our story, vision, mission, engineering values, and quality benchmarks.";
+
+  const shareImageUrl = "https://royana.com.sa/images/og-share.jpg";
+
   return {
-    title: isAr ? "من نحن | مؤسسة رؤيانا الحديثة للمقاولات" : "About Us | Royana Modern Contracting",
-    description: isAr
-      ? "تعرف على مؤسسة رؤيانا الحديثة للمقاولات بجدة، رؤيتنا، رسالتنا، قيمنا الهندسية، ومعايير الجودة المعتمدة وفق كود البناء السعودي."
-      : "Learn about Royana Modern Contracting in Jeddah: our story, vision, mission, engineering values, and quality benchmarks.",
+    title,
+    description,
     alternates: {
       canonical: `https://royana.com.sa/${locale}/about`,
+    },
+    openGraph: {
+      title,
+      description,
+      url: `https://royana.com.sa/${locale}/about`,
+      siteName: isAr ? "رؤيانا الحديثة للمقاولات" : "Royana Contracting",
+      locale: isAr ? "ar_SA" : "en_US",
+      type: "website",
+      images: [
+        {
+          url: shareImageUrl,
+          width: 1200,
+          height: 630,
+          alt: title,
+          type: "image/jpeg",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [shareImageUrl],
     },
   };
 }

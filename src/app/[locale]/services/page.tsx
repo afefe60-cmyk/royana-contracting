@@ -16,13 +16,44 @@ export async function generateMetadata({
   const { locale } = await params;
   const isAr = locale === "ar";
 
+  const title = isAr
+    ? "خدمات المقاولات العامة والترميم بجدة | كود البناء السعودي"
+    : "General Contracting & Restoration Services in Jeddah";
+
+  const description = isAr
+    ? "تصفح خدمات مؤسسة رؤيانا للمقاولات بجدة: الإنشاءات والبناء، الترميم الشامل، شبكات الكهرباء والمياه، وإدارة المشاريع والإشراف الهندسي الميداني."
+    : "Explore Royana Contracting services in Jeddah: construction, building restoration, MEP utilities, and engineering project management.";
+
+  const shareImageUrl = "https://royana.com.sa/images/og-share.jpg";
+
   return {
-    title: isAr ? "خدمات المقاولات العامة والترميم" : "General Contracting & Restoration Services",
-    description: isAr
-      ? "تصفح خدمات مؤسسة رؤيانا للمقاولات بجدة: الإنشاءات والبناء، الترميم، شبكات الكهرباء والمياه، وإدارة المشاريع والاستشارات الهندسية."
-      : "Explore Royana Contracting services in Jeddah: construction, building restoration, MEP utilities, and engineering project management.",
+    title,
+    description,
     alternates: {
       canonical: `https://royana.com.sa/${locale}/services`,
+    },
+    openGraph: {
+      title,
+      description,
+      url: `https://royana.com.sa/${locale}/services`,
+      siteName: isAr ? "رؤيانا الحديثة للمقاولات" : "Royana Contracting",
+      locale: isAr ? "ar_SA" : "en_US",
+      type: "website",
+      images: [
+        {
+          url: shareImageUrl,
+          width: 1200,
+          height: 630,
+          alt: title,
+          type: "image/jpeg",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [shareImageUrl],
     },
   };
 }

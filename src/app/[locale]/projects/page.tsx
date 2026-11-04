@@ -17,13 +17,44 @@ export async function generateMetadata({
   const { locale } = await params;
   const isAr = locale === "ar";
 
+  const title = isAr
+    ? "معرض المشاريع ودراسات الحالة المعتمدة | رؤيانا للمقاولات بجدة"
+    : "Projects Showcase & Case Studies | Royana Contracting";
+
+  const description = isAr
+    ? "تصفح مشاريع مؤسسة رؤيانا للمقاولات في جدة: أعمال الترميم، الإنشاءات، تركيب المصانع، والتشطيبات الموثقة وفق الكود السعودي."
+    : "Explore Royana Contracting portfolio in Jeddah: restoration, construction, factory equipment rigging, and certified engineering projects.";
+
+  const shareImageUrl = "https://royana.com.sa/images/projects/durrat-al-arus-finished.jpg";
+
   return {
-    title: isAr ? "معرض المشاريع ودراسات الحالة" : "Projects Showcase & Case Studies",
-    description: isAr
-      ? "تصفح مشاريع مؤسسة رؤيانا للمقاولات في جدة: أعمال الترميم، الإنشاءات، والتشطيبات الموثقة."
-      : "Explore Royana Contracting portfolio in Jeddah: restoration, construction, and certified engineering projects.",
+    title,
+    description,
     alternates: {
       canonical: `https://royana.com.sa/${locale}/projects`,
+    },
+    openGraph: {
+      title,
+      description,
+      url: `https://royana.com.sa/${locale}/projects`,
+      siteName: isAr ? "رؤيانا الحديثة للمقاولات" : "Royana Contracting",
+      locale: isAr ? "ar_SA" : "en_US",
+      type: "website",
+      images: [
+        {
+          url: shareImageUrl,
+          width: 1200,
+          height: 630,
+          alt: title,
+          type: "image/jpeg",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [shareImageUrl],
     },
   };
 }

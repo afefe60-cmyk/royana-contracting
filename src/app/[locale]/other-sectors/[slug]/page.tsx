@@ -38,8 +38,16 @@ export async function generateMetadata({
   const title = isAr ? sector.title_ar : sector.title_en;
   const description = isAr ? sector.short_desc_ar : sector.short_desc_en;
 
+  const palletImageMap: Record<string, string> = {
+    "wooden-pallets": "https://royana.com.sa/images/pallets/wooden-pallet-1.jpg",
+    "plastic-pallets": "https://royana.com.sa/images/pallets/plastic-pallet-1.jpg",
+    "metal-pallets": "https://royana.com.sa/images/pallets/metal-pallet-1.jpg",
+  };
+
+  const shareImageUrl = palletImageMap[slug] || "https://royana.com.sa/images/og-pallets.jpg";
+
   return {
-    title: `${title} | مؤسسة رؤيانا`,
+    title: `${title} | مؤسسة رؤيانا للتوريدات`,
     description,
     alternates: {
       canonical: `https://royana.com.sa/${locale}/other-sectors/${slug}`,
@@ -48,6 +56,24 @@ export async function generateMetadata({
       title,
       description,
       url: `https://royana.com.sa/${locale}/other-sectors/${slug}`,
+      siteName: isAr ? "رؤيانا الحديثة للتوريدات" : "Royana Supply",
+      locale: isAr ? "ar_SA" : "en_US",
+      type: "article",
+      images: [
+        {
+          url: shareImageUrl,
+          width: 1200,
+          height: 630,
+          alt: title,
+          type: "image/jpeg",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [shareImageUrl],
     },
   };
 }
