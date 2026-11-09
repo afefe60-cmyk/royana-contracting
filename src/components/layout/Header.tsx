@@ -12,6 +12,7 @@ import {
   Building2,
   Boxes,
   Factory,
+  Calculator,
   ArrowLeft,
   ArrowRight,
 } from "lucide-react";
@@ -66,12 +67,22 @@ export function Header({
     {
       title_ar: "المقاولات العامة والترميم",
       title_en: "General Contracting & Restoration",
-      desc_ar: "إنشاءات، حساب الأحمال والمقايسات، شبكات، وترميم المنشآت بجدة",
-      desc_en: "Turnkey building construction, load schedules, MEP & structural engineering",
+      desc_ar: "إنشاءات، ترميم شامل، فحص وتدعيم الهياكل الإنشائية بجدة",
+      desc_en: "Turnkey building construction, restoration & structural engineering",
       href: `/${locale}/services`,
       icon: Building2,
       badge_ar: "كود البناء السعودي",
       badge_en: "Saudi Code",
+    },
+    {
+      title_ar: "حساب الأحمال والمقايسات الكهربائية",
+      title_en: "Electrical Load & BOQ Calculations",
+      desc_ar: "حساب الأحمال (SBC 401)، مقاطع الكابلات، والمخططات المعتمدة لشركة الكهرباء",
+      desc_en: "Load schedules (SBC 401), cable sizing, SLD & SEC approvals",
+      href: `/${locale}/services/electrical-load-calculation-boq`,
+      icon: Calculator,
+      badge_ar: "الكود السعودي SBC",
+      badge_en: "SBC 401",
     },
     {
       title_ar: "توريد وتصنيع الطبالي",
