@@ -1,8 +1,9 @@
 import React from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { CheckCircle2, HelpCircle } from "lucide-react";
-import { getServices, getServiceBySlug } from "@/lib/content";
+import { CheckCircle2, HelpCircle, MessageCircle } from "lucide-react";
+import { getServices, getServiceBySlug, getSiteSettings } from "@/lib/content";
+import { buildWhatsAppUrl } from "@/lib/utils";
 import { QuoteRequestForm } from "@/components/forms/QuoteRequestForm";
 import {
   ServiceSchema,
@@ -94,6 +95,12 @@ export default async function ServiceDetailPage({
   const steps = isAr ? service.steps_ar : service.steps_en;
   const faqs = isAr ? service.faqs_ar : service.faqs_en;
 
+  const siteSettings = getSiteSettings();
+  const whatsappMsg = isAr
+    ? `مرحباً مؤسسة رؤيانا، أود الاستفسار وطلب دراسة ومقايسة بخصوص خدمة: ${title}`
+    : `Hello Royana Contracting, I would like to inquire about: ${title}`;
+  const whatsappUrl = buildWhatsAppUrl(siteSettings.contact.whatsapp, whatsappMsg);
+
   const breadcrumbs = [
     { name: isAr ? "الرئيسية" : "Home", url: `https://royana.com.sa/${locale}` },
     { name: isAr ? "خدماتنا" : "Services", url: `https://royana.com.sa/${locale}/services` },
@@ -123,6 +130,17 @@ export default async function ServiceDetailPage({
             <p className="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
               {description}
             </p>
+            <div className="mt-6 flex flex-wrap items-center gap-4">
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2.5 px-6 py-3 rounded-full bg-[#25D366] text-white font-bold text-sm shadow-[0_4px_16px_rgba(37,211,102,0.35)] hover:bg-[#20ba59] hover:-translate-y-0.5 transition-all"
+              >
+                <MessageCircle className="w-5 h-5 fill-current" />
+                <span>{isAr ? "استشارة فورية ومقايسة عبر الواتساب" : "Direct WhatsApp Quote Request"}</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>

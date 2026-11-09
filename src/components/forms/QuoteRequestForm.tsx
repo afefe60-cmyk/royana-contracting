@@ -211,6 +211,9 @@ export function QuoteRequestForm({
               <option value="شبكات الكهرباء والمياه والصرف" className="bg-[#0d1728] text-white">
                 {isAr ? "شبكات الكهرباء والمياه والصرف" : "Electrical & Plumbing (MEP)"}
               </option>
+              <option value="حساب الأحمال والمخططات والمقايسات الكهربائية" className="bg-[#0d1728] text-white">
+                {isAr ? "حساب الأحمال والمقايسات الكهربائية" : "Electrical Load Calculations & BOQ"}
+              </option>
               <option value="إدارة المشاريع والاستشارات الهندسية" className="bg-[#0d1728] text-white">
                 {isAr ? "إدارة المشاريع والاستشارات الهندسية" : "Project Management"}
               </option>

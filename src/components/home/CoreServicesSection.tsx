@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { Building2, Zap, ClipboardCheck, ArrowLeft, ArrowRight, CheckCircle2 } from "lucide-react";
+import { Building2, Zap, ClipboardCheck, ArrowLeft, ArrowRight, CheckCircle2, Calculator, Factory } from "lucide-react";
 import type { Service } from "@/types";
 
 interface CoreServicesSectionProps {
@@ -12,6 +12,8 @@ const iconMap: Record<string, React.ReactNode> = {
   Building2: <Building2 className="w-7 h-7 text-[#00d2ff]" />,
   Zap: <Zap className="w-7 h-7 text-[#00d2ff]" />,
   ClipboardCheck: <ClipboardCheck className="w-7 h-7 text-[#00d2ff]" />,
+  Calculator: <Calculator className="w-7 h-7 text-[#00d2ff]" />,
+  Factory: <Factory className="w-7 h-7 text-[#00d2ff]" />,
 };
 
 export function CoreServicesSection({ services, locale }: CoreServicesSectionProps) {
@@ -36,7 +38,7 @@ export function CoreServicesSection({ services, locale }: CoreServicesSectionPro
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((srv) => (
             <div
               key={srv.slug}

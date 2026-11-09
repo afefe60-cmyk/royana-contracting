@@ -208,5 +208,101 @@
         "a": "Yes, we provide turnkey solutions covering structural foundations, MEP connections, pneumatic networks, and automated Motor Control Center (MCC) panels."
       }
     ]
+  },
+  {
+    "slug": "electrical-load-calculation-boq",
+    "title_ar": "حساب الأحمال والمخططات والمقايسات الكهربائية",
+    "title_en": "Electrical Load Calculations & Engineering BOQ",
+    "short_desc_ar": "دراسة المخططات وحساب الأحمال التصميمية (Load Schedule)، تحديد مقاطع الكابلات وسعة القواطع، وإعداد جداول الكميات والمواصفات (BOQ) المعتمدة وفق كود البناء السعودي (SBC 401) واشتراطات شركة الكهرباء (SEC).",
+    "short_desc_en": "Engineering schematic analysis, load scheduling (SBC 401), cable and breaker sizing, and certified electrical Bill of Quantities (BOQ) for residential, commercial, and industrial facilities in Jeddah.",
+    "icon": "Calculator",
+    "scope_ar": [
+      "إعداد جداول حساب الأحمال التصميمية (Electrical Load Schedules) والمطابقة مع كود البناء السعودي (SBC 401).",
+      "تحديد مقاطع الكابلات وسعة القواطع المناسبة وحسابات هبوط الجهد (Voltage Drop) وتيار القصر (Short Circuit).",
+      "رسم وتصميم المخططات الأحادية (Single Line Diagram - SLD) وموازنة توزيع الفازات والأحمال (Phase Balancing).",
+      "إعداد جداول الكميات التقديرية والمقايسات (Bill of Quantities - BOQ) ومواصفات التوريد المعتمدة (SASO).",
+      "تجهيز واعتماد متطلبات الشركة السعودية للكهرباء (SEC) لطلبات إطلاق التيار ورفع سعة العدادات والقواطع.",
+      "فحص ومراجعة المخططات الكهربائية للمشاريع القائمة والمصانع والمستودعات لمنع التحميل الزائد والهدر."
+    ],
+    "scope_en": [
+      "Preparation of certified electrical load schedules compliant with the Saudi Building Code (SBC 401).",
+      "Precise cable sizing, breaker selection, voltage drop calculations, and short-circuit analysis.",
+      "Designing comprehensive Single Line Diagrams (SLD) and multi-phase electrical load balancing.",
+      "Drafting detailed engineering Bill of Quantities (BOQ) with SASO-compliant material specifications.",
+      "Preparing technical submission documentation for Saudi Electricity Company (SEC) power release and breaker upgrades.",
+      "Engineering audits of existing electrical distribution systems for factories, warehouses, and commercial properties."
+    ],
+    "steps_ar": [
+      {
+        "title": "استلام المخططات أو المعاينة الميدانية",
+        "desc": "استلام المخططات المعمارية ومسارات التوزيع أو إجراء مسح ميداني شامل للمنشأة بجدة لحصر كافة الأجهزة والمعدات والتجهيزات."
+      },
+      {
+        "title": "تحليل وحساب الأحمال الكهربائية",
+        "desc": "حساب الحمل الموصل (Connected Load) والحمل الأقصى المتوقع (Max Demand) وتوزيع الدوائر الكهربائية لضمان اتزان الفازات."
+      },
+      {
+        "title": "تصميم المخطط الأحادي وتحديد الكابلات",
+        "desc": "تحديد مقاطع الكابلات النحاسية/الألمنيوم وسعة القواطع وحسابات هبوط الجهد ورسم الـ Single Line Diagram."
+      },
+      {
+        "title": "إعداد جداول الكميات والمقايسة (BOQ)",
+        "desc": "حصر دقيق لكافة المواد والبنود (لوحات، كابلات، أسلاك، مواسير، قواطع، إنارة) مع المواصفات القياسية المعتمدة."
+      },
+      {
+        "title": "تسليم التقرير الهندسي المعتمد",
+        "desc": "تسليم كراسة الحسابات والمقايسة متكاملة بصيغة قابلة للتنفيذ الميداني الفوري أو التقديم للجهات الرسمية وشركة الكهرباء."
+      }
+    ],
+    "steps_en": [
+      {
+        "title": "Blueprint Intake & Site Survey",
+        "desc": "Reviewing architectural layouts or conducting comprehensive on-site inspections in Jeddah to catalog all connected equipment and power loads."
+      },
+      {
+        "title": "Load Demand Calculations",
+        "desc": "Calculating connected and maximum demand loads, configuring circuit branching, and achieving optimal 3-phase balancing."
+      },
+      {
+        "title": "SLD Drafting & Cable Sizing",
+        "desc": "Sizing copper/aluminum cables and breakers with voltage drop verification, generating certified Single Line Diagrams."
+      },
+      {
+        "title": "BOQ & Material Schedule",
+        "desc": "Detailed quantity surveying of panels, conduits, wiring, and switchgear with SASO-approved technical specifications."
+      },
+      {
+        "title": "Certified Engineering Package Delivery",
+        "desc": "Handover of complete stamped calculation dossiers and actionable BOQ ready for procurement, SEC approval, or site execution."
+      }
+    ],
+    "faqs_ar": [
+      {
+        "q": "لماذا أحتاج لحساب الأحمال الكهربائية قبل البدء في البناء أو طلب العداد؟",
+        "a": "حساب الأحمال يضمن طلب سعة القاطع الصحيحة من شركة الكهرباء (SEC) دون دفع رسوم فائضة لقاطع أكبر من حاجتك، كما يحميك من رفض إطلاق التيار إذا كانت السعة غير كافية، ويمنع هدر التكاليف في كابلات ذات مقاطع مبالغ فيها أو خطرة."
+      },
+      {
+        "q": "هل تقدمون الخدمة للمصانع والمستودعات في المدن الصناعية بجدة؟",
+        "a": "نعم، نقدم دراسات أحمال متقدمة للمنشآت الصناعية والمستودعات تشمل أحمال المحركات وخطوط الإنتاج والتكييف المركزي، وتجهيز مخططات لوحات التوزيع الرئيسية (MDB) والفرعية."
+      },
+      {
+        "q": "هل يتضمن جدول الكميات (BOQ) تسعير المواد وأجور التنفيذ؟",
+        "a": "نعم، تتضمن المقايسة الهندسية حصراً دقيقاً للكميات مع خيار التسعير التقديري للمواد المعتمدة في السوق السعودي (أسلاك، كابلات، قواطع) وتكلفة التركيب والتنفيذ الميداني."
+      }
+    ],
+    "faqs_en": [
+      {
+        "q": "Why is an electrical load calculation required before construction or applying for a power meter?",
+        "a": "Accurate load calculation ensures requesting the exact breaker capacity from SEC without paying unnecessary excess fees, avoids rejected power release applications, and eliminates costly oversizing or hazardous undersizing of main cables."
+      },
+      {
+        "q": "Do you provide electrical calculation services for industrial facilities and warehouses in Jeddah?",
+        "a": "Yes, we perform advanced load studies for industrial plants, logistics warehouses, motor drives, central HVAC systems, and design main/sub-distribution panels (MDB/SMDB)."
+      },
+      {
+        "q": "Does the BOQ include material pricing and installation costs?",
+        "a": "Yes, our engineering BOQ includes comprehensive quantity surveying with optional cost estimation reflecting current Saudi market prices for certified materials and on-site labor."
+      }
+    ]
   }
 ]

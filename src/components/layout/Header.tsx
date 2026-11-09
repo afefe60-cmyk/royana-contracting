@@ -66,8 +66,8 @@ export function Header({
     {
       title_ar: "المقاولات العامة والترميم",
       title_en: "General Contracting & Restoration",
-      desc_ar: "إنشاءات، ترميم شامل، فحص وتدعيم الهياكل الإنشائية بجدة",
-      desc_en: "Turnkey building construction, restoration & structural engineering",
+      desc_ar: "إنشاءات، حساب الأحمال والمقايسات، شبكات، وترميم المنشآت بجدة",
+      desc_en: "Turnkey building construction, load schedules, MEP & structural engineering",
       href: `/${locale}/services`,
       icon: Building2,
       badge_ar: "كود البناء السعودي",

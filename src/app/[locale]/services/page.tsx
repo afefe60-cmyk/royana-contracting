@@ -1,7 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Building2, Zap, ClipboardCheck, ArrowLeft, ArrowRight, CheckCircle2 } from "lucide-react";
+import { Building2, Zap, ClipboardCheck, ArrowLeft, ArrowRight, CheckCircle2, Calculator, Factory } from "lucide-react";
 import { getServices } from "@/lib/content";
 import { BreadcrumbSchema } from "@/components/seo/SchemaScripts";
 import { FinalCTASection } from "@/components/home/FinalCTASection";
@@ -62,6 +62,8 @@ const iconMap: Record<string, React.ReactNode> = {
   Building2: <Building2 className="w-10 h-10 text-[#00d2ff]" />,
   Zap: <Zap className="w-10 h-10 text-[#00d2ff]" />,
   ClipboardCheck: <ClipboardCheck className="w-10 h-10 text-[#00d2ff]" />,
+  Calculator: <Calculator className="w-10 h-10 text-[#00d2ff]" />,
+  Factory: <Factory className="w-10 h-10 text-[#00d2ff]" />,
 };
 
 export default async function ServicesPage({ params }: ServicesPageProps) {
